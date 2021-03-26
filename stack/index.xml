@@ -1,1 +1,49 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Леруа Мерлен Tech – Стек Технологий</title><link>/stack/</link><description>Recent content in Стек Технологий on Леруа Мерлен Tech</description><generator>Hugo -- gohugo.io</generator><atom:link href="/stack/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Леруа Мерлен Tech – Стек Технологий</title><link>/stack/</link><description>Recent content in Стек Технологий on Леруа Мерлен Tech</description><generator>Hugo -- gohugo.io</generator><atom:link href="/stack/index.xml" rel="self" type="application/rss+xml"/><item><title>Knowledge: Путь кандидата</title><link>/knowledge/jedi-way/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/knowledge/jedi-way/</guid><description>
+&lt;div class="alert alert-primary" role="alert">
+&lt;h4 class="alert-heading">Совет&lt;/h4>
+Перед собеседованием почитай о наших технологиях. &lt;br />&lt;a href="https://habr.com/ru/company/leroy_merlin/">Cтатьи&lt;/a>, &lt;a href="https://www.youtube.com/channel/UCIqfZ4wqEoC6x6x-zyPCL8g">видео с конференций&lt;/a>, а ещё &lt;a href="/stack">тех. стек&lt;/a> и &lt;a href="/values">ценности&lt;/a>.
+&lt;/div>
+&lt;div class="row">
+&lt;div class="col-md-8">
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>Первый телефонный звонок&lt;/strong> &lt;span class="text-muted pl-2">&amp;lt; 15 минут&lt;/span>&lt;br />
+Проводит рекрутер. На этом этапе поймём, что подходим друг другу. Поверхностно обсудим проекты и задачи, определим, что тебе интересно и договоримся о следующем шаге. &lt;br />&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Техническое интервью&lt;/strong> &lt;span class="text-muted pl-2">1-1.5 часа&lt;/span>&lt;br />
+Встреча с техническими экспертами. Здесь расскажем про технологии и специфику разработки, оценим техническую экспертизу.&lt;br />&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Интервью с руководителем&lt;/strong> &lt;span class="text-muted pl-2">&amp;lt; 1 часа&lt;/span>&lt;br />
+Встреча с лидером продуктовой команды или направления. На этом этапе поймём, насколько нам комфортно вместе. Расскажем про продукт, задачи и перспективы развития. &lt;br />&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Совместное принятие решения и оффер&lt;/strong> &lt;span class="text-muted pl-2">Мгновенно&lt;/span>&lt;br />
+Обсудим впечатления и если у нас произошёл «контакт» — позовём в команду. В любом случае наш рекрутер не пропадёт, как это иногда бывает. Он вернётся с конструктивной обратной связью и предложит пообщаться снова в следующий раз.&lt;/p>
+&lt;/div>
+&lt;div class="col-md-4 text-center">
+&lt;div class="mermaid">
+flowchart TD;
+A[Первый телефонный звонок]-->B[Техническое интервью];
+B-->C[Интервью с руководителем];
+C-->D[Оффер];
+A-->E[Технический скрининг];
+E-->B;
+C-->F[Знакомство с лидером домена];
+F-->D;
+click D href "https://youtu.be/LwaVWqn66Is" _blank;
+classDef default fill:#f8f9fa,stroke:#F2F3F5,stroke-width:1px;
+style D fill:#f8f9fa,stroke:#F2F3F5,stroke-width:1px;
+&lt;/div>
+&lt;/div>
+&lt;/li>
+&lt;/ul>
+&lt;/div>
+&lt;p>&lt;strong>Какие бывают варианты:&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Обсудим всё за одну встречу и примем решение. Такое случается редко.&lt;/li>
+&lt;li>Технический скрининг после первого звонка и до технического интервью. Скинем форму или позвоним. Займёт не больше получаса.&lt;/li>
+&lt;li>Знакомство с лидером домена после встречи с руководителем. Он отвечает за несколько продуктов. Поговорим о делах не только команды, но и домена в целом и всей компании. Займёт не больше часа.&lt;/li>
+&lt;/ul>
+&lt;p>По желанию устроим дополнительную встречу с любым участником процесса. Например, познакомим с командой или позовём руководителя на чашечку кофе.&lt;/p></description></item></channel></rss>
