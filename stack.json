@@ -2,15 +2,15 @@
     {
       "Area": "Machine Learning",
       "Cases": "Libraries",
-      "Research": "<code class='lang'>Pytorch</code>",
+      "Research": "<code class='framework'>Pytorch</code>",
       "Trial": "",
-      "Best choice": "<code class='lang'>Catboost</code> <code class='lang'>Plotly</code> <code class='lang'>Scikit-learn</code> <code class='lang'>Seaborn</code> <code class='lang'>Pandas</code> <code class='lang'>TensorFlow (Keras)</code> <code class='lang'>Matplotlib</code> <code class='lang'>LightGBM</code> <code class='lang'>OpenCV</code>",
+      "Best choice": "<code class='tool'>Catboost</code> <code class='tool'>Plotly</code> <code class='tool'>Scikit-learn</code> <code class='tool'>Seaborn</code> <code class='tool'>Pandas</code> <code class='tool'>TensorFlow (Keras)</code> <code class='tool'>Matplotlib</code> <code class='tool'>LightGBM</code> <code class='tool'>OpenCV</code>",
       "Hold": ""
     },
     {
       "Area": "Machine Learning",
       "Cases": "MLOps",
-      "Research": "<code class='lang'>DVC</code> <code class='lang'>Kubeflow</code> <code class='lang'>MLFlow</code>",
+      "Research": "<code class='tool'>DVC</code> <code class='framework'>Kubeflow</code> <code class='framework'>MLFlow</code>",
       "Trial": "",
       "Best choice": "",
       "Hold": ""
@@ -21,7 +21,7 @@
       "Research": "",
       "Trial": "",
       "Best choice": "<code class='tool'>Jupyter Notebook</code>",
-      "Hold": "<code class='platform'>JupyterHub</code>"
+      "Hold": "<code class='tool'>JupyterHub</code>"
     },
     {
       "Area": "Machine Learning",
@@ -33,18 +33,18 @@
     },
     {
       "Area": "Data",
-      "Cases": "Data Platform backend",
+      "Cases": "Data tool backend",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='lang'>Go</code> <code class='lang'>Java</code> <code class='lang'>Django</code>",
+      "Best choice": "<code class='lang'>Go</code> <code class='lang'>Java</code> <code class='framework'>Django</code>",
       "Hold": ""
     },
     {
       "Area": "Data",
-      "Cases": "Data Platform frontend",
+      "Cases": "Data tool frontend",
       "Research": "",
-      "Trial": "<code class='lang'>Ant Design</code>",
-      "Best choice": "<code class='lang'>Next.js</code>",
+      "Trial": "<code class='framework'>Ant Design</code>",
+      "Best choice": "<code class='framework'>Next.js</code>",
       "Hold": ""
     },
     {
@@ -52,7 +52,7 @@
       "Cases": "Data Product backend",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='lang'>Flask</code> <code class='lang'>AsyncIO</code> <code class='lang'>Python</code>",
+      "Best choice": "<code class='framework'>Flask</code> <code class='framework'>AsyncIO</code> <code class='lang'>Python</code>",
       "Hold": ""
     },
     {
@@ -60,22 +60,22 @@
       "Cases": "Data Product frontend",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='lang'>React</code>",
+      "Best choice": "<code class='framework'>React</code>",
       "Hold": ""
     },
     {
       "Area": "Data",
       "Cases": "Data Visualization  (BI tools)",
       "Research": "",
-      "Trial": "<code class='platform'>Superset</code>",
-      "Best choice": "<code class='platform'>Power BI</code> <code class='platform'>Tableau</code>",
-      "Hold": "<code class='platform'>QlikView</code> <code class='platform'>SQL Server Reporting</code> <code class='platform'>SAP BusinessObjects</code>"
+      "Trial": "<code class='tool'>Superset</code>",
+      "Best choice": "<code class='tool'>Power BI</code> <code class='tool'>Tableau</code>",
+      "Hold": "<code class='tool'>QlikView</code> <code class='tool'>SQL Server Reporting</code> <code class='tool'>SAP BusinessObjects</code>"
     },
     {
       "Area": "Data",
       "Cases": "Data Processing",
       "Research": "",
-      "Trial": "<code class='lang'>Spark</code> <code class='lang'>Scala</code>",
+      "Trial": "<code class='framework'>Spark</code> <code class='lang'>Scala</code>",
       "Best choice": "",
       "Hold": ""
     },
@@ -84,8 +84,8 @@
        "Cases": "DWH",
        "Research": "",
        "Trial": "",
-       "Best choice": "<code class='platform'>Greenplum</code>",
-       "Hold": "<code class='platform'>SQL Server</code>"
+       "Best choice": "<code class='tool'>Greenplum</code>",
+       "Hold": "<code class='tool'>SQL Server</code>"
     },
     {
       "Area": "Data",
@@ -101,15 +101,15 @@
       "Research": "",
       "Trial": "<code class='tool'>Huawei S3</code>",
       "Best choice": "<code class='tool'>Kafka</code> <code class='tool'>Yandex Object Storage S3</code>",
-      "Hold": "<code class='platform'>Hadoop</code> <code class='tool'>MinIO</code>"
+      "Hold": "<code class='tool'>Hadoop</code> <code class='tool'>MinIO</code>"
     },
     {
       "Area": "Data",
       "Cases": "ETL",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>NiFi</code>",
-      "Hold": "<code class='platform'>Talend</code> <code class='platform'>ESB Stambya</code>"
+      "Best choice": "<code class='tool'>NiFi</code>",
+      "Hold": "<code class='tool'>Talend</code> <code class='tool'>ESB Stambya</code>"
     },
     {
       "Area": "Data",
@@ -123,7 +123,7 @@
       "Area": "Data",
       "Cases": "Data Quality Governance",
       "Research": "",
-      "Trial": "<code class='platform'>great_expectations</code> <code class='platform'>Colibra</code>",
+      "Trial": "<code class='tool'>great_expectations</code> <code class='tool'>Colibra</code>",
       "Best choice": "",
       "Hold": ""
     },
@@ -131,8 +131,8 @@
       "Area": "Business applications backend",
       "Cases": "CRUD",
       "Research": "",
-      "Trial": "<code class='lang'>Go</code> <code class='platform'>Platformeco</code> <code class='lang'>Nest JS</code> <code class='lang'>Python (Django)</code> <code class='lang'>Python (fastapi)</code> <code class='lang'>Python (flask)</code>",
-      "Best choice": "<code class='lang'>Node.JS</code> <code class='lang'>Nest JS</code> <code class='lang'>Java</code> <code class='platform'>Spring Boot</code> <code class='lang'>Kotlin</code> <code class='lang'>Typescript</code>",
+      "Trial": "<code class='lang'>Go</code> <code class='tool'>Platformeco</code> <code class='framework'>Django</code> <code class='framework'>Fastapi</code> <code class='framework'>Flask</code>",
+      "Best choice": "<code class='framework'>Node.JS</code> <code class='framework'>Nest JS</code> <code class='lang'>Java</code> <code class='framework'>Spring Boot</code> <code class='lang'>Kotlin</code> <code class='lang'>Typescript</code>",
       "Hold": "<code class='lang'>C#</code> <code class='lang'>ASP.Net</code> <code class='lang'>PHP</code>"
     },
     {
@@ -147,16 +147,16 @@
       "Area": "Business applications backend",
       "Cases": "Complex BL, Process orchestration",
       "Research": "",
-      "Trial": "<code class='platform'>Java state machine</code>",
-      "Best choice": "<code class='platform'>Camunda</code>",
+      "Trial": "<code class='tool'>Java state machine</code>",
+      "Best choice": "<code class='tool'>Camunda</code>",
       "Hold": ""
     },
     {
       "Area": "Business applications backend",
       "Cases": "Data storage",
       "Research": "",
-      "Trial": "<code class='tool'>Cassandra</code> <code class='tool'>MariaDB</code> <code class='platform'>Huawei S3</code>",
-      "Best choice": "<code class='tool'>MongoDB</code> <code class='tool'>ClickHouse</code> <code class='tool'>PostgeSQL</code> <code class='platform'>S3</code> <code class='tool'>Elasticsearch (opendistro)</code>",
+      "Trial": "<code class='tool'>Cassandra</code> <code class='tool'>MariaDB</code> <code class='tool'>Huawei S3</code>",
+      "Best choice": "<code class='tool'>MongoDB</code> <code class='tool'>ClickHouse</code> <code class='tool'>PostgeSQL</code> <code class='tool'>S3</code> <code class='tool'>Elasticsearch (opendistro)</code>",
       "Hold": "<code class='tool'>Oracle</code> <code class='tool'>MS SQL</code> <code class='tool'>FTP / SFTP</code> <code class='tool'>MySQL</code>"
     },
     {
@@ -172,48 +172,48 @@
       "Cases": "Integration flows",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='lang'>TypeScript: NodeJS</code> <code class='lang'>Java: Spring Boot</code> <code class='lang'>Kotlin: Spring Boot</code> <code class='platform'>Platformeco</code>",
-      "Hold": "<code class='platform'>ESB</code> <code class='tool'>Debezium / CDC Pattern</code>"
+      "Best choice": "<code class='framework'>TypeScript: NodeJS</code> <code class='framework'>Java: Spring Boot</code> <code class='framework'>Kotlin: Spring Boot</code> <code class='tool'>Platformeco</code>",
+      "Hold": "<code class='tool'>ESB</code> <code class='tool'>Debezium / CDC Pattern</code>"
     },
     {
       "Area": "Frontends",
       "Cases": "Web",
       "Research": "",
-      "Trial": "<code class='lang'>Vue</code> <code class='tool'>WebComponents</code> <code class='platform'>Angular</code> <code class='tool'>OKAPI</code> <code class='tool'>Linaria</code> <code class='tool'>Mobx</code> <code class='tool'>Redux</code>",
-      "Best choice": "<code class='lang'>TypeScript</code> <code class='lang'>JavaScript</code> <code class='platform'>React</code> <code class='tool'>HTTP2</code> <code class='tool'>CSS Modules</code>",
-      "Hold": "<code class='lang'>PHP</code> <code class='tool'>AEM</code> <code class='lang'>BEM</code> <code class='tool'>Bitrix</code>"
+      "Trial": "<code class='framework'>Vue</code> <code class='tool'>WebComponents</code> <code class='tool'>Angular</code> <code class='tool'>OKAPI</code> <code class='tool'>Linaria</code> <code class='tool'>Mobx</code> <code class='tool'>Redux</code>",
+      "Best choice": "<code class='lang'>TypeScript</code> <code class='lang'>JavaScript</code> <code class='tool'>React</code> <code class='tool'>HTTP2</code> <code class='tool'>CSS Modules</code>",
+      "Hold": "<code class='lang'>PHP</code> <code class='tool'>AEM</code> <code class='framework'>BEM</code> <code class='tool'>Bitrix</code>"
     },
     {
       "Area": "Frontends",
       "Cases": "Design Systems for Web",
       "Research": "",
-      "Trial": "<code class='lang'>Ant Design</code> <code class='lang'>Material Design</code>",
-      "Best choice": "<code class='lang'>Fronton</code>",
-      "Hold": "<code class='lang'>LMUI</code>"
+      "Trial": "<code class='framework'>Ant Design</code> <code class='framework'>Material Design</code>",
+      "Best choice": "<code class='framework'>Fronton</code>",
+      "Hold": "<code class='framework'>LMUI</code>"
     },
     {
       "Area": "Frontends",
       "Cases": "Mobile",
       "Research": "<code class='tool'>Kaspresso</code> <code class='tool'>XCTest</code>",
-      "Trial": "<code class='lang'>React Native</code> <code class='lang'>Kotlin Multiplatform</code>",
-      "Best choice": "<code class='lang'>Swift</code> <code class='tool'>Alamofire</code> <code class='tool'>Core Data</code> <code class='lang'>Kotlin</code> <code class='tool'>Firebase</code> <code class='tool'>Room</code> <code class='tool'>Jetpack Navigation</code> <code class='tool'>Retrofit + Okhttp</code>",
-      "Hold": "<code class='lang'>Java</code> <code class='lang'>Objective-C</code> <code class='lang'>RxJava</code> <code class='platform'>GRPC</code>"
+      "Trial": "<code class='framework'>React Native</code> <code class='framework'>Kotlin Multitool</code>",
+      "Best choice": "<code class='framework'>Swift</code> <code class='tool'>Alamofire</code> <code class='tool'>Core Data</code> <code class='framework'>Kotlin</code> <code class='tool'>Firebase</code> <code class='tool'>Room</code> <code class='tool'>Jetpack Navigation</code> <code class='tool'>Retrofit + Okhttp</code>",
+      "Hold": "<code class='lang'>Java</code> <code class='lang'>Objective-C</code> <code class='framework'>RxJava</code> <code class='tool'>GRPC</code>"
     },
     {
       "Area": "Frontends",
       "Cases": "Design Systems for Mobile",
       "Research": "",
-      "Trial": "<code class='lang'>LMUI</code>",
-      "Best choice": "<code class='lang'>Fronton</code>",
+      "Trial": "<code class='framework'>LMUI</code>",
+      "Best choice": "<code class='framework'>Fronton</code>",
       "Hold": ""
     },
     {
       "Area": "QA",
       "Cases": "Functional",
-      "Research": "<code class='tool'>Stubber</code>  <code class='tool'>Allure Server</code> <code class='lang'>Cucumber</code>",
-      "Trial": "<code class='lang'>Kotlin</code> <code class='lang'>Codecept JS</code>",
-      "Best choice": "<code class='lang'>Mocha</code> <code class='lang'>Java</code> <code class='lang'>JavaScript</code> <code class='tool'>WireMock</code> <code class='platform'>Umbrella</code> <code class='lang'>TestNG</code> <code class='tool'>Mountebank</code> <code class='lang'>Appium</code> <code class='tool'>Grafana</code> <code class='lang'>Selenide</code>",
-      "Hold": "<code class='lang'>Selenuim</code> <code class='lang'>Rest-Assured</code> <code class='lang'>Gemini</code> <code class='lang'>Nightwatch</code>"
+      "Research": "<code class='tool'>Stubber</code>  <code class='tool'>Allure Server</code> <code class='framework'>Cucumber</code>",
+      "Trial": "<code class='lang'>Kotlin</code> <code class='framework'>Codecept JS</code>",
+      "Best choice": "<code class='framework'>Mocha</code> <code class='lang'>Java</code> <code class='lang'>JavaScript</code> <code class='tool'>WireMock</code> <code class='tool'>Umbrella</code> <code class='framework'>TestNG</code> <code class='tool'>Mountebank</code> <code class='framework'>Appium</code> <code class='tool'>Grafana</code> <code class='framework'>Selenide</code>",
+      "Hold": "<code class='framework'>Selenuim</code> <code class='framework'>Rest-Assured</code> <code class='framework'>Gemini</code> <code class='framework'>Nightwatch</code>"
     },
     {
       "Area": "QA",
@@ -228,55 +228,55 @@
       "Cases": "Infrastructure & Documentation",
       "Research": "<code class='tool'>Allure Server</code>",
       "Trial": "",
-      "Best choice": "<code class='tool'>Moon</code> <code class='platform'>TestRail</code> <code class='tool'>Browserstack</code> <code class='platform'>Umbrella</code>",
-      "Hold": "<code class='platform'>Selenium Grid</code> <code class='tool'>Confluence</code>"
+      "Best choice": "<code class='tool'>Moon</code> <code class='tool'>TestRail</code> <code class='tool'>Browserstack</code> <code class='tool'>Umbrella</code>",
+      "Hold": "<code class='tool'>Selenium Grid</code> <code class='tool'>Confluence</code>"
     },
     {
       "Area": "API management",
       "Cases": "Internal product integrations",
       "Research": "",
-      "Trial": "<code class='lang'>GRPC</code> <code class='lang'>GraphQL</code> <code class='lang'>WebSocket</code> <code class='platform'>NATS</code> <code class='platform'>NATS Streaming</code> <code class='tool'>Kafka Streams / connect</code>",
-      "Best choice": "<code class='lang'>REST</code> <code class='lang'>AMPQ (RabbitMQ)</code> <code class='tool'>Kafka</code>",
-      "Hold": "<code class='lang'>SOAP</code> <code class='lang'>JMS</code> <code class='tool'>ActiveMQ</code>"
+      "Trial": "<code class='tool'>GRPC</code> <code class='tool'>GraphQL</code> <code class='tool'>WebSocket</code> <code class='tool'>NATS</code> <code class='tool'>NATS Streaming</code> <code class='tool'>Kafka Streams / connect</code>",
+      "Best choice": "<code class='tool'>REST</code> <code class='tool'>AMPQ (RabbitMQ)</code> <code class='tool'>Kafka</code>",
+      "Hold": "<code class='tool'>SOAP</code> <code class='tool'>JMS</code> <code class='tool'>ActiveMQ</code>"
     },
         {
       "Area": "API management",
       "Cases": "Product to Product integrations",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='lang'>REST</code> <code class='tool'>AMPQ (RabbitMQ)</code> <code class='tool'>Kafka</code>",
-      "Hold": "<code class='tool'>SFTP / FTPS</code> <code class='lang'>GRPC</code> <code class='lang'>GraphQL</code> <code class='tool'>ActiveMQ</code> <code class='lang'>JMS</code>"
+      "Best choice": "<code class='tool'>REST</code> <code class='tool'>AMPQ (RabbitMQ)</code> <code class='tool'>Kafka</code>",
+      "Hold": "<code class='tool'>SFTP / FTPS</code> <code class='tool'>GRPC</code> <code class='tool'>GraphQL</code> <code class='tool'>ActiveMQ</code> <code class='tool'>JMS</code>"
     },
     {
       "Area": "API management",
       "Cases": "Gateways & mediation",
       "Research": "<code class='tool'>Istio</code>",
       "Trial": "",
-      "Best choice": "<code class='platform'>ApiGee</code>",
-      "Hold": "<code class='tool'>Spring Gateway</code> <code class='platform'>Web methods ESB</code> <code class='tool'>Transfile perl</code> <code class='tool'>Spring Zuul</code>"
+      "Best choice": "<code class='tool'>ApiGee</code>",
+      "Hold": "<code class='tool'>Spring Gateway</code> <code class='tool'>Web methods ESB</code> <code class='tool'>Transfile perl</code> <code class='tool'>Spring Zuul</code>"
     },
      {
       "Area": "Observability",
       "Cases": "Monitoring (application)",
       "Research": "<code class='tool'>Gogomonia</code>",
       "Trial": "<code class='tool'>VictoriaMetrics</code>",
-      "Best choice": "<code class='tool'>Prometheus</code> <code class='platform'>Dynatrace</code>",
-      "Hold": "<code class='platform'>Pingdom</code> <code class='tool'>ELK</code> <code class='tool'>Zabbix</code>"
+      "Best choice": "<code class='tool'>Prometheus</code> <code class='tool'>Dynatrace</code>",
+      "Hold": "<code class='tool'>Pingdom</code> <code class='tool'>ELK</code> <code class='tool'>Zabbix</code>"
     },
     {
       "Area": "Observability",
       "Cases": "Alerting",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>Opsgenie</code> <code class='tool'>Statuspage</code>",
+      "Best choice": "<code class='tool'>Opsgenie</code> <code class='tool'>Statuspage</code>",
       "Hold": "<code class='tool'>ELK</code> <code class='tool'>Grafana</code> <code class='tool'>Prometheus</code>"
     },
     {
       "Area": "Observability",
       "Cases": "Tracing",
-      "Research": "<code class='platform'>Open Telemetry</code>",
+      "Research": "<code class='tool'>Open Telemetry</code>",
       "Trial": "",
-      "Best choice": "<code class='platform'>Dynatrace</code> <code class='tool'>Jaeger</code>",
+      "Best choice": "<code class='tool'>Dynatrace</code> <code class='tool'>Jaeger</code>",
       "Hold": "<code class='tool'>Zipkin</code>"
     },
     {
@@ -284,7 +284,7 @@
       "Cases": "Visualize",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='tool'>Grafana</code> <code class='tool'>Statuspage</code> <code class='platform'>Dynatrace</code>",
+      "Best choice": "<code class='tool'>Grafana</code> <code class='tool'>Statuspage</code> <code class='tool'>Dynatrace</code>",
       "Hold": "<code class='tool'>Zabbix</code> <code class='tool'>Kibana</code>"
     },
     {
@@ -300,7 +300,7 @@
       "Cases": "Code storage",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>Github</code>",
+      "Best choice": "<code class='tool'>Github</code>",
       "Hold": "<code class='tool'>Gitlab</code>"
     },
     {
@@ -340,8 +340,8 @@
       "Cases": "Containerization",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>Kubernetes</code> <code class='tool'>Docker</code>",
-      "Hold": "<code class='platform'>Openshift</code>"
+      "Best choice": "<code class='tool'>Kubernetes</code> <code class='tool'>Docker</code>",
+      "Hold": "<code class='tool'>Openshift</code>"
     },
     {
       "Area": "CICD",
@@ -362,10 +362,10 @@
     {
       "Area": "Infrastructure",
       "Cases": "Cloud",
-      "Research": "<code class='platform'>Mail.ru</code> <code class='platform'>SberCloud Advance</code>",
+      "Research": "<code class='tool'>Mail.ru</code> <code class='tool'>SberCloud Advance</code>",
       "Trial": "",
-      "Best choice": "<code class='platform'>Yandex Cloud</code> <code class='platform'>OpenStack</code>",
-      "Hold": "<code class='platform'>Huawei cloud</code>"
+      "Best choice": "<code class='tool'>Yandex Cloud</code> <code class='tool'>OpenStack</code>",
+      "Hold": "<code class='tool'>Huawei cloud</code>"
     },
     {
       "Area": "Infrastructure",
@@ -380,15 +380,15 @@
       "Cases": "Virtualization",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>VMware</code> <code class='platform'>KVM</code>",
-      "Hold": "<code class='platform'>Hyper-V</code>"
+      "Best choice": "<code class='tool'>VMware</code> <code class='tool'>KVM</code>",
+      "Hold": "<code class='tool'>Hyper-V</code>"
     },
     {
       "Area": "Infrastructure",
       "Cases": "Anti Ddos",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>Qrator</code>",
+      "Best choice": "<code class='tool'>Qrator</code>",
       "Hold": ""
     },
     {
@@ -396,7 +396,7 @@
       "Cases": "GSLB",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>Qrator</code>",
+      "Best choice": "<code class='tool'>Qrator</code>",
       "Hold": ""
     },
     {
@@ -404,7 +404,7 @@
       "Cases": "CDN",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='platform'>Ngenix</code>",
-      "Hold": "<code class='platform'>Cloudinary (Fastly)</code>"
+      "Best choice": "<code class='tool'>Ngenix</code>",
+      "Hold": "<code class='tool'>Cloudinary (Fastly)</code>"
     }
 ]
