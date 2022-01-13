@@ -38,10 +38,6 @@ languages:
     stage: hold
     category: Business applications backend
     usage: CRUD
-  - name: ASP.Net
-    stage: hold
-    category: Business applications backend
-    usage: CRUD
   - name: PHP
     stage: hold
     category: Business applications backend
@@ -161,6 +157,10 @@ frameworks:
     usage: CRUD
   - name: Spring Boot
     stage: adopt
+    category: Business applications backend
+    usage: CRUD
+  - name: ASP.Net
+    stage: hold
     category: Business applications backend
     usage: CRUD
   - name: Node.JS
@@ -638,7 +638,15 @@ tools:
     stage: adopt
     category: Frontends
     usage: Mobile
+  - name: Core Data
+    stage: adopt
+    category: Frontends
+    usage: Mobile
   - name: Retrofit + Okhttp
+    stage: adopt
+    category: Frontends
+    usage: Mobile
+  - name: Kotlin Multiplatform Mobile
     stage: adopt
     category: Frontends
     usage: Mobile

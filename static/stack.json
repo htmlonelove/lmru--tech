@@ -133,7 +133,7 @@
       "Research": "",
       "Trial": "<code class='lang'>Go</code> <code class='tool'>Platformeco</code> <code class='framework'>Django</code> <code class='framework'>FastAPI</code> <code class='framework'>Flask</code>",
       "Best choice": "<code class='framework'>Node.JS</code> <code class='framework'>Nest.js</code> <code class='lang'>Java</code> <code class='framework'>Spring Boot</code> <code class='lang'>Kotlin</code> <code class='lang'>TypeScript</code>",
-      "Hold": "<code class='lang'>C#</code> <code class='lang'>ASP.Net</code> <code class='lang'>PHP</code>"
+      "Hold": "<code class='lang'>C#</code> <code class='framework'>ASP.Net</code> <code class='lang'>PHP</code>"
     },
     {
       "Area": "Business applications backend",
@@ -204,7 +204,7 @@
       "Cases": "Mobile",
       "Research": "<code class='tool'>Kaspresso</code> <code class='tool'>XCTest</code> <code class='tool'>Jetpack Compose</code>",
       "Trial": "<code class='framework'>React Native</code> <code class='tool'>Jetpack Navigation</code>",
-      "Best choice": "<code class='lang'>Swift</code> <code class='tool'>Alamofire</code> <code class='lang'>Kotlin</code> <code class='tool'>Firebase</code> <code class='tool'>Room</code> <code class='tool'>Retrofit + Okhttp</code>",
+      "Best choice": "<code class='lang'>Swift</code> <code class='tool'>Alamofire</code> <code class='lang'>Kotlin</code> <code class='tool'>Firebase</code> <code class='tool'>Room</code> <code class='tool'>Core Data</code> <code class='tool'>Retrofit + Okhttp</code> <code class='tool'>Kotlin Multiplatform Mobile</code>",
       "Hold": "<code class='lang'>Java</code> <code class='lang'>Objective-C</code> <code class='framework'>RxJava</code> <code class='framework'>gRPC</code>"
     },
     {
