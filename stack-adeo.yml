@@ -778,7 +778,7 @@ tools:
     stage: hold
     category: Observability
     usage: Monitoring (application)
-  - name: OpsGenie
+  - name: Opsgenie
     stage: adopt
     category: Observability
     usage: Alerting
@@ -794,11 +794,35 @@ tools:
     stage: hold
     category: Observability
     usage: Alerting
-  - name: Prometheus
+  - name: Prometheus (Alertmanager)
     stage: hold
     category: Observability
     usage: Alerting
+  - name: Grafana Loki
+    stage: assess
+    category: Observability
+    usage: Logging
+  - name: Dynatrace
+    stage: assess
+    category: Observability
+    usage: Logging
+  - name: OpenSearch
+    stage: adopt
+    category: Observability
+    usage: Logging
+  - name: Open Distro for Elasticsearch
+    stage: adopt
+    category: Observability
+    usage: Logging
+  - name: Graylog
+    stage: hold
+    category: Observability
+    usage: Logging
   - name: Open Telemetry
+    stage: assess
+    category: Observability
+    usage: Tracing
+  - name: Grafana Tempo
     stage: assess
     category: Observability
     usage: Tracing
@@ -935,18 +959,6 @@ tools:
     category: CICD
     usage: Secrets Storage
 infrastructure:
-  - name: Grafana Loki
-    stage: assess
-    category: Infrastructure
-    usage: Logging
-  - name: Dynatrace
-    stage: assess
-    category: Infrastructure
-    usage: Logging
-  - name: OpenSearch
-    stage: adopt
-    category: Infrastructure
-    usage: Logging
   - name: VK Cloud Solutions
     stage: assess
     category: Infrastructure
