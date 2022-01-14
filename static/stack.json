@@ -263,7 +263,7 @@
       "Best choice": "<code class='tool'>ApiGee</code>",
       "Hold": "<code class='tool'>Spring Gateway</code> <code class='tool'>WebMethods ESB</code> <code class='tool'>Transfile</code> <code class='tool'>Spring Zuul</code>"
     },
-     {
+    {
       "Area": "Observability",
       "Cases": "Monitoring (application)",
       "Research": "<code class='tool'>Gogomonia</code>",
@@ -276,13 +276,21 @@
       "Cases": "Alerting",
       "Research": "",
       "Trial": "",
-      "Best choice": "<code class='tool'>OpsGenie</code> <code class='tool'>Statuspage</code>",
-      "Hold": "<code class='tool'>Elastic Stack</code> <code class='tool'>Grafana</code> <code class='tool'>Prometheus</code>"
+      "Best choice": "<code class='tool'>Opsgenie</code> <code class='tool'>Statuspage</code>",
+      "Hold": "<code class='tool'>Elastic Stack</code> <code class='tool'>Grafana</code> <code class='tool'>Prometheus (Alertmanager)</code>"
+    },
+    {
+      "Area": "Observability",
+      "Cases": "Logging",
+      "Research": "<code class='tool'>Grafana Loki</code> <code class='tool'>Dynatrace</code>",
+      "Trial": "",
+      "Best choice": "<code class='tool'>OpenSearch</code> <code class='tool'>Open Distro for Elasticsearch</code>",
+      "Hold": "<code class='tool'>Graylog</code>"
     },
     {
       "Area": "Observability",
       "Cases": "Tracing",
-      "Research": "<code class='tool'>Open Telemetry</code>",
+      "Research": "<code class='tool'>Open Telemetry</code> <code class='tool'>Grafana Tempo</code>",
       "Trial": "",
       "Best choice": "<code class='tool'>Dynatrace</code> <code class='tool'>Jaeger</code>",
       "Hold": "<code class='tool'>Zipkin</code>"
@@ -358,14 +366,6 @@
       "Trial": "<code class='tool'>Encrypted in Git</code>",
       "Best choice": "<code class='tool'>Hashicorp Vault</code>",
       "Hold": "<code class='tool'>Git</code>"
-    },
-    {
-      "Area": "Infrastructure",
-      "Cases": "Logging",
-      "Research": "<code class='tool'>Grafana Loki</code> <code class='tool'>Dynatrace</code>",
-      "Trial": "",
-      "Best choice": "<code class='tool'>OpenSearch</code>",
-      "Hold": ""
     },
     {
       "Area": "Infrastructure",
