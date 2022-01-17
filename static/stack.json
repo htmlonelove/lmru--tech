@@ -266,8 +266,8 @@
   {
     "Area": "Observability",
     "Cases": "Monitoring (application)",
-    "Research": "<code class='tool'>Gogomonia</code>",
-    "Trial": "<code class='tool'>VictoriaMetrics</code>",
+    "Research": "",
+    "Trial": "<code class='tool'>Gogomonia</code> <code class='tool'>VictoriaMetrics</code>",
     "Best choice": "<code class='tool'>Prometheus</code> <code class='tool'>Dynatrace</code>",
     "Hold": "<code class='tool'>Pingdom</code> <code class='tool'>Elastic Stack</code> <code class='tool'>Zabbix</code>"
   },
