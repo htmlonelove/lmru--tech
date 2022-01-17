@@ -751,7 +751,7 @@ tools:
     category: API management
     usage: Product to Product integrations mediators
   - name: Gogomonia
-    stage: assess
+    stage: trial
     category: Observability
     usage: Monitoring (application)
   - name: VictoriaMetrics
@@ -778,6 +778,10 @@ tools:
     stage: hold
     category: Observability
     usage: Monitoring (application)
+  - name: PagerDuty
+    stage: assess
+    category: Observability
+    usage: Alerting
   - name: Opsgenie
     stage: adopt
     category: Observability
