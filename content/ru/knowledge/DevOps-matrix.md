@@ -7,7 +7,7 @@ type: docs
 
 Матрица зрелости DevOps призвана помочь командам в развитии качества их продуктов в рамках технологической поставки. Она хватывает все стадии разработки. 
 
-![DevOps matrix](/images/Razrabotka.png)
+![DevOps matrix](https://github.com/adeo/lmru--tech/blob/DevOps-matrix/static/images/Razrabotka.png)
 
 
 |Секция         |Описание                                  |Бронзовый    |Серебрянный    |Золотой    |Платиновый          |Комментарии            | 
