@@ -10,7 +10,7 @@ type: docs
 ![DevOps matrix](https://github.com/adeo/lmru--tech/blob/DevOps-matrix/static/images/Razrabotka.png)
 
 
-|Секция         |Описание                                  |Бронзовый <span style="color:blue">some *bronze* text</span>   |Серебрянный<span style="color:blue">some *silver* text</span>    |Золотой    |Платиновый          |Комментарии            | 
+|Секция         |Описание                                  |<span style="color:bronze">Бронзовый</span>   |<span style="color:red">Серебрянный</span>    |Золотой    |Платиновый          |Комментарии            | 
 |:--------------|:-----------------------------------------|:-----------:|:-------------:|:---------:|:------------------:|:----------------------| 
 |Разработка     |Код хранится локально                     |+            |               |           |                    |                       |
 |Разработка     |Код хранится централизовано в VCS системе команды   |+            |+              |           |                    |                       |
