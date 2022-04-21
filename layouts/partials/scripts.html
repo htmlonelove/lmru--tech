@@ -60,6 +60,52 @@
   } );
   </script>
 {{ end }}
+{{ if in .Permalink "devops-maturity-matrix/" }}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/fh-3.1.7/rg-1.1.2/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/fh-3.1.7/rg-1.1.2/datatables.min.js"></script>
+
+<script>
+  $(document).ready( function () {
+    $('#tablestack').DataTable({
+      ajax: {
+        url: '../maturity-matrix.json',
+        dataSrc: ''
+      },
+      fixedHeader: {
+        header: true,
+        headerOffset: $('#fixed').height() + 10
+      },
+      columns: [
+        { data: 'Area' },
+        { data: 'Cases' },
+        { data: 'Bronze' },
+        { data: 'Silver' },
+        { data: 'Gold' },
+        { data: 'Platinum' }
+      ],
+      paging: false,
+      ordering:  false,
+      info: false,
+      rowGroup: {
+        dataSrc: ['Area', 'Cases']
+      },
+      columnDefs: [
+        {
+          visible: false,
+          targets: [0, 1]
+        },
+        {
+          width: "25%",
+          targets: [2, 3, 4, 5]
+        }
+      ],
+      "initComplete": function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      }
+    });
+  } );
+</script>
+{{ end }}
 <script>
 	$('#youmax').youmax({
 	apiKey:'AIzaSyAc7Z4PtwiyQzntMScG533kmdoBMuH5FAI',
