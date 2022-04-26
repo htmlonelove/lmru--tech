@@ -1,11 +1,11 @@
 ---
-title: "DevOps матрица зрелости продуктов"
+title: "Матрица зрелости продукта"
 description: "Оцени продукт на технологическое совершенство."
 simple_list: true
 type: docs
 ---
 
-![DevOps matrix](/images/devops.png)
+![Maturnity matrix](/images/devops.png)
 
 {{< matrix >}}
 
