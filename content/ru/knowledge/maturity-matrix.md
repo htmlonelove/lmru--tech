@@ -5,7 +5,7 @@ simple_list: true
 type: docs
 ---
 
-![Maturnity matrix](/images/devops.png)
+![Maturity matrix](/images/devops.png)
 
 {{< matrix >}}
 
