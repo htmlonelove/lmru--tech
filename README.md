@@ -33,7 +33,7 @@ After the merge to the `master` branch the content will be automatically updated
 
 ## Running the website locally
 
-First, you should have [Hugo](https://gohugo.io/getting-started/installing/) installed.
+First, you should have [Hugo-Extended](https://gohugo.io/getting-started/installing/) installed.
 
 The following will give you a project that is set up and ready to use (don't forget to use `--recurse-submodules` or you won't pull down some of the code you need to generate a working site). The `hugo server` command builds and serves the site. If you just want to build the site, run `hugo` instead.
 
