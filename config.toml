@@ -163,22 +163,22 @@ enable = false
 	url = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
 	icon = "fab fa-creative-commons-sa"
 [[params.links.developer]]
-	name = "GitHub"
+	name = ""
 	url = "https://github.com/adeo"
 	icon = "icon-github-2"
         desc = "Development takes place here!"
 [[params.links.developer]]
-	name = "Telegram"
+	name = ""
 	url = "https://t.me/leroymerlintech"
 	icon = "icon-tg"
         desc = "Development takes place here!"
 [[params.links.developer]]
-	name = "Habr"
+	name = ""
 	url = "https://habr.com/ru/company/leroy_merlin/blog/"
 	icon = "icon-h"
-        desc = "Development takes place here!"
+        desc = "Check the latest Leroy Merlin vacancies"
 [[params.links.developer]]
-	name = "VC"
+	name = ""
 	url = "https://vc.ru/leroymerlintech"
 	icon = "icon-vc"
-        desc = "Development takes place here!"		
+        desc = "Development takes place here!"	
