@@ -1,0 +1,135 @@
+.compare-table {
+  max-width: 760px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @include vp-767 {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    border-left: none;
+    border-right:  none;
+    border-radius: 0;
+
+    overflow-x: auto;
+  }
+  
+  &__wrapper {
+    width: fit-content;
+
+    border: 1px solid $color-whisper;
+    border-radius: 8px;
+    background-color: $color-default-white;
+
+    @include vp-767 {
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  tr {
+    border-bottom: 1px solid $color-whisper;
+  }
+
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+
+  th {
+    padding: 15px 20px 15px 16px;
+    margin-bottom: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 115%;
+    font-weight: 700;
+    letter-spacing: -0.2px;
+    text-align: left;
+
+    @include vp-767 {
+      padding: 10px;
+
+      font-size: 16px;
+      line-height: 110%;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      max-width: 22px;
+      width: auto;
+      height: 24px;
+      margin-right: 3px;
+
+      @include vp-767 {
+        height: 18px;
+        margin-right: 3px;
+      }
+    }
+  }
+
+  td {
+    padding: 18px 16px 17px;
+    vertical-align: top;
+    
+    @include secondary-text();
+    letter-spacing: -0.2px;
+
+    @include vp-1619 {
+        line-height: 150%;
+    }
+
+    @include vp-767 {
+      padding: 10px;
+
+      font-size: 14px;
+      line-height: 110%;
+      word-wrap: break-word;
+    }
+    
+    &:first-child {
+      color: $color-grey;
+    }
+    
+    p {
+      @include secondary-text();
+      margin-bottom: 24px;
+      
+      @include vp-1619 {
+        line-height: 150%;
+      }
+      
+      @include vp-767 {
+        font-size: 14px;
+        line-height: 110%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 210px;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 273px;
+  }
+  th:nth-child(3),
+  td:nth-child(3) {
+    width: 275px;
+  }
+  
+}

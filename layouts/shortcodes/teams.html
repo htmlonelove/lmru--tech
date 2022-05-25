@@ -1,0 +1,128 @@
+{{ $title := .Get "title" }}
+
+<script>
+  const clippedClass = 'teams__list--clipped';
+
+  let teamsList = null;
+  let cards = null;
+  let moreBtn = null;
+  let overlay = null;
+  let visibleCards = 0;
+  let resizeTimeout = null;
+
+  setTimeout(() => {
+    teamsList = document.querySelector('.teams__list');
+    cards = document.querySelectorAll('.teams__domain');
+  }, 50);
+
+  const resizeThrottler = () => {
+    if (!resizeTimeout) {
+      resizeTimeout = setTimeout(() => {
+        resizeTimeout = null;
+
+        showFirstList();
+        moreBtn.style.display = '';
+        overlay.style.display = '';
+      }, 66);
+    }
+  };
+
+  const PAGE_SIZE = {
+    desktop: 20,
+    laptop: 9,
+    mobile: 6
+  };
+
+  const VIEWPORT_WIDTH = {
+    wideScreen: window.matchMedia('(max-width: 2280px)'),
+    desktop: window.matchMedia('(max-width: 1440px)'),
+    laptop: window.matchMedia('(max-width: 1024px)'),
+    mobile: window.matchMedia('(max-width: 767px)')
+  };
+
+  let veiwportWidth = window.innerWidth;
+
+  const checkWidth = () => {
+    if (VIEWPORT_WIDTH.mobile.matches) {
+      return 'mobile';
+    } else if (VIEWPORT_WIDTH.laptop.matches) {
+      return 'laptop';
+    } else if (VIEWPORT_WIDTH.desktop.matches || VIEWPORT_WIDTH.wideScreen) {
+      return 'desktop';
+    }
+  };
+
+  const showMoreHandler = (evt) => {
+    evt.preventDefault();
+
+    if (teamsList && teamsList.classList.contains(clippedClass)) {
+      teamsList.classList.remove(clippedClass);
+    }
+
+    let width = checkWidth();
+
+    showList(visibleCards + PAGE_SIZE[width]);
+  };
+
+  const showList = (size) => {
+    for (let i = 0; i <= cards.length; i += 1) {
+
+      if (i >= size && cards[i]) {
+        cards[i].style.display = 'none';
+      } else if (cards[i]) {
+        cards[i].style.display = '';
+        visibleCards += 1;
+      } else {
+        visibleCards += 1;
+      }
+
+      if (size >= cards.length && moreBtn) {
+        moreBtn.style.display = 'none';
+        overlay.style.display = 'none';
+
+        moreBtn.removeEventListener('click', showMoreHandler);
+      }
+    }
+  };
+
+  const showFirstList = () => {
+    if (!cards || cards.length === 0) {
+      return;
+    }
+
+    let width = checkWidth();
+    showList(PAGE_SIZE[width]);
+
+    setTimeout(() => {
+      moreBtn = document.querySelector('.teams__more');
+      moreBtn.addEventListener('click', showMoreHandler);
+
+      overlay = document.querySelector('.teams__overlay');
+    }, 0);
+  };
+
+  setTimeout(() => {
+    showFirstList();
+    window.addEventListener("resize", resizeThrottler);
+  }, 60);
+</script>
+
+<div class="teams">
+  <div class="container">
+    <h2 class="teams__title" data-aos="fade-up">Домены</h2>
+    <p class="teams__text" data-aos="fade-up"> В нашей компании 20 направлений, в&nbsp;которых работают 700+ инженеров </p>
+
+    <ul class="teams__list teams__list--clipped" data-delay-child
+      data-delay-child-counter-reset="4">
+      {{ .Inner | markdownify }}
+    </ul>
+
+    <a class="btn teams__more" href="#">Показать ещё</a>
+
+    <div class="teams__overlay"></div>
+
+    {{ partial "modal/modal.html" (dict "context" . "path"
+    "modal/modal-domain.html" "name"
+    "domain") }}
+  </div>
+</div>

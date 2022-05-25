@@ -1,139 +1,136 @@
 ---
-title: "How to prepare your code to Open Source"
-description: "A short tutorial for the code cleaning."
+title: "Как подготовить код к&nbsp;open source?"
+description: "Мы активно используем продукты open source. А ещё хотим контрибутить, чтобы поддерживать сообщество и участвовать в разработке. Поэтому сделали эту инструкцию — здесь описано, как заопенсорсить код.
+"
 simple_list: true
+weight: 40
+menu:
+  main:
+    parent: "Знания"
 type: docs
 ---
 
-We actively use open source solutions created and supported by enthusiasts from around the world.
-We want to not only use but to return the contribution and participate in the development
-of Open source products and support the community. 
+{{% blocks/inner-section %}}
+## Шаг 1. Проверяем указание авторства и оригинальность кода
 
-Here is the instruction for the teams what to do in order to open up the project.
+Необходимо зафиксировать список участников проекта. Для каждого участника определить:
 
-## Three steps to open source your code
+* Имя и фамилию – Pavel Griboedov
+* Компанию — LLC «Leroy Merlin Vostok»
+* Контактную почту – pavel.griboedov\@leroymerlin.ru
 
-{{< blocks/section color="white" >}}
-{{% blocks/feature icon="fa-dice-one" title="Step 1" %}}
-Check attribution and project originality
-{{% /blocks/feature %}}
+### Указание правильной информации в git 
+{{% blocks/inner-block class="inner-page__block--sm" %}}
 
-{{% blocks/feature icon="fa-dice-two" title="Step 2" %}}
-Choose the license
-{{% /blocks/feature %}}
+Обязательно отправлять корректную мета-информацию с каждым коммитом.  
+По этой информации определяется авторство кода.
 
-{{% blocks/feature icon="fa-dice-three" title="Step 3" %}}
-Check compatibility of third-party dependencies
-{{% /blocks/feature %}}
-{{< /blocks/section >}}
+{{% /blocks/inner-block %}}
 
-### Step 1. Check attribution and project originality.
-The project should have a list of members for the project. Each member should have:
-
-* Identity – Pavel Griboedov
-* Company — LLC «Leroy Merlin Vostok»
-* Contact email – pavel.griboedov@leroymerlin.ru
-
-#### Setting correct information in `git`
-It is required to send proper meta information in all commits. 
-This information used to determine an author of the code.
+{{% blocks/inner-block class="inner-page__block--sm" %}}
+{{% blocks/block-bordered %}}
 
 ```
 git config --global user.name "Pavel Griboedov"
 git config --global user.email "pavel.griboedov@leroymerlin.ru"
 ```
 
-Involving trainee or temp workers in the open sourcing internal projects or 
-in contributing to third-party projects is strictly prohibited.
+{{% /blocks/block-bordered %}}
+{{% /blocks/inner-block %}}
 
-When an external company writes code for us then this fact should be mentioned and we should have a proper contract. 
+{{% blocks/inner-block  class="inner-page__block--xs" %}}
+Нельзя привлекать временных работников или практикантов к разработке собственных продуктов, которые мы будем выкладывать в open source, а также к работе над внешними open source-проектами.
+{{% /blocks/inner-block %}}
 
-#### Checking originality
-Originality is an important legal concept. We can enforce legal rights only if the code is *original*. 
-In practice, originality stems from the ability to identify *design decisions* in the source code.
+{{% blocks/inner-block %}}
+Если для нас пишет код внешняя компания, нужно составить контракт с отчуждением прав, а также дополнительно указывать принадлежность кода в исходниках и в документации.
+{{% /blocks/inner-block %}}
 
-{{< alert color="success" title="Design Decision" >}}
-Personal intellectual contribution of the developer demonstrating that another developer would have solved
-the technical issue in a different manner.
+{{% blocks/inner-block %}}
+### Проверка оригинальности
 
-![Design Decision Example](/images/design_decision.jpg)
-{{< /alert >}}
+Оригинальность — это важный юридический термин. Мы обладаем юридическими правами, только если код оригинальный. На практике оригинальность кода можно определить, выделив design decision.
 
-{{< alert color="danger" title="Not a Design Decision" >}}
-Automatically generated code or the code which can only be written in a single manner.
+{{% /blocks/inner-block %}}
 
-![Not A Design Decision Example](/images/not_design_decision.jpg)
-{{< /alert >}}
+{{% blocks/inner-block %}}
+{{% blocks/block-bordered class="block-bordered--success" title-h3="Design Decision" %}}
+<p class="block-bordered__text">Персональная интеллектуальная контрибуция разработчика — доказывает, что другой разработчик решил бы похожую проблему иначе.</p>
+<img src="/images/design_decision.jpg" alt="Это Design Decision" width="500" height="203">
+{{% /blocks/block-bordered %}}
+{{% /blocks/inner-block %}}
 
-### Step 2. Choose the license
-The hardest and the most important part is to choose the correct license for your code.
-Some third-party libraries used in your project can force you to use a specific license — 
-more details in [step 3](#step-3-check-compatibility-of-third-party-dependencies).
+{{% blocks/block-bordered class="block-bordered--danger" title-h3="Не Design Decision" %}}
+<p class="block-bordered__text">Автоматически сгенерированный код или код, который можно написать единственным образом.</p>
+<img src="/images/not_design_decision.jpg" alt="Это не Design Decision" width="500" height="236">
+{{% /blocks/block-bordered %}} 
+{{% /blocks/inner-section %}}
 
-##### Copyleft licenses
-This type of license in most of the cases requires to use the same open source
-license when distributing the code together with yours.
+---
 
-The most popular license here is [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/). 
-It lets people do almost anything they want with your project, except distributing closed source versions.
+{{% blocks/inner-section %}}
+## Шаг 2. Выбираем лицензию
 
-##### Copyright licenses
-This type of license allows everyone to distribute the code together with your code in the closed proprietary products.
+### Лицензии copyleft
 
-* BSD — there is two general editions.
-The [original](https://opensource.org/licenses/BSD-3-Clause) license requires advertisement of the initial project on all products uses the code with the line like
-«This product includes software developed by the `organization`».
-[Modified](https://opensource.org/licenses/bsd-license.php) version not includes this requirement. 
-All versions are going under the same name and to avoid collision **we do not recommend** to use this licenses.
-This license ignores patent rights, described further.
+{{% blocks/inner-block  class="inner-page__block--xs" %}}
+Допустим, ты пишешь код и используешь для этого чужой, который защищен Copyleft лицензией. Тогда, чтобы распространять свой, тебе придётся выбрать лицензию похожего типа. Это значит, что если ты захочешь использовать библиотеку с copyleft-лицензией, то распространять ПО нужно тоже по свободной copyleft-лицензии.
+{{% /blocks/inner-block %}}
 
-* [MIT](https://opensource.org/licenses/MIT) - short license in several paragraphs.
-The license beloved by developers because of simplicity and it works well for small projects.
-The MIT license was drafted before software patents were common. Therefore, they completely ignore the topic.
+{{% blocks/inner-block %}}
+Самая популярная лицензия этого типа — GNU GPLv3. Даёт возможность делать с проектом всё что угодно, за исключением дистрибуции с закрытым кодом.
+{{% /blocks/inner-block %}}
 
-{{< alert color="primary" title="Difference between Copyright and Patent" >}}
-There are two, completely independent, forms of intellectual property rights
-that can be used to protect software against unwanted copying/modification:
+### Лицензии copyright
 
-* Copyright
-* Patents
+{{% blocks/inner-block  class="inner-page__block--sm" %}}
+Этот тип лицензий разрешает всем использовать и распространять продукты, которые содержат твой код. Даже в закрытых проприетарных решениях.
+{{% /blocks/inner-block %}}
 
-Copyright protects the "expression of an idea" and applies to the source code that gets written.
-Copyright protection is granted automatically at the moment that the code is written.
-Copyright protection means that only the author is allowed to make copies of or changes in the code,
-unless the author explicitly gives this right also to others by means of a copyright license.
+{{% blocks/inner-block %}}
+* BSD — есть две основные редакции.
+[Оригинальная](https://opensource.org/licenses/BSD-3-Clause) версия обязывает добавлять рекламу библиотеки во всех продуктах, где есть твой код, например такую: «Продукт использует программу, разработанную в компании Рога и копыта».
+[Изменённая и укороченная](https://opensource.org/licenses/bsd-license.php) версия не включает это обязательство. Обе версии называются одинаково, поэтому мы советуем не использовать их совсем, чтобы не запутаться. А ещё эта лицензия полностью игнорирует патентные права, о которых чуть дальше.
 
-Patents protect inventions and need to be explicitly requested. When a patent has been granted to you,
-you have the exclusive right to make use of that invention or to give a patent license to others.
-Patents can be broader that copyrights, because if someone else makes the same invention that you have a patent on,
-then you can force them to stop using the invention or to buy a patent license from you. With copyright, however,
-it is possible that multiple people independently write very similar code and each has their own copyright protection.
+* [MIT](https://opensource.org/licenses/MIT) — короткая лицензия в несколько параграфов. Нравится разработчикам за свою простоту и отлично подходит небольшим проектам. Единственное но — её изобрели раньше, чем патентные права стали часто применяться. Как следствие — лицензия никак не покрывает эту тему.
+{{% /blocks/inner-block %}}
 
-[source](https://opensource.stackexchange.com/questions/6302/what-does-express-grant-of-patent-rights-from-contributors-to-users-mean)
-{{< /alert >}}
+### Разница между правами копирайта и патентными правами
 
+{{% blocks/inner-block class="inner-page__block--xs" %}}
+Копирайт защищает идеи и вступает в силу автоматически после написания кода. В этом случае копировать или изменять код можно только автору, другим — с разрешения автора по лицензии.
+{{% /blocks/inner-block %}}
+
+{{% blocks/inner-block class="inner-page__block--sm" %}}
+Патент защищает изобретения. Если кто-то создаст похожее ПО, владелец патента сможет запретить использовать его или предложит купить патент. У владельца копирайта таких прав нет: если ты и другой разработчик напишете похожий код, каждый из них будет охраняться копирайтом.
+{{% /blocks/inner-block %}}
+
+{{% blocks/inner-block %}}
 * [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) —
-one of the most popular open source license used by [CNCF](https://www.cncf.io/) and [Apache Foundation](https://www.apache.org/licenses/).
-Longer than MIT, but covers also patent rights.
+популярная open source лицензия, которую используют в *[CNCF](https://www.cncf.io/)* и&nbsp;[Apache Foundation](https://www.apache.org/licenses/).
+Длиннее чем MIT, но покрывает ещё и вопрос с патентами.
+{{% /blocks/inner-block %}}
 
-#### Recommended license for common cases
-By default we offer you to use a 
-<abbr data-toggle="tooltip" title="It means everybody can distribute your code with the closed proprietary products.">non copyleft</abbr>
- open source license – [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
+### Рекомендованный выбор лицензии для большинства случаев
+{{% blocks/inner-block class="inner-page__block--sm" %}}
+По умолчанию мы предлагаем использовать сopyright open source лицензию — [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
+{{% /blocks/inner-block %}}
 
-{{< alert color="primary" title="Apache License 2.0" >}}
-A permissive license whose main conditions require preservation of copyright and license notices.
-Contributors provide an express grant of patent rights. 
-Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+{{% blocks/inner-block %}}
+#### Apache License 2.0
 
-![Apache License](/images/apache_license.jpg)
+Основное требование — сохранение информации о копирайте и лицензии. Разрешает  патентное использование. Лицензированный код, модификации и работы на его основе могут распространяться под другой, даже закрытой лицензией и не включать исходный код.
 
-[source](https://choosealicense.com/licenses/apache-2.0/)
-{{< /alert >}}
+![Лицензия Apache](/images/apache_license.jpg)
+{{% /blocks/inner-block %}}
 
-#### Placing the license information
-* Each code file should have copyright notice on the top.
+### Указание лицензии в проекте
+{{% blocks/inner-block class="inner-page__block--sm" %}}
+В каждом файле с кодом в шапке должна быть указана лицензия. 
+{{% /blocks/inner-block %}}
 
+{{% blocks/inner-block class="inner-page__block--sm" %}}
+{{% blocks/block-bordered class="block-bordered--light block-bordered--lg-text" %}}
 ```
 /*
  * Copyright 2020 LLC Leroy Merlin Vostok.
@@ -150,40 +147,51 @@ Licensed works, modifications, and larger works may be distributed under differe
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+```
 
 package ru.leroymerlin.delivery.tariff.convert;
-```
 
-* `README.md` should mention the license used.
+README.md должен упоминать лицензию.  
+\## License
 
-```
-## License
+This repository is released under version 2.0 of the  
+\[Apache License]\(https://www.apache.org/licenses/LICENSE-2.0).
 
-This repository is released under version 2.0 of the 
-[Apache License](https://www.apache.org/licenses/LICENSE-2.0).
-```
+{{% /blocks/block-bordered %}}
+{{% /blocks/inner-block %}}
 
-* `LICENSE` file in the root should have [complete text](https://www.apache.org/licenses/LICENSE-2.0.txt) of the license.
+LICENSE-файл в корне должен иметь полный текст лицензии.
+{{% /blocks/inner-section %}}
 
+---
 
-### Step 3. Check compatibility of third-party dependencies.
+{{% blocks/inner-section %}}
 
-Third-party component licenses may force to use a particular license for the whole project.
-It is mandatory to check license compatibility between components and between component and project license.
+## Шаг 3. Проверяем совместимость сторонних зависимостей
+{{% blocks/inner-block %}}
+Лицензии сторонних компонентов могут требовать использование определённой лицензии в твоём проекте. Это значит, что нужно проверять совместимости между сторонними компонентами, а также между компонентами&nbsp;и лицензией проекта.
+{{% /blocks/inner-block %}}
 
-| Third Party License Type                                                         | Examples             | Actions Required                                                            |
-|----------------------------------------------------------------------------------|----------------------|-----------------------------------------------------------------------------|
-| **Permissive**                                                                   | `Apache` `BSD` `MIT` | None                                                                        |
-| **Copyleft**                                                                     | `GPL` `LGPL` `AGPL`  | <abbr data-toggle="tooltip" title="Ensure that its intial license allows its redistribution under the licence selected by the project or alongside the other third-party components governed by a possibly different license.">Check compatibility</abbr>|
-| **Unidentified**                                                                 |                      | Delete or replace component                                                 |
-| **Proprietary**                                                                  | `Commercial`         | Delete or replace component                                                 |
-| **Requires accepting another agreement**<br /> alongside the open source license | `CLA` `CAA`          | Accept the agreement <br />or delete or replace component |
+{{% blocks/table-col-3 %}}
+| Тип лицензии зависимости | Пример | Требуемые действия 
+| --- | --- | --- 
+| Разрешающие | <span class="code code--default">Apache</span> <span class="code code--default">BSD</span> <span class="code code--default">MIT</span> | None 
+| Copyleft | <span class="code code--default">GPL</span> <span class="code code--default">LGPL</span> <span class="code code--default">AGPL</span> | None
+| Без лицензии | | Проверить совместимость 
+| Проприетарные | <span class="code code--default">Commercial</span> | Удалить или заменить компонент 
+| Требующая принятие стороннего соглашения вместе с open source лицензией | <span class="code code--default">CLA</span> <span class="code code--default">CAA</span> | Принять соглашение, удалить или&nbsp;заменить компонент 
+{{% /blocks/table-col-3 %}}
+{{% /blocks/inner-section %}}
 
+---
 
-## All Steps Have Been Passed
-Congratulations! You may open source the project. <i class="fa fa-glass-cheers"></i>
+## Все шаги пройдены
+{{% blocks/inner-block class="inner-page__block--xs" %}}
+Можно выкладывать проект в open source. Для этого нужно анонсировать предложение в CI/CD канале в Слаке — дальше репозиторий добавят в список исключений в специальном боте, который закрывает открытые по ошибке репозитории.
+{{% /blocks/inner-block %}}
 
-For doing that you need to announce your willing at the CI/CD slack channel 
-and let your colleagues add the repository to the allowlist of `prevent-public-repos` script.
+После этого можно смело идти в настройки репозитория и выставить его видимость в public.
 
-After that, you can make repository public in the settings of the repository.
+---
+
+{{< blocks/button-improvement href="#" text="Предложить улучшения">}}

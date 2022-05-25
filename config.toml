@@ -3,9 +3,6 @@ title = "Leroy Merlin Tech"
 
 enableRobotsTXT = true
 
-# Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["docsy"]
-
 # Will give values to .Lastmod etc.
 enableGitInfo = true
 
@@ -72,12 +69,21 @@ time_format_blog = "02.01.2006"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+	[markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.tableOfContents]
+    endLevel = 2
+    ordered = false
+    startLevel = 2
 
 # Everything below this are Site Params
 
 [params]
 copyright = "Leroy Merlin Vostok LLC"
 # privacy_policy = "https://policies.google.com/privacy"
+schemaLinkType = "http://schema.org/WebPage"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -117,6 +123,11 @@ algolia_docsearch = false
 # Enable Lunr.js offline search
 offlineSearch = false
 
+time_format_blog = "Monday, January 02, 2006"
+time_format_default = "January 2, 2006"
+# Sections to publish in the main RSS feed.
+rss_sections = ["blog"]
+
 # User interface configuration
 [params.ui]
 # Enable to show the side bar menu in its compact state.
@@ -144,7 +155,7 @@ no = 'Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
 # add "hide_readingtime: true" to the page's front matter
 [params.ui.readingtime]
-enable = false
+enable = false 
 
 [params.links]
 [[params.links.user]]
@@ -154,15 +165,20 @@ enable = false
 [[params.links.developer]]
 	name = "GitHub"
 	url = "https://github.com/adeo"
-	icon = "fab fa-github"
+	icon = "icon-github-2"
         desc = "Development takes place here!"
 [[params.links.developer]]
-	name = "Slack"
-	url = "https://adeo-tech-community.slack.com"
-	icon = "fab fa-slack"
-        desc = "Corporate Slack account"
+	name = "Telegram"
+	url = "https://t.me/leroymerlintech"
+	icon = "icon-tg"
+        desc = "Development takes place here!"
 [[params.links.developer]]
-	name = "Jobs"
-	url = "https://hh.ru/search/vacancy?text=%D0%9B%D0%B5%D1%80%D1%83%D0%B0%20%D0%9C%D0%B5%D1%80%D0%BB%D0%B5%D0%BD&search_field=company_name&specialization=1"
-	icon = "fa fa-building"
-        desc = "Check the latest Leroy Merlin vacancies"
+	name = "Habr"
+	url = "https://habr.com/ru/company/leroy_merlin/blog/"
+	icon = "icon-h"
+        desc = "Development takes place here!"
+[[params.links.developer]]
+	name = "VC"
+	url = "https://vc.ru/leroymerlintech"
+	icon = "icon-vc"
+        desc = "Development takes place here!"		

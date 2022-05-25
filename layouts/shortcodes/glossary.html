@@ -1,6 +1,16 @@
-<div class="glossary-item d-inline">
-{{ with .Get "title" }}<span data-title="{{ . | safeHTML }}" class="glossary">{{ . | safeHTML }}</span> {{ end }}
-<div class="glossary-text text-hide d-inline">{{ .Inner | markdownify }}
-{{ with .Get "source" }}<a href="{{ . }}" class="text-muted" target="blank">[source]</a>{{ end }}
-</div>
-</div>
+<span class="glossary {{ .Get `modifier` }}">
+{{ with .Get "title" }}<span class="glossary__item">{{ . | safeHTML }}</span> {{ end }}
+<span class="glossary__text">
+<span class="glossary__title">
+    {{ with .Get "title" }}{{ . | safeHTML }}{{ end }}
+</span>
+{{ with .Get "text" }}{{ . | markdownify }}{{ end }}
+{{ with .Get "source" }}<a href="{{ . }}" class="text-muted glossary__external-link" target="blank">[Источник]</a>{{ end }}
+<button class="glossary__close-btn" type="button">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0005 17.4137L20.1551 21.5681L21.5693 20.1539L17.4147 15.9996L21.5693 11.8452L20.1552 10.431L16.0005 14.5854L11.8458 10.431L10.4316 11.8452L14.5862 15.9996L10.4317 20.1539L11.8458 21.5681L16.0005 17.4137Z" fill="currentColor"/>
+    </svg>        
+</button>
+</span>
+</span>

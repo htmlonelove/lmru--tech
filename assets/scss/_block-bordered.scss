@@ -1,0 +1,74 @@
+.block-bordered {
+  padding-left: 20px;
+  overflow-x: auto;
+
+  border-left: 2px solid $color-whisper;
+
+  h4,
+  h3 {
+    margin-top: 0;
+  }
+
+  p,
+  code {
+    margin: 0;
+    letter-spacing: -0.4px;
+  }
+
+  pre {
+    margin: 0;
+    code {
+      letter-spacing: -0.2px;
+    }
+  }
+
+  img {
+    margin-top: 24px;
+  }
+  
+  p.block-bordered__text {
+    letter-spacing: -0.2px;
+  }
+
+  &--sm {
+    padding-left: 12px;
+
+    p,
+    code {
+      letter-spacing: -0.2px;
+    }
+  }
+
+  &--danger {
+    border-color: $color-persian-red;
+  }
+
+  &--success {
+    border-color: $color-apple;
+  }
+
+  &--light {
+    p {
+      margin-bottom: 16px;
+
+      color: $color-grey;
+    }
+  }
+
+  &--lg-text {
+    p {
+      margin-bottom: 30px;
+
+      letter-spacing: -0.2px;
+    }
+
+    pre {
+      margin-bottom: 32px;
+    }
+  }
+
+  p:last-child,
+  pre:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,39 @@
+.modal-candidate {
+    h2 {
+        @include title-h2;
+        margin-top: 0;
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        @include title-h3;
+        margin-top: 0;
+        margin-bottom: 8px;
+    }
+
+    p {
+        @include primary-text;
+        margin-top: 0;
+        margin-bottom: 32px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }    
+}
+
+.modal-candidate__time {
+    color: $color-grey;
+}
+
+.modal-candidate__important {
+    padding: 16px;
+    background-color: $color-solitude;
+    border-radius: 8px;
+}
+
+p.modal-candidate__important-title {
+    @include accent-text;
+    margin-top: 0;
+    margin-bottom: 8px;
+}

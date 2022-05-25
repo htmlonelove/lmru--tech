@@ -1,0 +1,37 @@
+<div class="compare-table">
+  <svg style="display: none">
+    <symbol id="check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+      <g>
+        <path fill="#b1cc33" d="m61.5 23.3-8.013-8.013-25.71 25.71-9.26-9.26-8.013 8.013 17.42 17.44z"></path>
+      </g>
+      <g>
+        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m10.5 39.76 17.42 17.44 33.58-33.89-8.013-8.013-25.71 25.71-9.26-9.26z"></path>
+      </g>
+    </symbol>
+    <symbol id="cross" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+      <g>
+        <path fill="#ea5a47" d="m58.14 21.78-7.76-8.013-14.29 14.22-14.22-14.22-8.013 8.013 14.36 14.22-14.36 14.22 8.014 8.013 14.22-14.22 14.29 14.22 7.76-8.013-14.22-14.22z"></path>
+      </g>
+      <g>
+        <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m58.14 21.78-7.76-8.013-14.29 14.22-14.22-14.22-8.013 8.013 14.35 14.22-14.35 14.22 8.014 8.013 14.22-14.22 14.29 14.22 7.76-8.013-14.22-14.22z"></path>
+      </g>
+    </symbol>
+  </svg>
+  
+  <div class="compare-table__wrapper">
+
+  |     | <img src="/images/kafka.png" alt="Kafka logo" width="15" height="24"> Kafka | <img src="/images/rabbitmq.png" alt="RabbitMQ logo" width="22" height="24"> RabbitMQ 
+  | --- | --- | --- 
+  | Комфортная скорость | 100 rps | 20 rps
+  | Acknowledgment | <svg width="22" height="22" aria-label="Есть"><use xlink:href="#check"></use></svg> | <svg width="22" height="22" aria-label="Есть"><use xlink:href="#check"></use></svg> 
+  | Многоразовое чтение | <svg width="22" height="22" aria-label="Есть"><use xlink:href="#check"></use></svg> | <svg width="22" height="22" aria-label="Нет"><use xlink:href="#cross"></use></svg> 
+  | Продвинутый роутинг | <svg width="22" height="22" aria-label="Нет"><use xlink:href="#cross"></use></svg> | <svg width="22" height="22" aria-label="Есть"><use xlink:href="#check"></use></svg> 
+  | Приоритет сообщений | <svg width="22" height="22" aria-label="Нет"><use xlink:href="#cross"></use></svg> | <svg width="22" height="22" aria-label="Есть"><use xlink:href="#check"></use></svg> 
+  | Модель | пулл | пуш
+  | Скалирование брокера | горизонтальное | вертикальное
+  | Скалирование клиента | скалирование количества партиций топика | Скалирование количества потребителей
+  | Кейсы использования | <p>Анализ данных: трекинг, поглощение данных, логирование, аудит безопасности.</p><p>Процессинг реального времени: множество продюссеров с небольшим количеством консьюмеров.</p><p>Event Sourcing: моделирование изменения состояния системы через последователь&shy;ность событий.</p> | <p>Сложный роутинг до потребителей.</p><p>Межмикросер&shy;висная коммуникация.</p><p>Приложение поддерживает только легаси-протоколы, например STOMP, MQTT и другие.</p>
+  
+  </div>
+</div>
+

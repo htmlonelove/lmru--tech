@@ -1,0 +1,13 @@
+{{ $title := .Get "title"}}
+{{ $text:= .Get "text" }}
+
+<div class="conference-speaking " data-aos="fade-up">
+    <div class="conference-speaking__wrapper container">
+        <h2 class="conference-speaking__title">{{ $title | markdownify }}</h2>
+        <div class="conference-speaking__text">
+            <p>{{ $text | markdownify }}</p>
+        </div>
+        {{.Inner}}
+    </div>
+</div>
+

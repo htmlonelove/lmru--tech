@@ -1,0 +1,17 @@
+<div class="mission" data-aos="fade-up">
+    <div class="container">
+        <div class="mission__wrapper">
+            <div class="mission__inner">
+                <h2>
+                    <svg width="195" height="33" viewBox="0 0 195 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.222656 8L193.779 9.60008L3.65965 22.9164L192.521 24.0204" stroke="#5AB030" stroke-width="16"/>
+                    </svg>
+                    {{ with .Get "title" }} {{.|markdownify}} {{ end }}
+                </h2>
+                <p>
+                    {{ .Inner | markdownify }}
+                </p>
+                </div>
+        </div>
+    </div>
+</div>

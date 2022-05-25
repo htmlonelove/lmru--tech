@@ -1,25 +1,71 @@
 ---
-title: "How to start to use a new technology?"
-weight: 20
+title: "Как начать использовать новую технологию?"
+weight: 30
+menu:
+    main:
+        parent: "Стек технологий"
 type: docs
+mod_page: inner-page--small-title
 ---
 
-Each team can take a new technology into research by notifying the [Technology Committee]({{< ref "/stack/committee" >}}). Based on the results, the team fills in the [experiment canvas](https://miro.com/app/board/o9J_khG0Gns=) and reports on the next meeting of the technology committee about the results in order to decide whether to move the technology to `Trial` or `Hold`. 
+{{< blocks/image class="stack-img" src="/images/stack/stack" format="png" width="760" height="339" alt="Этапы стека технологий" >}}
 
-![Technology Table movement](/images/technology_movement.jpg)
+<article class="stage">
+{{< svg icon="icon-find" >}}
 
-* Adoption of technology for `Research` with an understanding of the resources and timing of the process.
-To make this decision, it is required to have more than 40% positively voted participants.
-* Move technology from the research phase to the `Trial` section.
-To make this decision, it is required to have more than 50% positively voted participants.
-* Move technology from the phase of `Trial` use to the `Best Choice` section.
-To make this decision, it is required to have more than 80% positively voted participants.
-* Move technology from the `Best Choice` section to `Hold`.
-To make this decision, all existing software components must be analyzed for refactoring and fixing technical debt
-and the positive decision of more than 90% of the meeting participants.
-* Other decisions on changing the composition of the participants and the rules of the Committee
-are made with a positive decision by more than 50% of the participants.
+## Этап 1 — Research
 
-<abbr data-toggle="tooltip" title="Chief Technology Officer">CTO</abbr>,
-<abbr data-toggle="tooltip" title="Chief Information Officer">CIO</abbr>,
-and <abbr data-toggle="tooltip" title="Lead Enterprice Architect">LEA</abbr> have the right to veto all decisions made.
+
+Обращаемся в&nbsp;{{< glossary modifier="glossary--inline" title="Технологический комитет:" text="Это сообщество архитекторов предприятия, технических архитекторов и технических лидеров команд разработки и IT-инфраструктуры. Комитет собирается раз в месяц и решает, берём мы в работу новую технологию или нет. Перед голосованием участники оценивают распространенность стека, модель лицензирования и насколько инструмент подходит под наши задачи.">}} если добро дадут&nbsp;40% участников, тестируем и&nbsp;оцениваем технологию. По&nbsp;результатам заполняем canvas эксперимента и&nbsp;рассказываем о&nbsp;проделанной работе на&nbsp;следующем собрании комитета.
+
+</article>
+
+---
+
+<article class="stage">
+{{< svg icon="icon-key">}}
+
+## Этап 2 — Trial
+
+
+
+Чтобы технология перешла в&nbsp;категорию Trial, &laquo;за&raquo; должны проголосовать 50% Технологического комитета. Если нужного количества голосов не&nbsp;наберётся, мы&nbsp;удалим стек из&nbsp;таблицы с&nbsp;пометкой &laquo;пробовали, пока непонятно&raquo; или продолжим исследование.
+
+</article>
+
+---
+
+<article class="stage">
+{{< svg icon="icon-star" >}}
+
+## Этап 3 — Best Choice
+
+
+
+Продолжаем использовать технологию. Если всё отлично, предлагаем комитету перенести стек в&nbsp;категорию Best Choice. Для этого нужно согласие&nbsp;80% участников.
+
+</article>
+
+---
+
+<article class="stage">
+{{< svg icon="icon-hold" >}}
+
+## Этап 4 — Hold
+
+
+
+Если технология не подошла, переносим её в Hold и больше не используем. Для этого проверяем все системы на необходимость рефакторинга и исправления технического долга. Чтобы отказаться от стека, «за» должны проголосовать 90% участников комитета. 
+
+</article>
+
+
+
+---
+
+## Примечания
+
+* Чтобы изменить состав участников или правила комитета, нужно&nbsp;50% голосов.
+* У&nbsp;CTO, CIO, and LEA есть право вето.
+
+{{< blocks/button-improvement href="#" text="Предложить улучшения">}}

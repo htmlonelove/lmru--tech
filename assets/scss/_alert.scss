@@ -1,0 +1,23 @@
+// Style alert boxes.
+
+.alert {
+    position: relative;
+    padding: 0;
+    padding-left: 32px;
+    &__text {
+        @include primary-text;
+        letter-spacing: -0.2px;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+    }
+}

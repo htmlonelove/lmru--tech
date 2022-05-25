@@ -1,0 +1,9 @@
+{{ $src := .Get "src" }}
+{{ $format := .Get "format" }}
+{{ $alt := .Get "alt" }}
+{{ $width := .Get "width" }}
+{{ $height := .Get "height" }}
+{{ $class := .Get "class"}}
+<div class="{{ $class }}">
+    <img src="{{ $src }}.{{ $format }}" srcset="{{ $src }}@2x.{{ $format }} 2x" alt="{{ $alt }}" width="{{ $width }}" height="{{ $height }}">
+</div>

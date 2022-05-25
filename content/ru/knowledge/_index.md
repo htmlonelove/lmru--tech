@@ -9,6 +9,5 @@ menu:
   main:
     weight: 60
 hide_feedback: true
+redirect: true
 ---
-
-Материалы для ознакомления и сбора обратной связи.

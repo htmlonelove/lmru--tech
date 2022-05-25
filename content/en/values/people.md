@@ -1,162 +1,143 @@
 ---
-title: "People"
+title: "Люди"
 weight: 10
 type: docs
-description: People are the heart of the company.
+menu:
+    main:
+        parent: "Инженерная культура"
+description: "Рассказываем про нашу корпоративную культуру: как принято общаться в компании, зачем запрашивать фидбэк после каждого спринта и куда бежать, если не справляешься с задачей. Всё с примерами и антипримерами."
 ---
 
-### 1. We value common success on the same level with personal.
+## Ценим общий успех наравне с личным
 
-* We are open to colleagues, we share personal and team experience.
-* We share common culture, best practices and their understanding within each team.
+* Открыты к коллегам и делимся опытом
+* У нас есть практики и своя культура, которые мы распространяем внутри команды.
 
-#### Practices & rituals: 
-{{< glossary title="Communities" >}}
-Our company is divided into products and domains.
-It means that we do not separate IT teams and business teams.
-These conditions make professional communities and guilds vital.
+{{< blocks/practice >}}
+#### Практики и ритуалы: 
 
-Cross-product communities by interests allows for knowledge and news sharing, 
-is a source of organizational and professional help and
-almost the only way to keep a connection between colleagues with similar competences across the organization.
-It is highly encouraged for teams to invest resources in community development.
-{{< /glossary >}}
-{{< glossary title="Retrospective" source="https://www.scrumguides.org/scrum-guide.html#events-retro" >}}
-The Retro is the event giving an opportunity for the team to inspect itself and create a plan for improvements to be enacted next time.
-{{< /glossary >}}
-{{< glossary title="InnerSource" >}}
-[Being InnerSource Ready](https://adeo.github.io/innersource) means that you are ready to collaborate with other developers, including developers in your team.
-{{< /glossary >}}
-{{< glossary title="Contribution conventions" source="https://adeo.github.io/innersource" >}}
-The project uses a consistent convention to handle contributions from it’s own team but also for external teams, I.E: pull requests, code-review and branch permissions
-{{< /glossary >}}
+{{< glossary title="Кросс-продуктовые сообщества" text="Кроме команд и доменов у нас есть сообщества по интересам. Например, для разработчиков или спикеров. Они нужны, чтобы обмениваться опытом и новостями, а ещё помогать друг другу со сложными задачами." >}}
 
-{{< alert color="warning" title="Antipattern" >}}
-Overfulfill your own tasks while your colleague can not finish in time and you were able to help.
+{{< glossary title="Ретроспектива" text="Это встреча, на которой команды обсуждают закрытые задачи и размышляют, как не повторить ошибки и закрепить успех. " >}}
+
+{{< glossary title="InnerSource" text="[Быть InnerSource Ready](https://adeo.github.io/innersource) значит быть готовым к совместной работе с другими разработчиками." >}}
+
+{{< glossary title="Правила контрибуции" text="В каждом репозитории описаны соглашения о том, как они обрабатывают изменения в коде. Например, работа с пулл-реквестами, процесс код-ревью и настройки защищенных веток в гите" >}}
+
+{{< /blocks/practice >}}
+
+{{< alert color="warning" title="Антипаттерн" >}}
+Сотрудник выполнил собственные задачи и освободился раньше, но не помог коллеге, который обратился за помощью.
+{{< /alert >}}
+
+
+---
+
+## Принимаем ошибки и учимся на них
+
+* Предлагаем и тестируем даже самые сумасшедшие идеи. 
+* Не боимся сделать первый шаг. Если ничего не вышло — пишем post-mortem и идём другим путём.
+* Работаем над ошибками, чтобы не повторять их.
+* Ошибка не включает в себя намеренное нарушение правил.
+
+{{< blocks/practice >}}
+#### Практики и ритуалы: 
+
+{{< glossary title="Fail fast" text="Это философия, которая предполагает постоянное тестирование идей и инкрементальную разработку для определения истинной ценности идеи. Важный момент философии: если что-то не работает, нужно минимизировать потери и попробовать немного по-другому." >}}
+
+{{< glossary title="Post mortem" text="Это обзор инцидента — в нём описано, что команда сделала, чтобы исправить ошибку и не повторять её в будущем. Всё конструктивно и без обвинений." >}}
+{{< /blocks/practice >}}
+
+{{< alert color="warning" title="Антипаттерн" >}}
+В продакшене одни и те же проблемы, потому что после аварии никто не смотрел в Post mortem.
 {{< /alert >}}
 
 ---
 
-### 2. We accept mistakes and learn from them.
+## Уважаем коллег и их время
 
-* We share ideas and test them fast, even the craziest.
-* We are not afraid to take the first step, fall into the dirt, rise, shake off, write a post mortem with clean hands, and go the other way. 
-* We work on our mistakes to prevent them in the future.
-* *Mistakes* term does not include intentional violation of the rules. 
+* Уважаем правила команды.
+* Общаемся ны ты. 
+* У каждой встречи есть повестка.
+* Готовимся к встрече до её начала. 
+* Встреча — это не единственный способ для принятия решений.
+* Стараемся объяснять свою точку зрения, но не навязываем её другим.
+* Можем работать удалённо и по гибкому графику. 
+* Ценим баланс работы и личной жизни.
 
-#### Practices & rituals: 
-{{< glossary title="Fail fast" source="https://whatis.techtarget.com/definition/fail-fast" >}}
-Fail fast is a philosophy that values extensive testing and incremental development to determine whether an idea has value. 
-An important goal of the philosophy is to cut losses when testing reveals something isn’t working 
-and quickly try something else, a concept known as pivoting.
-{{< /glossary >}} 
-{{< glossary title="Post mortem" >}}
-Also called a major incident review.
-A written blameless-style incident review with the timings and activities that were done in order to fix the problem. 
-Also contains activities that should be done in the future to prevent repetition of the accident.
-{{< /glossary >}}
+{{< blocks/practice >}}
+#### Практики и ритуалы:
 
-{{< alert color="warning" title="Antipattern" >}}Repeated problem in production due to lack of actions after a post-mortem has been written.{{< /alert >}}
+{{< glossary title="Готовность к удалёнке" text="Заботимся, чтобы коммуникация внутри команды была удобной для удалённых сотрудников: встречи по умолчанию проходят по видеоконференцсвязи. Удалённые сотрудники — полноценные участники встреч. Документируем выводы, к которым пришли внутри команды, даже если договорились о чём-то в коридоре. Ставим встречи на время, когда доступны все участники команды." >}}
 
----
+{{< glossary title="Фасилитация" text="Это техника управления коммуникацией в группе. Цель — настроить всех участников на продуктивное общение и не уводить разговор в сторону." >}}
 
-### 3. We respect colleagues and their time.
+{{< /blocks/practice >}}
 
-* We respect team rules. 
-* We prefer nonformal style of communication to officialism.
-* We know goals of every meeting and record all decisions. Each invitation to a meeting should have an agenda.
-* We prepare for meetings before the meeting. Meetings are not the only way to make a decision
-* We listen to each other and give everyone an opportunity to express and explain their point of view.
-* We don't impose our opinion in any way, but do our best to explain it and convince others.
-* We may work remotely and have flexible working hours.
-* We value work-life balance.
 
-#### Practices & rituals: 
-
-{{< glossary title="Remote Ready" >}}
-We are modifying our process for meetings, reviews, and other collaboration to accommodate remote work. 
-* Remote-only employees have meetings that are built with them in mind.
-* Meetings via videoconferencing by default
-* Accessible, structured, and documented team meetings
-* Document, document, document (aka, nothing is word-of-mouth or from memory)
-* No hallway conversations (unless you document them)
-* Planned together-time
-{{< /glossary >}}
-{{< glossary title="Tools Availability" >}}
-We can take corporate notebooks wherever we want. All tools and environments are available on the internet or through VPN.
-{{< /glossary >}}
-{{< glossary title="Facilitation" source="https://www.scrum.org/resources/blog/scrum-master-master-art-facilitation" >}}
-Facilitation is a technique to manage a group conversation in such a way that everyone stays on the topic and is involved in a meaningful way.
-{{< /glossary >}}
-
-{{< alert color="warning" title="Antipattern" >}}
-1 hour meeting with 30 participants without agenda and written conclusions.
+{{< alert color="warning" title="Антипаттерн" >}}
+Провели двухчасовую встречу на 30 человек без повестки и зафиксированных решений.
 {{< /alert >}}
 
 ---
 
-### 4. We give and request constructive feedback.
+## Даём и запрашиваем конструктивный фидбек
 
-* We use nonviolent communication.
-* We discuss facts, not emotions or personality.
-* We are open to new ideas.
+* Общаемся конструктивно.
+* Обсуждаем факты, а не эмоции или личности.
+* Открыты новым идеям.
 
-#### Practices & rituals: 
+{{< blocks/practice >}}
+#### Практики и ритуалы:
 
-{{< glossary title="BORD" >}}
-Once a year feedback session. Used also for yearly goals standing.
-{{< /glossary >}}
-{{< glossary title="Short Cycles" >}}
-Did something – ask for feedback.
-Short cycles and feedback loops – an ideal picture.
-The sooner you get the feedback, the faster you can fix the problem.
-{{< /glossary >}}
+{{< glossary title="Беседа о результатах деятельности — БОРД" text="Ежегодная сессия фидбека. Нужна, чтобы ставить персональные цели." >}}
+
+{{< glossary title="Короткие циклы" text="Сделал дело — собери обратную связь. Короткие циклы и петли обратной связи — идеальная картина. Чем раньше получишь фидбек, тем быстрее сможешь пофиксить проблему." >}}
 
 
-{{< alert color="warning" title="Antipattern" >}}
-OMG, screw this Slack, I have so many chats in Telegram — it would be such a pain to move there.
+{{< /blocks/practice >}}
+
+{{< alert color="warning" title="Антипаттерн" >}}
+Запросили обратную связь, когда проект уже на финише. Как итог — переделывали всё с нуля и сорвали дедлайн.
 {{< /alert >}}
 
 ---
 
-### 5. We constantly develop our skills and can choose any direction.
+## Постоянно развиваем навыки и можем выбрать любое направление
 
-* Our job is safe, but role is not.
-* We can ask colleagues to be a mentor.
+* Роли внутри команды могут меняться.
+* Можно попросить коллегу стать ментором.
 
-#### Practices & rituals:
+{{< blocks/practice >}}
+#### Практики и ритуалы:
 
-{{< glossary title="Internal Rotation" >}}
-Want to change job — ask HR for options. There is a possibility to change a product/project.
-{{< /glossary >}}
+{{< glossary title="Внутренняя ротация и карьерные возможности" text="Если работа перестала приносить удовольствие — обсуди с руководителем, а затем сходи к HR. Есть возможность выбрать другой продукт или проект." >}}
 
-{{< glossary title="In Store Integration" >}}
-Each employee, regardless of position or position, must pass a two-week internship in the store.
+{{< glossary title="Интеграция в магазине" text="Каждый сотрудник вне зависимости от должности или позиции обязательно проходит стажировку в магазине. Это нужно, чтобы лучше понимать специфику бизнеса и реальные боли покупателей." >}}
+{{< /blocks/practice >}}
 
-This is necessary to better understand the specifics of the business, people and their real pains.
-{{< /glossary >}}
 
-{{< alert color="warning" title="Antipattern" >}}After one year of work notice that not learned anything new.{{< /alert >}}
+{{< alert color="warning" title="Антипаттерн" >}}После года работы сотрудник осознал, что не научился ничему новому. {{< /alert >}}
 
 ---
 
-### 6. We work consciously.
+## Работаем осознанно
 
-* We know the subject area.
-* We understand what for and why we are doing every task.
-* We know the code we write and technologies we use.
+* Знаем предметную область
+* Понимаем, почему и зачем мы работаем над каждой задачей.
+* Разбираемся в коде и технологиях, которые используем.
 
-{{< glossary title="In Store Integration" >}}
-Each employee, regardless of position or position, must pass a two-week internship in the store.
+{{< blocks/practice >}}
+#### Практики и ритуалы:
 
-This is necessary to better understand the specifics of the business, people and their real pains and think about possible improvements.
-{{< /glossary >}}
-{{< glossary title="Retrospective" source="https://www.scrumguides.org/scrum-guide.html#events-retro" >}}
-The Retro is the event giving an opportunity for the team to inspect itself and create a plan for improvements to be enacted next time.
-{{< /glossary >}}
-{{< glossary title="30% rule" >}}
-Each engineer may spend some part of his working time on R&D tasks, technical debt reduction or education. 
-The percentage it is approximate number and should be determined by technical leader together with the product team.
-{{< /glossary >}}
+{{< glossary title="Интеграция в магазине" text="Каждый сотрудник вне зависимости от должности или позиции обязательно проходит стажировку в магазине. Это нужно, чтобы лучше понимать специфику бизнеса и реальные боли покупателей." >}}
 
-{{< alert color="warning" title="Antipattern" >}}Mindlessly copy a solution from stackoverflow and happily close the task.{{< /alert >}}
+{{< glossary title="Ретроспектива" text="Это встреча, на которой команды обсуждают закрытые задачи и размышляют, как не повторить ошибки и закрепить успех. " >}}
+
+{{< glossary title="Правило 30%" text="Каждый инженер может использовать часть рабочего времени на исследовательские задачи, работу над техническим долгом или обучение. Процент времени определяет технический лидер совместно с продуктовой командой." >}}
+{{< /blocks/practice >}}
+
+
+{{< alert color="warning" title="Антипаттерн" >}}Сотрудник бездумно скопировал решение со stackoverflow и радостно закрыл задачу.{{< /alert >}}
+
+{{< blocks/button-improvement href="#" text="Предложить улучшения">}}

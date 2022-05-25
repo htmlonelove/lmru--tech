@@ -1,0 +1,32 @@
+.practice {
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 21px;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  @include vp-1439 {
+      margin-bottom: 17px;
+  }
+
+  @include vp-374 {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: content;
+  }
+
+  h4 {
+      margin-bottom: 8px;
+
+      @include vp-374 {
+          width: 100%;
+          flex-grow: 1;
+      }
+  }
+}

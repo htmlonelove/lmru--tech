@@ -1,0 +1,93 @@
+@import "vendor/aos";
+@import "support/functions";
+@import "variables_project";
+@import "variables";
+@import "global/reboot";
+@import "support/mixins";
+@import "typography";
+
+@import "support/utilities";
+@import "code";
+@import "nav";
+@import "buttons";
+@import "breadcrumb";
+@import "alert";
+@import "search";
+@import "blocks/blocks";
+@import "section-index";
+@import "pageinfo";
+@import "logo";
+@import "lang-toggle";
+@import "header";
+@import "socials";
+@import "menu-toggle-btn";
+@import "accordion";
+@import "data-accordion";
+@import "container";
+@import "intro";
+@import "inline-svg";
+@import "teams";
+@import "modals/modal";
+@import "modals/modal-domain";
+@import "footer";
+@import "communication";
+@import "values";
+@import "values-card";
+@import "button";
+@import "conference-speaking";
+@import "video-external";
+@import "hubr-publication";
+@import "job-card";
+@import "jobs";
+@import "inner-page";
+@import "sidebar";
+@import "practice";
+@import "glossary";
+@import "button-improvement";
+@import "stack";
+@import "table";
+@import "stage";
+@import "levels";
+@import "legacy-card";
+@import "uri-scheme";
+@import "block-bordered";
+@import "compare-table";
+@import "search-form";
+@import "table-col-3";
+@import "grid-card";
+@import "mission";
+@import "btn";
+@import "animation-badge";
+@import "modal-candidate";
+@import "last-word";
+
+@if $td-enable-google-fonts {
+    @import url($web-font-path);
+}
+
+body {
+    min-height: -webkit-fill-available;
+}
+
+html {
+    height: -webkit-fill-available;
+}
+// Adjust anchors vs the fixed menu.
+// @include media-breakpoint-up(md) {
+//     .td-offset-anchor:target {
+//         display: block;
+//         position: relative;
+//         top: -4rem;
+//         visibility: hidden;
+//     }
+
+//     h2[id]:before, h3[id]:before, h4[id]:before, h5[id]:before {
+//         display: block;
+//         content: " ";
+//         margin-top: -5rem;
+//         height: 5rem;
+//         visibility: hidden;
+//     }
+// }
+
+@import "styles_project";

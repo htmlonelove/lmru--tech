@@ -12,16 +12,6 @@
 <link rel="preload" as="image" href="{{ $promo_image_small.RelPermalink }}" media="(max-width: 1200px)">
 <link rel="preload" as="image" href="{{ $promo_image_big.RelPermalink }}" media="(min-width: 1200px)">
 <style>
-#{{ $blockID }} {
-    background-image: url({{ $promo_image_small.RelPermalink }}); 
-}
-@media only screen and (min-width: 1200px) {
-    #{{ $blockID }} {
-        padding-top: 3rem;
-        padding-bottom: 10rem;
-        background-image: url({{ $promo_image_big.RelPermalink }}); 
-    }
-}
 </style>
 {{ end }}
 <section id="{{ $blockID }}" class="row td-cover-block td-box td-cover-block--height-{{ $height }} js-td-cover td-overlay td-overlay--dark -bg-{{ $col_id }}">
@@ -30,9 +20,6 @@
       <div class="col-lg-10 h5 text-lg-right text-sm-left col-sm-12">
           {{ .Inner | markdownify}}
       </div>
-			<div class="col-lg-2 col-sm-12 text-lg-right text-sm-left">
-				<i class="fa fa-laptop-code giant-icon"></i>
-			</div>
     </div>
   </div>
   {{ if $byline }}

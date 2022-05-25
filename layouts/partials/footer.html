@@ -1,0 +1,38 @@
+{{ $links := .links }}
+{{ $mod := .mod }}
+{{ $copyright := .Site.Params.copyright }}
+
+<footer class="footer">
+  {{ if or (eq $mod "all") (eq $mod "top") }}
+  {{partial "communication"}}
+  {{ end }}
+
+  {{ if or (eq $mod "all") (eq $mod "bottom") }}
+  <div class="footer__bottom">
+    {{ $copyright }}<p class="footer__copy">&copy; {{
+      now.Year}} {{ T "footer_all_rights_reserved" }}</p>
+
+    {{ with $links }}
+    {{ with index . "developer"}}
+    {{ template "footer-links-block" . }}
+    {{ end }}
+    {{ end }}
+  </div>
+  {{ end }}
+</footer>
+
+{{ define "footer-links-block" }}
+<ul class="footer__social">
+  {{ range . }}
+  <li class="footer__social-item">
+    <a class="footer__social-link" target="_blank"
+      rel="noopener noreferrer nofollow" href="{{ .url }}" aria-label=" {{
+      .name }}">
+      {{ $icon := .icon }}
+      {{ partial "inline-svg" $icon }}
+      {{ .name }}
+    </a>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,348 @@
+.teams {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 120px 0;
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    bottom: 93px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $color-default-white 100%);
+    pointer-events: none;
+  }
+
+  &__title {
+    margin: 0 auto 8px;
+    padding: 0;
+    max-width: 1024px;
+
+    @include title-h2;
+    text-align: center;
+  }
+
+  &__title > em {
+    font-style: normal;
+  }
+
+  @include vp-1619 {
+    &__title {
+      max-width: 980px;
+    }
+  }
+
+  @include vp-1439 {
+    &__title {
+      max-width: 960px;
+      line-height: 53px;
+      }
+  }
+
+  @include vp-1023 {
+    padding-top: 80px;
+
+    &__title {
+      line-height: 39px;
+    }
+  }
+
+  @include vp-767 {
+    max-width: calc(100vw - 20px);
+    padding: 64px 0;
+
+    .teams__overlay {
+      bottom: 72px;
+    }
+
+    .teams__title {
+      max-width: 95%;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &__title {
+      text-align: center;
+      font-size: 26px;
+      line-height: 26px;
+    }
+  }
+
+  @include vp-374 {
+    &__title {
+      margin-bottom: 8px;
+
+      font-size: 20px;
+      line-height: 26px;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    @include primary-text;
+    margin: 0 auto 64px;
+    text-align: center;
+
+    @include vp-767 {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.teams__list {
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 8px;
+
+  &--clipped {
+    max-height: 820px;
+    overflow: hidden;
+  }
+
+  @include vp-1619 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  @include vp-1279 {
+    grid-template-columns: repeat(4, 1fr);
+
+    &--clipped {
+      max-height: 820px;
+    }
+  }
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+
+    &--clipped {
+      max-height: 930px;
+    }
+  }
+
+  @include vp-767 {
+    grid-template-columns: repeat(2, 1fr);
+
+    &--clipped {
+      max-height: 755px;
+    }
+  }
+
+  @include vp-374 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teams__domain {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 260px;
+  border-radius: 4px;
+
+  padding: 20px 16px;
+
+  font-style: normal;
+  letter-spacing: -0.2px;
+  text-align: left;
+  color: $color-night-rider;
+  background-color: $color-solitude;
+
+
+  transition: color $trans--400, background-color $trans--400;
+
+ &[data-aos][data-aos][data-aos-delay='200'].aos-animate,
+ &[data-aos][data-aos][data-aos-delay='400'].aos-animate,
+ &[data-aos][data-aos][data-aos-delay='600'].aos-animate,
+ &[data-aos][data-aos][data-aos-delay='800'].aos-animate {
+    transition-delay: 0s;
+  }
+
+  &[data-aos][data-aos][data-aos-delay='200'].aos-animate  {
+    transition: color $trans--400 0s,
+    background-color $trans--400 0s,
+    opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2ms, 
+    transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2ms;
+  }
+
+  &[data-aos][data-aos][data-aos-delay='400'].aos-animate {
+    transition: color $trans--400 0s,
+    background-color $trans--400 0s,
+    opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4ms, 
+    transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.4ms;
+  }
+
+  &[data-aos][data-aos][data-aos-delay='600'].aos-animate {
+    transition: color $trans--400 0s,
+    background-color $trans--400 0s,
+    opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6ms, 
+    transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.6ms;
+  }
+
+  &[data-aos][data-aos][data-aos-delay='800'].aos-animate  {
+    transition: color $trans--400 0s,
+    background-color $trans--400 0s,
+    opacity 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.8ms, 
+    transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.8ms;
+  }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: $color-apple;
+    color: $color-default-white;
+
+    .teams__domain-small-text {
+      color: $color-default-white;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &-title {
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    padding: 0;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 115%;
+  }
+
+  &-description {
+    margin: 0;
+    padding: 0;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &-content {
+    display: none;
+  }
+
+  &-small-text {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: -0.2px;
+    line-height: 150%;
+    color: $color-apple;
+    margin-top: auto;
+    transition: color $trans--400;
+
+    svg {
+      width: 5;
+      height: 9px;
+      margin-left: 8px;
+    }
+  }
+
+  @include vp-767 {
+    min-height: 248px;
+
+    &-link {
+      padding: 20px;
+    }
+
+    &-title {
+      margin-bottom: 4px;
+
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    &-description {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    &-small-text {
+      font-size: 12px;
+    }
+
+
+  }
+
+  svg {
+    transform: translateZ(0);
+  }
+}
+
+.teams__more {
+  position: absolute;
+  bottom: 112px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 24px;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.4px;
+  font-weight: 600;
+  font-style: normal;
+
+  border-radius: 4px;
+  border: 1px solid $color-whisper;
+  color: $color-night-rider;
+  background-color: $color-default-white;
+
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.08);
+
+  transition: border-color $trans--100;
+
+  z-index: 2;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $color-grey;
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    box-shadow: 0 16px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    outline: none;
+    border-color: $color-whisper;
+  }
+
+  @include vp-1439 {
+    font-size: 16px;
+  }
+
+  @include vp-1023 {
+    bottom: 87px;
+  }
+
+  @include vp-767 {
+    bottom: 66px;
+  }
+
+  @include vp-374 {
+    bottom: 86px;
+  }
+}

@@ -1,0 +1,210 @@
+.nav__list {
+    @include secondary-text;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.2px;
+    list-style: none;
+    color: $color-grey;
+
+    @include vp-1023 {
+        // padding: 0 10px 0 20px;
+    }
+}
+
+.nav__item {
+    position: relative;
+    margin-right: 8px;
+    border-radius: 4px;
+    transition: color $trans--100, background-color $trans--100;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    @include hover-focus {
+        .nav__inner-list {
+            -webkit-clip-path: none;
+            clip-path: none;
+            visibility: visible;
+        }
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: inherit;
+        color: inherit;
+        border-radius: 5px;
+
+        @include vp-1023 {
+            width: initial;
+            height: initial;
+        }
+    }
+
+    @include vp-1023 {
+        margin: 0;
+        padding: 0 20px 0 20px;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: -0.4px;
+        color: $color-night-rider;
+        width: 100%;
+        border-bottom: 1px solid $color-whisper;
+
+        @include hover-focus {
+            background-color: initial;
+        }
+    }
+
+    & > a {
+        padding: 8px 12px;
+
+        @include hover {
+            color: $color-night-rider;
+            background-color: $color-solitude;
+            cursor: default;
+        }
+
+        @include vp-1023 {
+            @include hover {
+                color: initial;
+                background-color: initial;
+                cursor: pointer;
+            }
+
+            position: relative;
+            display: block;
+            padding: 20px 30px 20px 0;
+            transition: padding $trans--400 ;
+        }
+    }
+
+    & > a.active {
+        color: $color-apple;
+    }
+
+    svg {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        display: none;
+        width: 24px;
+        height: 24px;
+        // transform: translateY(-50%) rotate(-180deg);
+        transform: matrix(1, 0, 0, -1, 0, 0) translateY(+50%);
+        transition: transform $trans--200;
+
+        @include vp-1023 {
+            z-index: -1;
+            display: block;
+        }
+    }
+
+    &.is-active {
+        @include vp-1023 {
+            padding-bottom: 20px;
+        }
+
+        & > a {
+            @include vp-1023 {
+                padding: 20px 30px 5px 0;
+            }
+        }
+
+        a {
+            @include vp-1023 {
+                pointer-events: all;
+            }
+        }
+
+        svg {
+            transform: matrix(1, 0, 0, 1, 0, 0) translateY(-30%);
+        }
+
+        .nav__inner-list {
+            border: 1px solid $color-whisper;
+
+            @include vp-1023 {
+                display: block;
+                border: none;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.nav__inner-list {
+    @include secondary-text;
+    position: absolute;
+    z-index: 10000;
+    margin: 5px 0 0 0;
+    padding: 0;
+    background-color: $color-default-white;
+    min-width: 186px;
+    color: $color-night-rider;
+    list-style: none;
+    border-radius: 4px;
+    -webkit-filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.08));
+            filter: drop-shadow(0px 16px 24px rgba(0, 0, 0, 0.08));
+
+    border: 1px solid $color-whisper;
+    -webkit-clip-path: inset(0 100%);
+    clip-path: inset(0 100%);
+    visibility: hidden;
+
+    @include vp-1023 {
+        transform: translateY(10px);
+        position: initial;
+        background-color: initial;
+        border-radius: initial;
+        border: none;
+        filter: none;
+        clip-path: initial;
+    }
+}
+
+.nav__inner-item {
+    transition: color $trans--100, background-color $trans--100;
+    border-bottom: 1px solid $color-whisper;
+
+    &:last-child {
+        border-bottom: none;
+        border-radius: 0 0 4px 4px;
+    }
+
+    @include hover-focus {
+        color: $color-night-rider;
+        background-color: $color-solitude;
+    }
+
+    @include vp-1023 {
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: -0.2px;
+        color: $color-grey;
+        border: none;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include hover-focus {
+            background-color: initial;
+        }
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 8px 16px;
+        white-space: nowrap;
+
+        @include vp-1023 {
+            white-space: initial;
+            padding: 8px 0;
+            pointer-events: none;
+        }
+    }
+}

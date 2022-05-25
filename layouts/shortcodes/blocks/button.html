@@ -1,0 +1,7 @@
+{{$text := .Get "text"}}
+{{$class := .Get "class"}}
+{{$href := .Get "href"}}
+{{$type := .Get "type" | default "button"}}
+{{$dataModal := .Get "dataModal" }}
+{{$target:= .Get "target"}}
+<a href="{{ $href }}" target="{{$target}}" class="button {{ $class }}" type="{{$type}}" {{if $dataModal}} data-open-modal="{{$dataModal}}" {{end}}>{{ $text }}</a>

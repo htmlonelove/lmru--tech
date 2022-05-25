@@ -1,0 +1,60 @@
+.button {
+    display: block;
+    width: min-content;
+    white-space: nowrap;
+    padding: 16px 24px;
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: $color-default-white;
+    background-color: $color-apple;
+    box-shadow: 0px 16px 24px rgba($color-default-black, 0.08);
+    transition: $trans--100;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    @include vp-1619 {
+      font-size: 16px;
+      letter-spacing: -0.2px;
+    }
+
+    @include hover {
+      background-color: $color-la-palma;
+      color: $color-default-white;
+    }
+
+    &--transparent {
+      border-radius: 4px;
+      border: 1px solid $color-whisper;
+      color: $color-night-rider;
+      background-color: $color-default-white;
+    
+      box-shadow: 0 16px 24px rgba(0, 0, 0, 0.08);
+    
+      transition: border-color $trans--100;
+    
+      z-index: 2;
+
+      @include hover {
+        outline: none;
+        border-color: $color-grey;
+        background-color: $color-default-white;
+        color: $color-default-black;
+        box-shadow: 0 16px 24px rgba(0, 0, 0, 0.08);
+      }
+    
+      &:not(:disabled):not(.disabled):active,
+      &:not(:disabled):not(.disabled):active:focus {
+        box-shadow: 0 16px 24px rgba(0, 0, 0, 0.08);
+      }
+    
+      &:active {
+        outline: none;
+        border-color: $color-whisper;
+      }
+    }
+}
+

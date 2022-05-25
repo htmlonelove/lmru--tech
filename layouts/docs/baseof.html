@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ .Site.Language.Lang }}" class="no-js">
+
+<head>
+  {{ partial "head.html" . }}
+</head>
+
+<body>
+  {{ partial "header.html" . }}
+  {{ partial "sidebar.html" . }}
+  <main>
+    <div class="inner-page {{ if $.Params.mod_page }}{{ print $.Params.mod_page}} {{ end }}">
+      <div class="container container--wide">
+        <div class="inner-page__grid">
+          <div class="inner-page__wrapper">
+            <div class="inner-page__inner-wrapper">
+            
+            {{ partial "version-banner.html" . }}
+            {{ if not .Site.Params.ui.breadcrumb_disable }}{{ partial
+            "breadcrumb.html" . }}{{ end }}
+            {{ block "main" . }}{{ end }}
+          </div>
+          {{ if .Params.stack_table }}{{ partial "stack.html" }} {{end}}
+        	<div class="inner-page__last-change">{{ partial "page-meta-lastmod.html" . }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  {{ partial "footer.html" (dict "context" . "links" .Site.Params.links "mod"
+  "bottom") }}
+  {{ partial "scripts.html" . }}
+</body>
+
+</html>
