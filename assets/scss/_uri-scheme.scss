@@ -1,0 +1,152 @@
+.uri-scheme {
+  width: 100%;
+  margin-bottom: 48px;
+
+  @include vp-1439 {
+    max-width: 760px;
+  }
+  
+  
+
+  
+  &__content {
+    display: flex;
+    width: 100%;
+    padding: 29px 24px 26px;
+    
+    border-radius: 8px;
+    background-color: $color-whisper;
+    overflow: hidden;
+    
+    @include vp-767 {
+      flex-wrap: wrap;
+      row-gap: 10px;
+      overflow: initial;
+      padding: 20px 14px;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include vp-1279 {
+      flex-shrink: 1;
+    }
+  }
+
+  &__element {
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+
+    @include vp-1619 {
+        font-size: 16px;
+        letter-spacing: -0.2px;
+    }
+
+    @include vp-1439 {
+      font-size: 14px;
+    }
+
+    @include vp-1279 {
+      font-size: 14px;
+    }
+
+    @include vp-1023 {
+      font-size: 12px;
+    }
+
+    @include vp-767 {
+        font-size: 16px;
+    }
+  }
+
+  &__caption {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    span {
+      align-self: center;
+  
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 19px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      color: $color-grey;
+
+      @include vp-1619 {
+        font-size: 10px;
+      }
+
+      @include vp-1023 {
+        font-size: 8px;
+      }
+    }
+
+    svg {
+      margin-bottom: 5px;
+    }
+
+    @include vp-1279 {
+      align-self: stretch;
+      position: relative;
+      padding-top: 11px;
+
+      span {
+        font-size: 11px;
+        line-height: 150%;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        height: auto;
+        align-self: flex-start;
+      }
+    }
+
+    @include vp-1023 {
+      align-self: flex-start;
+      padding-top: 0;
+
+      span {
+        font-size: 12px;
+      }
+
+      svg {
+        position: static;
+        align-self: center;
+      }
+    }
+
+    @include vp-767 {
+      align-self: stretch;
+      position: relative;
+      padding-top: 11px;
+
+      span {
+        font-size: 11px;
+        line-height: 150%;
+      }
+
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 100%;
+        height: auto;
+        align-self: flex-start;
+      }
+    }
+
+  }
+
+}

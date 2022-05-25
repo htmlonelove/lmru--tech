@@ -1,14 +1,13 @@
 
 
 ---
-title: "Knowledge"
-linkTitle: "Knowledge"
+title: "Знания"
+linkTitle: "Знания"
 weight: 60
 type: docs
 menu:
   main:
     weight: 60
 hide_feedback: true
+redirect: true
 ---
-
-Materials for the usage and feedback.

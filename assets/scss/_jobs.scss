@@ -1,0 +1,135 @@
+.jobs {
+    padding-bottom: 120px;
+
+    @include vp-1023 {
+        padding-bottom: 80px;
+    }
+
+    &__title {
+        z-index: 1;
+        @include title-h2;
+        position: relative;
+        width: min-content;
+        min-width: 920px;
+        margin: 0 auto;
+        margin-top: -18px;
+        margin-bottom: 68px;
+        color: $color-default-white;
+        text-align: center;
+        border-radius: 4px;
+
+        &::before {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            display: block;
+            width: 104%;
+            height: calc(100% + 30px);
+            background: url('/svg/badge.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+
+            @media screen and (min-width: $vp-1620) {
+                left: -18px;
+            }
+            
+            @include vp-767 {
+                width: calc(100% + 20px);
+            }
+
+            @include vp-374 {
+                height: calc(100% + 50px);
+                top: -23px;
+                left: -12px;
+            }
+        }
+
+        @include vp-1619 {
+            margin-bottom: 53px;
+            min-width: max-content;
+        }
+
+        @include vp-1023 {
+            min-width: 550px;
+            margin-bottom: 48px;
+        }
+
+        @include vp-767 {
+            font-size: 22px;
+            min-width: 324px;
+            margin-top: -15px;
+            margin-bottom: 51px;
+        }
+
+        @include vp-374 {
+            min-width: max-content;
+            font-size: 20px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+
+        @include vp-1439 {
+            height: 500px;
+        }
+
+        @include vp-767 {
+            position: relative;
+            height: 400px;
+        }
+    }
+
+    &__button-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include vp-767 {
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    &__button-wrapper p {
+        margin: 0;
+    }
+
+    &__button {
+        margin: 32px auto 0;
+
+        @include vp-767 {
+            margin-bottom: 0;
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+
+    &__button-all {
+        margin: 32px 16px 10px 0;
+
+        @include vp-767 {
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}

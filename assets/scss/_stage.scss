@@ -1,0 +1,29 @@
+.stage svg {
+    width: 64px;
+    height: 64px;
+}
+
+.stage h2 svg {
+    width: 24px;
+    height: 24px;
+}
+
+.stage .glossary svg {
+    width: 32px;
+    height: 32px;
+}
+
+.stage .glossary__text {
+
+    @include vp-767 {
+        padding-top: 16px;
+    }
+}
+
+
+.stage .glossary__text,
+.stage .glossary__title {
+    @include vp-767 {
+        font-size: 14px;
+    }
+}   

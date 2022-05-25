@@ -1,78 +1,102 @@
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js" integrity="sha256-x3YZWtRjM8bJqf48dFAv/qmgL68SI4jqNWeSLMZaMGA=" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha256-OFRAJNoaD8L3Br5lglV7VyLRf0itmoBzWUoM+Sji4/8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,
+  });
+</script>
 
 {{ $jsBase := resources.Get "js/base.js" }}
+{{ $jsModals := resources.Get "vendor/modals/modals.js" }}
 {{ $jsAnchor := resources.Get "js/anchor.js" }}
 {{ $jsYoumax := resources.Get "js/youmax.js" }}
-{{ $jsSearch := resources.Get "js/search.js" | resources.ExecuteAsTemplate "js/search.js" .Site.Home }}
+{{ $setAnimate := resources.Get "js/setAnimate.js" }}
+{{ $videoPlayer := resources.Get "js/videoPlayer.js" }}
+{{ $youTubeAPI := resources.Get "js/youTubeAPI.js" }}
+{{ $youTubePlayer := resources.Get "js/youTubePlayer.js" }}
+{{ $jsSearch := resources.Get "js/search.js" | resources.ExecuteAsTemplate
+"js/search.js" .Site.Home }}
 {{ if .Site.Params.offlineSearch }}
 {{ $jsSearch = resources.Get "js/offline-search.js" }}
 {{ end }}
-{{ $js := (slice $jsBase $jsAnchor $jsSearch $jsYoumax) | resources.Concat "js/main.js" }}
+{{ $js := (slice $jsBase $jsAnchor $jsSearch $jsYoumax $jsModals $setAnimate $youTubeAPI $youTubePlayer $videoPlayer) |
+resources.Concat "js/main.js" }}
 {{ if .Site.IsServer }}
 <script src="{{ $js.RelPermalink }}"></script>
 {{ else }}
 {{ $js := $js | minify | fingerprint }}
-<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous"></script>
+<script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"
+  crossorigin="anonymous"></script>
 {{ end }}
 
 {{ if in .Permalink "stack/" }}
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/fh-3.1.7/rg-1.1.2/datatables.min.css"/>
-<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/fh-3.1.7/rg-1.1.2/datatables.min.js"></script>
+<link rel="stylesheet" type="text/css"
+  href="https://cdn.datatables.net/v/bs4/dt-1.10.22/fh-3.1.7/rg-1.1.2/datatables.min.css" />
+<script
+  src="https://cdn.datatables.net/v/bs4/dt-1.10.22/fh-3.1.7/rg-1.1.2/datatables.min.js"></script>
 
 <script>
-    $(document).ready( function () {
-      $('#tablestack').DataTable({
-        ajax: {
-          url: '/stack.json',
-          dataSrc: ''
+  $(document).ready(function () {
+    $('#tablestack').DataTable({
+      ajax: {
+        url: '/stack.json',
+        dataSrc: ''
+      },
+      fixedHeader: {
+        header: true,
+        headerOffset: $('.header').height() - 1 
+      },
+      columns: [
+        {data: 'Area'},
+        {data: 'Cases'},
+        {data: 'Research'},
+        {data: 'Trial'},
+        {data: 'Best choice'},
+        {data: 'Hold'}
+      ],
+      info: false,
+      length: true,
+      paging: true,
+      ordering: false,
+      searching: true,
+      language: {
+        "lengthMenu": "Таблица технологий",
+        searchPlaceholder: "Поиск по таблице",
+        "search": "",
+      },
+      rowGroup: {
+        dataSrc: ['Area', 'Cases']
+      },
+      columnDefs: [
+        {
+          visible: false,
+          targets: [0, 1]
         },
-        fixedHeader: {
-            header: true,
-            headerOffset: $('#fixed').height() + 10
-        },
-        columns: [
-          { data: 'Area' },
-          { data: 'Cases' },
-          { data: 'Research' },
-          { data: 'Trial' },
-          { data: 'Best choice' },
-          { data: 'Hold' }
-        ],
-        paging: false,
-        ordering:  false,
-        info: false,
-        rowGroup: {
-          dataSrc: ['Area', 'Cases']
-        },
-        columnDefs: [
-          { 
-            visible: false,
-            targets: [0, 1]
-          },
-          { 
-            width: "25%", 
-            targets: [2, 3, 4, 5]
-          }
-        ]
-      });
-  } );
-  </script>
-{{ end }}
-<script>
-	$('#youmax').youmax({
-	apiKey:'AIzaSyAc7Z4PtwiyQzntMScG533kmdoBMuH5FAI',
-	youTubeChannelURL:"https://www.youtube.com/channel/UCIqfZ4wqEoC6x6x-zyPCL8g",
-	youmaxDefaultTab:"UPLOADS",
-	youmaxColumns:4,
-	showVideoInLightbox:false,
-	maxResults: 8,
+      ]
+    });
+  });
+
+  $(function(){
+	$nav = $('.fixed-div');
+	$nav.css('width', $nav.outerWidth());
+	$window = $(window);
+	$h = $nav.offset().top; 
+	$window.scroll(function(){
+		if ($window.scrollTop() > $h){
+			$nav.addClass('fixed');
+		} else {
+			$nav.removeClass('fixed');
+		}
+	});
 });
 </script>
+{{ end }}
 {{ if (.Params.diagram) }}
 <!-- MermaidJS support -->
-<script async src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
+<script async
+  src="https://unpkg.com/mermaid@8.9.2/dist/mermaid.min.js"></script>
 {{ end }}
-{{ partial "hooks/habr" . }}
+<!-- {{ partial "hooks/habr" . }} -->
 {{ partial "hooks/body-end.html" . }}

@@ -1,0 +1,199 @@
+.glossary {
+    position: relative;
+    display: inline-block;
+    margin-right: 11px;
+    margin-bottom: 18px;
+    font-size: 24px;
+    line-height: 150%;
+
+    &:last-child {
+        margin-bottom: 8px;
+    }
+
+    @include vp-767 {
+        display: inline-flex;
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    @include vp-374 {
+        display: block;
+        max-width: 100%;
+    }
+
+    &__title {
+        @include title-h4;
+        display: block;
+        margin-right: 25px;
+    }
+
+    &__item {
+        @include primary-text;
+        padding: 7px 12px;
+        background-color: $color-solitude;
+        cursor: pointer;
+        border: 1px solid $color-whisper;
+        border-radius: 4px;
+        transition: background-color $trans--200;
+        letter-spacing: -0.2px;
+
+        @include vp-1023 {
+            font-size: 16px;
+            line-height: 24px;
+            display: block;
+            width: 100%;
+            max-width: max-content;
+        }
+
+        @include vp-767 {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            display: flex;
+            flex-basis: content;
+        }
+        @include vp-374 {
+            display: block;
+            max-width: 100%;
+            flex-shrink: 1;
+            padding-right: 6px;
+            padding-left: 6px;
+        }
+
+        @include hover-focus {
+            background-color: $color-solitude-2;
+            border: 1px solid $color-solitude-2;
+
+            .glossary__text {
+                display: block;
+            }
+        }
+    }
+
+    &__text {
+        z-index: 999;
+        position: absolute;
+        display: none;
+        width: 324px;
+        padding: 12px 16px 16px 16px;
+        background-color: $color-default-white;
+        transform: translateY(8px);
+        border-radius: 4px;
+        max-height: 350px;
+        overflow: auto;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.4px;
+
+        @include vp-767 {
+            width: 250px;
+            top: 100%;
+        }
+
+        @include vp-374 {
+            width: 210px;
+            max-height: 250px;
+        }
+
+        h4 {
+            margin: 0;
+            padding: 4px 0;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+            text-align: center;
+            letter-spacing: -0.4px;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 23px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+
+            letter-spacing: -0.4px;
+
+            @include vp-374 {
+                font-size: 14px;
+            }
+        }
+
+        a {
+            color: $color-apple;
+
+            @include hover-focus {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &__close-btn {
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        padding: 0;
+        background: none;
+        border: none;
+        color: $color-grey;
+        cursor: pointer;
+        transition: color $trans--200;
+
+        @include hover-focus {
+            color: $color-night-rider;
+        }
+
+        svg {
+            position: static;
+            width: 32px;
+            height: 32px;
+        }
+
+
+    }
+
+    &.show {
+        .glossary__text {
+            display: block;
+            filter: drop-shadow(0px 8px 40px rgba($color-default-black, 0.16));
+        }
+    }
+
+    &__external-link {
+        color: $color-grey;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+
+        letter-spacing: -0.2px;
+        text-decoration-line: underline;
+
+        @include hover-focus {
+            text-decoration: underline;
+            opacity: 0.7;
+        }
+    }
+
+    &--inline {
+        display: inline-block;
+        margin-right: 0;
+        margin-bottom: 0;
+        line-height: 0;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .glossary__item {
+            text-decoration: none;
+            border: 1px solid $color-whisper;
+            background-color: $color-solitude;
+            padding-right: 4px;
+            padding-left: 4px;
+            padding-top: 0;
+            padding-bottom: 0;
+            border-radius: 8px;
+        }
+    }
+}

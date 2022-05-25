@@ -1,0 +1,35 @@
+.animation-badge {
+    @include title-h1;
+    color: $color-default-white;
+    position: relative;
+    
+    @include vp-767 {
+        font-size: 32px;
+    }
+
+    @include vp-374 {
+        font-size: 26px;
+    }
+}
+
+.animation-badge svg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    width: 106%;
+    height: 105%;
+    transform: translateX(-3%);
+}
+
+.animation-badge .svg-elem-1 {
+    stroke-dashoffset: 2048.8433837890625px;
+    stroke-dasharray: 2048.8433837890625px;
+    -webkit-transition: stroke-dashoffset $trans-cub-bez--100 0s;
+            transition: stroke-dashoffset $trans-cub-bez--100 0s;
+}
+
+.animation-badge.active .svg-elem-1 {
+    stroke-dashoffset: 0;
+}
+  

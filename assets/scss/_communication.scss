@@ -1,0 +1,104 @@
+.communication__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  width: 100%;
+
+  border-radius: 4px;
+  border: 1px solid $color-whisper;
+  box-shadow: 0 -100px 0 $color-default-white,
+              0 4px 60px rgba($color-default-black, 0.08); 
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.communication__item {
+  width: calc(100% / 2);
+  padding: 53px 80px 48px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid $color-whisper;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @include vp-1023 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding-left: 13px;
+    padding-right: 13px;
+
+    border-right: none;
+    border-bottom: 1px solid $color-whisper;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.communication__icon {
+  width: 38px;
+  height: 38px;
+
+  margin-bottom: 27px;
+}
+
+.communication__title {
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+
+  @include title-h3;
+  color: $color-night-rider;
+}
+
+.communication__description {
+  margin: 0;
+  padding: 0;
+
+  @include primary-text;
+  color: $color-night-rider;
+
+  a {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-weight: 400;
+    color: $color-apple;
+    text-decoration: underline;
+
+    transition: color $trans--400;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

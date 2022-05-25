@@ -25,7 +25,7 @@ limitations under the License.
             return;
         }
         
-        var headings = article.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        var headings = article.querySelectorAll('h2, h3');
         headings.forEach(function (heading) {
             if (heading.id) {
                 var a = document.createElement('a');
@@ -34,9 +34,22 @@ limitations under the License.
                 // [a11y] hide this from screen readers, etc..
                 a.setAttribute('aria-hidden', 'true');
                 // material insert_link icon in svg format
-                a.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>';
+                a.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M0 0h24v24H0z" fill="none"/><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/></svg>';
                 a.href = '#' + heading.id;
-                heading.insertAdjacentElement('beforeend', a);
+                if (heading.children.length === 0) {
+                    let words = heading.textContent.split(' ');
+                    let lastWord = ` ${words[words.length - 1]}`;
+                    words.splice(words.length - 1, 1);
+                    words = words.join(' ');
+                    heading.textContent = `${words} `;
+                    const item = document.createElement('span');
+                    item.classList.add('last-word');
+                    item.textContent = `${lastWord}`;
+                    item.insertAdjacentElement('beforeend', a);
+                    heading.insertAdjacentElement('beforeend', item);
+                } else {
+                    heading.insertAdjacentElement('beforeend', a);
+                }
 
                 heading.addEventListener('mouseenter', function () {
                     a.style.visibility = 'initial';

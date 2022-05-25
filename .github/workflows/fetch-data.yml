@@ -1,0 +1,22 @@
+name: Fetch static data
+on: 
+  schedule:
+    # Run every day at 4:30 MSK
+    - cron: "30 1 * * *"
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install deps
+        run: npm i
+      - name: Fetch youtube data
+        run: node fetch/youtube
+      - name: Fetch vacancies data
+        run: node fetch/vacancies
+      - name: Fetch habr data
+        run: node fetch/habr
+      - name: Pushing changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Fetched new static data

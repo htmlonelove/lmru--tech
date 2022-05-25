@@ -1,0 +1,39 @@
+.values {
+
+    @include vp-1023 {
+        padding-top: 0;
+    }
+}
+
+.values__title {
+    @include title-h2;
+    text-align: center;
+    margin: 0;
+}
+
+.values__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include vp-1023 {
+        // flex-direction: column;
+    }
+}
+
+.values__list .values-card {
+    width: calc(33% - 3px);
+    margin-right: 8px;
+    margin-bottom: 8px;
+
+    &:nth-child(1n + 3) {
+        margin: 0;
+    }
+
+    @include vp-1023 {
+        margin-right: 0;
+        width: 100%;
+    }
+}

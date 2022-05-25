@@ -1,0 +1,162 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  background-color: rgba(10, 10, 10, 0.7);
+
+  transition: opacity $trans--600 0.2s,
+  visibility $trans--600;
+
+  pointer-events: none;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__wrapper {
+    position: relative;
+
+    display: flex;
+    flex-shrink: 0;
+    // justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+
+    @include vp-1023 {
+      align-items: flex-end;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    cursor: pointer;
+
+    @include vp-1023 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__content {
+    max-width: 722px;
+    min-width: 500px;
+
+    min-height: 100vh;
+    height: 100%;
+    padding: 80px;
+    margin-left: auto;
+
+    border-radius: 24px 0 0 24px;;
+    background-color: $color-default-white;
+
+    overflow-y: auto;
+
+    transform: translate3D(100%, 0, 0);
+    transition: transform $trans--600;
+
+    @include vp-1023 {
+      top: auto;
+      bottom: 0;
+      right: 0;
+      padding: 45px 20px;
+
+      max-width: initial;
+      min-width: 100%;
+      width: 100%;
+
+      max-height: 79%;
+      height: 100%;
+      min-height: initial;
+      border-radius: 24px 24px 0 0;
+
+      transform: translate3D(0, 100%, 0);
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+
+    z-index: 1;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: none;
+    color: $color-grey;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    background-color: $color-default-white;
+
+    transition: background-color $trans--100;
+
+    &:hover,
+    &:focus {
+      background-color: $color-solitude;
+      outline: none;
+      border: none;
+      color: $color-grey;
+    }
+
+    &:active {
+      background-color: $color-default-white;
+      outline: none;
+      border: none;
+      color: $color-grey;
+    }
+
+    svg {
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition: opacity $trans--400,
+    visibility $trans--400;
+
+    @include vp-767 {
+      .header {
+        opacity: 0;
+        transform: translateY(calc(var(--header-height-mobile) * (-1)));
+      }
+    }
+  }
+
+  &.is-active .modal__content {
+    transform: translate3D(0, 0, 0);
+    transition: transform $trans--600;
+  }
+}

@@ -1,0 +1,18 @@
+{{ $title := .Get "title" }}
+{{ $href := .Get "href" }}
+{{ $imgSrc := .Get "img-src" }}
+{{ $imgAlt := .Get "img-alt" }}
+{{ $imgWidth := .Get "img-width" }}
+{{ $imgHeight := .Get "img-height" }}
+{{ $imgFormat := .Get "img-format" }}
+
+
+<li class="values-card" data-aos="fade-up">
+    <a href="{{ $href }}" class="values-card__link">
+        <div class="values-card__text-content">
+            <h3>{{ $title }}</h3>
+            <p>{{ .Inner | markdownify }}</p>
+        </div>
+        <img src="{{ $imgSrc }}.{{$imgFormat}}" srcset="{{ $imgSrc }}@2x.{{$imgFormat}} 2x" alt="{{ $imgAlt }}" width="{{ $imgWidth }}" height="{{ $imgHeight }}">
+    </a>
+</li>

@@ -1,0 +1,5 @@
+<div class="logo">
+    <a href="#">
+        {{ with resources.Get "icons/logo.svg" }}{{ ( . | minify).Content | safeHTML }}{{ end }}
+    </a>
+</div>
