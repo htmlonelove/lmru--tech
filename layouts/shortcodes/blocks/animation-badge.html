@@ -1,0 +1,6 @@
+{{ $svg := .Get "svg"}}
+
+<span class="animation-badge">
+    {{ $svg | safeHTML }}
+    {{ .Inner | markdownify }}
+</span>

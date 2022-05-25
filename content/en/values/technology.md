@@ -1,147 +1,142 @@
 ---
-title: "Technology"
+title: "Технологии"
 weight: 30
 type: docs
-description: Сonstantly challenging selection of tools.
+menu:
+    main:
+        parent: "Инженерная культура"
+description: Рассказываем, как внедряем новые технологии, зачем пишем код в соответствии с требованиями InnerSource и почему тестирование так же важно, как разработка.
 ---
 
-### 1. All codebase are compliant with [InnerSource requirements](https://adeo.github.io/innersource/).
+## Весь код соответствует минимальным [требованиям InnerSource](https://adeo.github.io/innersource/)
 
-* Codebase accessible for each collaborators and stored in GitHub.
-* Non compliant repositories declared as a technical debt and fixed.
-* Code review is mandatory.
+* Код доступен для каждого сотрудника и хранится в GitHub.
+* Всё, что не соответствует требованиям InnerSource, считается техническим долгом. 
+* Код-ревью — это обязательно. 
 
-#### Practices & rituals: 
-{{< glossary title="30% rule" >}}
-Each engineer may spend some part of his working time on R&D tasks, technical debt reduction or education. 
-The percentage it is approximate number and should be determined by technical leader together with the product team.
-{{< /glossary >}}
-{{< glossary title="The Boy Scout Rule" source="https://deviq.com/boy-scout-rule/" >}}
-True Boy Scouts have a rule regarding camping, that they should leave the campground cleaner than they found it.
+{{< blocks/practice >}}
+#### Практики и ритуалы 
+{{< glossary title="Правило 30%" text="Каждый инженер может использовать часть рабочего времени на исследовательские задачи, работу над техническим долгом или обучение. Процент времени определяет технический лидер совместно с продуктовой командой." >}}
 
-Our version is: **leave your code better than you found it.**
-As [Uncle Bob said](https://www.oreilly.com/library/view/97-things-every/9780596809515/ch08.html), *the act of leaving a mess in the code should be as socially unacceptable as littering.*
-{{< /glossary >}}
-{{< glossary title="Contribution conventions" source="https://adeo.github.io/innersource" >}}
-The project uses a consistent convention to handle contributions from it’s own team but also for external teams, I.E: pull requests, code-review and branch permissions
-{{< /glossary >}}
+{{< glossary title="Правило Бойскаута" text="У настоящих бойскаутов есть правило: оставляй поляну чище, чем она была до тебя. Наша версия: оставляй код лучше, чем он был до тебя. [Как говорил Дядюшка Боб](https://www.oreilly.com/library/view/97-things-every/9780596809515/ch08.html), беспорядок в коде нужно порицать так же, как мусор на улице. ">}}
 
-{{< alert color="warning" title="Antipattern" >}}Closed repository without readme and maintainers working in production.{{< /alert >}}
+{{< glossary title="Правила контрибуции" text="В каждом репозитории описано, как обрабатывать изменения в коде. Например, работа с пулл-реквестами, процесс код-ревью и настройки защищённых веток в гите. ">}}
 
----
+{{< /blocks/practice >}}
 
-### 2. We automate everything as much as possible.
 
-* We prefer automated tests rather than manual testing.
-* Build & Deploy done by CI tool.
-
-#### Practices & rituals: 
-{{< glossary title="DevOps" >}}
-A friendship between developers and operations :) If seriously, I would recommend to read [this book](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592) to understand what is it.
-
-We practice DevOps worship as the main approach of product building.
-{{< /glossary >}}
-{{< glossary title="IaC" >}}
-Infrastructure as a Code. We prefer to have automated configuration files rather than manual UI clicks. The configuration file contains a script on how to prepare infrastructure, build, and deploy applications.
-{{< /glossary >}}
-
-{{< alert color="warning" title="Antipattern" >}}It is scary to make release because of plenty of manual work and rare occasion.{{< /alert >}}
+{{< alert color="warning" title="Антипаттерн" >}}Закрытый репозиторий без readme файла и мейнтенеров работает в&nbsp;продакшене.{{< /alert >}}
 
 ---
 
-### 3. Choice of technology aligned with [Technology Table]({{< ref "/stack" >}}).
+## Автоматизируем по возможности всё
 
-* Table is kept up-to-date by technology committee.
-* All movements in the table are  logged in decision records table.
-* We support iniciatives to try new technology or approach after notice of technology committee.
+* Предпочитаем автотесты ручному тестированию.
+* Осуществляем билд и деплой с помощью CI-инструментов
 
-#### Practices & rituals: 
-{{< glossary title="Technology Committee" >}}
-The committee is a community of enterprise architects, technical architects and technical leaders of development teams and IT infrastructure. The main goal of the committee is the selection and recommendations on the use of technologies in Leroy Merlin Russia and increasing the efficiency of use of company resources. Technologies are understood as programming languages, frameworks and libraries, software tools and approaches in the context of specific usage scenarios.
+{{< blocks/practice >}}
+#### Практики и ритуалы 
 
-Meetings are held at least once a month. Leader — CTO.
-{{< /glossary >}}
+{{< glossary title="DevOps" text="Дружба между разработчиками и опсами :) Если серьёзно, то рекомендуем [книгу](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/0988262592).">}}
 
-{{< alert color="warning" title="Antipattern" >}}Manager orders an external company to write a non-maintainable black-box application on 1C.{{< /alert >}}
+{{< glossary title="IaC" text="Infrastructure as Code — инфраструктура как код. Мы используем автоматические конфигурационные файлы вместо простого накликивания через веб-интерфейс. Эти файлы содержат сценарий подготовки инфраструктуры, билда и деплоя приложения.">}}
 
----
+{{< /blocks/practice >}}
 
-### 4. Front applications follow [Design System](https://fronton.leroymerlin.ru/).
 
-<i class="fa fa-lock mr-1"></i> <i>Design system currently accessible only from internal network</i>
-
-* All business settings configurable through UI.
-
-{{< glossary title="Design System" source="https://uxdesign.cc/what-the-heck-is-a-design-system-c89a8ea73b0d">}}
-Design System – the system of rules and tools for visual and technical design. Reflects the philosophy of the product. Design System continuously evolving.
-{{< /glossary >}}
-
-{{< alert color="warning" title="Antipattern" >}}Built in store application uses Comic Sans.{{< /alert >}}
+{{< alert color="warning" title="Антипаттерн" >}}Страшно делать релиз из-за большого объёма ручного труда и редкого события.{{< /alert >}}
 
 ---
 
-### 5. We build robust applications and infrastructure.
+## Согласуем выбор технологии с [Таблицей технологий]({{< ref "stack/table" >}})
 
-* We know about production issues before end-users.
-* We prefer develop stateless applications and run them inside containers using container orchestrator.
-* Applications handle partial outages.
-* Applications and databases are replicated and can be sharded.
-* Applications responses accurately and correctly handle wrong inputs.
-* Services provides <abbr data-toggle="tooltip" title="Service Level Objective is a goal that service provider wants to reach.">SLO</abbr> and controls them.
-* Infrastructure for key systems allows to have master-master replication.
+* Таблицу поддерживает Технологический комитет.
+* Все движения в основной таблице зарегистрированы в таблице движений.
+* Поддерживаем тестирование новых технологий. 
 
-#### Practices & rituals: 
-{{< glossary title="VALET" source="https://landing.google.com/sre/workbook/chapters/slo-engineering-case-studies/" >}}
-A way how to track SLO. 
+{{< blocks/practice >}}
+#### Практики и ритуалы 
+{{< glossary title="Технологический Комитет" text="Это сообщество архитекторов предприятия, технических архитекторов и технических лидеров команд разработки и IT-инфраструктуры. Комитет собирается минимум раз в месяц и отбирает технологии, которые помогут эффективнее использовать ресурсы компании. Это могут быть языки программирования, платформы и библиотеки, инструменты и подходы в контексте конкретных сценариев использования.">}}
 
-* Volume (traffic) — how much business volume can my service handle?
-* Availability — is the service up when I need it?
-* Latency — does the service respond fast when I use it?
-* Errors — does the service throw an error when I use it?
-* Tickets — does the service require manual intervention to complete my request?
-{{< /glossary >}}
-{{< glossary title="Feature Toggling">}}
-An approach where new functionality should be added as a pluggable module and can be turned off at any time.
-{{< /glossary >}}
-{{< glossary title="Distributed Tracing" >}}
-Each request on the entrance receives a unique tracing ID and pushes this ID with all consequence calls.
-{{< /glossary >}}
-{{< glossary title="Telemetry" >}}
-Applications expose endpoints with health metrics for analysis and monitoring.
-{{< /glossary >}}
+{{< /blocks/practice >}}
 
-{{< alert color="warning" title="Antipattern" >}}Client can't order because email system is broken.{{< /alert >}}
+{{< alert color="warning" title="Антипаттерн" >}}Менеджер заказал у внешней компании разработку неподдерживаемого приложения «чёрный ящик»&nbsp; на 1С.{{< /alert >}}
 
 ---
 
-### 6. Software testing has the same importance as software development.
+## Фронтовые приложения следуют [Дизайн-системе](https://fronton.leroymerlin.ru/){:target="_blank"}
 
-* Testing process start on designing product/feature requirements stage.
-* Every product team has at least one QA-engineer.
-* Source code is covered by tests immediately. Tests created while code is being crafted, and not postpone to the backlog.
+* Дизайн-система доступна пока только из внутренней сети.
+* Все бизнес-настройки конфигурируются через веб-интерфейс.
 
-#### Practices & rituals: 
-{{< glossary title="Dynamic test environments" >}}
-Software testing is conducted in dynamic test environment. Such environment should include all required for testing dependencies (it is recommended to mock out external services). Testing environment is isolated from external processes and systems to prevent them from affecting test results. Test environment is removed when testing is finished.
-{{< /glossary >}}
-{{< glossary title="Mocking" >}}
-It is important to be independent of external systems (unstable behavior, restricted or prohibited control of test data) during software testing. For that case use mocking of such systems.
-Mock is a system emulator that duplicates system behavior in limited manner but does not reproduce its inner logic.
-{{< /glossary >}}
-{{< glossary title="Performance testing" >}}
-Type of software testing which involve testing of system’s performance but not its logic.
+{{< blocks/practice >}}
 
-Backend performance is measured by following metrics:
-* requests per second
-* response time, ms
-* percentage of failures, %
-* system resources usage, %
+#### Практики и ритуалы
+{{< glossary title="Дизайн Система" text="Дизайн-система — это набор правил и инструментов для визуального и технического исполнения, который отражает философию продукта и постоянно развивается. ">}}
 
-Frontend performance is measured with Google Lighthouse and its metrics.
-For backend tests recommended use the Gatling.
-{{< /glossary >}}
-{{< glossary title="Canary deployment" >}}
-Canary deployment helps to reduce negative impact of new feature deployment in case it contains bugs. This strategy is that the first deploy the change to a small subset of servers, test it, and then roll the change out to the rest of the servers. [Learn more](https://octopus.com/docs/deployment-patterns/canary-deployments#:~:text=Canary%20deployments%20are%20a%20pattern,the%20rest%20of%20the%20servers.)
-{{< /glossary >}}
+{{< /blocks/practice >}}
 
-{{< alert color="warning" title="Antipattern" >}}Functional testing in production environment creates real incidents and worsens real users’ experience{{< /alert >}}
+
+{{< alert color="warning" title="Антипаттерн" >}}
+
+Созданное в магазине приложение использует шрифт Comic Sans.
+
+{{< /alert >}}
+
+---
+
+## Строим надёжные приложения и инфраструктуру
+
+* Узнаём о проблемах в проде быстрее пользователей.
+* Предпочитаем stateless приложения, запускаем их в контейнерах и используем оркестратор.
+* Приложения корректно переносят частичные отказы.
+* Приложения и базы данных реплицированы и поддерживают шардинг.
+* Приложения корректно обрабатывают некорректные входящие запросы и отдают только корректные ответы.
+* Сервисы предоставляют и контролируют SLO.
+* Инфраструктура ключевых систем построена по принципу мастер-мастер репликации.
+
+
+{{< blocks/practice >}}
+#### Практики и ритуалы
+{{< glossary title="VALET" text="Гугловский способ измерения SLO.<br>Volume (traffic) — Объём трафика — какой объём бизнес транзакций сервис может обработать?<br>Availability — Доступность — насколько сервис готов бесперебойно обслуживать посетителей?<br>Latency — Задержка — насколько быстро отвечает сервис?<br>Errors — Ошибки — правильно ли ведется учет и «расходование» бюджета ошибок?<br>Tickets — Тикеты — насколько часто необходимо обслуживать сервис в ручном режиме?" >}}
+
+{{< glossary title="Фича флаги" text="По-другому этот подход называют feature toggling. Суть в том, чтобы добавлять новую функциональность как подключаемый модуль, который можно отключить в любой момент.">}}
+
+{{< glossary title="Распределённый Трейсинг" text="Каждый запрос на входе получает уникальный трейс-ID — этот идентификатор передаётся в каждом последующем вызове.">}}
+
+{{< glossary title="Телеметрия" text="Приложения выставляют наружу эндпоинт с показателями жизни для анализа и мониторинга.">}}
+
+{{< /blocks/practice >}}
+
+{{< alert color="warning" title="Антипаттерн" >}} Созданное в магазине приложение использует шрифт Comic Sans.{{< /alert >}}
+
+---
+
+## Тестирование так же важно, как разработка
+
+* Тестирование начинается на этапе формирования требований.
+* В каждой продуктовой команде есть минимум один QA-инженер.
+* Код покрывается тестами сразу — тестирование не откладывается в бэклог.
+* Приложения и базы данных реплицированы и поддерживают шардинг.
+* Приложения корректно обрабатывают некорректные входящие запросы и отдают только корректные ответы.
+* Сервисы предоставляют и контролируют SLO.
+* Инфраструктура ключевых систем построена по принципу мастер-мастер репликации.
+
+
+
+{{< blocks/practice >}}
+
+#### Практики и ритуалы 
+{{< glossary title="Динамические тестовые окружения" text="Проводим тестирование системы на динамически поднятом окружении — оно включает в себя все необходимые зависимости (внешние зависимости лучше заменять моками). Доступ к таким окружениям ограничен, чтобы ничто не могло повлиять на тестирование. После тестирования удаляем окружение.">}}
+
+{{< glossary title="Мокирование" text="В тестировании лучше избегать зависимости от внешних систем — они нестабильны, а доступ к тестовым данным может быть ограничен. Вместо них можно использовать мок-эмулятор системы, который повторяет её поведение в необходимом объёме, но не воспроизводит внутреннюю логику.">}}
+
+{{< glossary title="Тестирование производительности" text="Вид тестирования, при котором тестируется не логика системы, а её быстродействие.В качестве критериев производительности бэкэнда используются следующие метрики:<br> * количество запросов в секунду; * время отклика; * процент ошибок; * утилизация ресурсов системы. * Для тестирования производительности фронтэнда используют Google Lighthouse и его метрики. Бекэнд лучше тестировать при помощи Gatling. ">}}
+
+{{< glossary title="Канареечное развёртывание" text="Канареечное развёртывание помогает снизить негативное воздействие релизов, в которых пропущены баги. Суть стратегии: сначала развёртывать изменения на небольшом подмножестве серверов, а после теста — на остальных серверах. [Читать больше](https://octopus.com/docs/deployment-patterns/canary-deployments#:~:text=Canary%20deployments%20are%20a%20pattern,the%20rest%20of%20the%20servers.)">}}
+
+{{< /blocks/practice >}}
+
+{{< alert color="warning" title="Антипаттерн" >}}Функциональное тестирование на продакшене создает реальные инциденты.{{< /alert >}}
+
+{{< blocks/button-improvement href="#" text="Предложить улучшения">}}

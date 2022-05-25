@@ -1,0 +1,26 @@
+<ul
+    class="conference-speaking__list"
+    data-delay-child
+    data-delay-child-counter-reset="2"
+>
+    {{ range .Site.Data.youtube }}
+    <li class="conference-speaking__item" data-aos="fade-up">
+        <div class="video-external">
+            <a href="{{ .href }}" target="_blank" rel="noopener">
+                <div class="video-external__img-wrap">
+                    {{ if .thumbnail }}
+                    <img
+                        src="{{ .thumbnail.url }}"
+                        alt="{{ .title }}"
+                        width="{{ .thumbnail.width }}"
+                        height="{{ .thumbnail.height }}"
+                    />
+                    {{ end }}
+                </div>
+                <h3>{{ .title }}</h3>
+                <small>{{ .pubDate }}</small>
+            </a>
+        </div>
+    </li>
+    {{ end }}
+</ul>

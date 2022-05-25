@@ -1,0 +1,179 @@
+table.dataTable {
+    font-family: inherit;
+    color: $color-night-rider;
+    border: 1px solid $color-whisper;
+
+    thead th,
+    thead td {
+        @include secondary-text;
+        font-weight: 600;
+        background-color: $color-solitude;
+        color: $color-grey;
+        border: none;
+    }
+
+    thead th {
+        padding: 11px 16px;
+        text-transform: uppercase;
+        text-align: start;
+
+        @include vp-1023 {
+            padding: 6px 8px;
+        }
+
+        @include vp-374 {
+            padding: 8px 2px;
+        }
+    }
+
+    tr td {
+        border-right: 1px #F2F3F5 solid;
+        border-top: 1px solid $color-whisper;
+
+    }
+
+
+    tbody {
+
+        tr.dtrg-group.dtrg-level-0 td {
+            @include primary-text;
+            background-color: $color-default-white !important;
+            font-weight: 400 !important;
+            padding: 16px;
+            
+            @include vp-1023 {
+                padding: 8px;
+            }
+
+            @include vp-374 {
+                padding: 8px 2px;
+            }
+        }
+
+        tr.dtrg-group.dtrg-level-1 td {
+            @include accent-text;
+            background-color: $color-solitude;
+            padding: 4px 16px;
+
+            @include vp-1023 {
+                padding: 8px;
+            }
+
+            @include vp-374 {
+                padding: 8px 2px;
+            }
+        }
+
+        tr td {
+            padding: 16px;
+            vertical-align: top;
+
+            @include vp-1023 {
+                padding: 8px;
+            }
+
+            @include vp-374 {
+                padding: 2px;
+            }
+        }
+    }
+
+    table.dataTable tr td {
+        border-right: 1px solid $color-whisper;
+    }
+
+    .code {
+        font-family: inherit;
+        margin-right: 1px;
+        margin-bottom: 4px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+
+        @include vp-767 {
+            margin-right: 0;
+            margin-bottom: 2px;
+        }
+    }
+
+    .dataTables_scroll {
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .dataTables_scroll::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+}
+
+.dataTables_paginate {
+    display: none;
+}
+
+.dataTables_wrapper .row:first-child {
+    align-items: center;
+    padding: 17px;
+    border-top: 1px solid $color-whisper;
+
+    @include vp-767 {
+        align-items: flex-start;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+}
+
+.stack .dataTables_wrapper .dataTables_length,
+.stack .dataTables_wrapper .dataTables_filter {
+    @include vp-767 {
+        text-align: start;
+    }
+}
+
+.stack div.dataTables_wrapper div.dataTables_filter input {
+    @include vp-767 {
+        margin-left: 0;
+    }
+}
+
+.stack div.dataTables_wrapper div.dataTables_length label {
+    @include title-h3;
+    margin: 0;
+}
+
+.dataTables_filter label {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjY3ODkgMTQuNjE0M0MxNS43Mjg5IDEzLjQ4NyAxNi4zNzI5IDExLjk2NDkgMTYuMzcyOSAxMC4yODk5QzE2LjM3MjkgNi44MTYxIDEzLjYwMzEgNCAxMC4xODY0IDRDNi43Njk3NiA0IDQgNi44MTYxIDQgMTAuMjg5OUM0IDEzLjc2MzggNi43Njk3NiAxNi41Nzk5IDEwLjE4NjQgMTYuNTc5OUMxMS45NTU2IDE2LjU3OTkgMTMuNTUxNCAxNS44MjQ4IDE0LjY3ODkgMTQuNjE0M1pNMTQuNjc4OSAxNC42MTQzTDIwIDIwIiBzdHJva2U9IiM4ODg4ODgiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K)
+    }
+}
+
+.dataTables_filter input {
+    margin-bottom: 0;
+    position: relative;
+    max-width: 1980px;
+    padding-right: 32px;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    color: $color-night-rider;
+    font-size: 16px;
+
+    &::placeholder {
+        @include primary-text;
+        font-family: inherit;
+        color: $color-grey;
+    }
+}

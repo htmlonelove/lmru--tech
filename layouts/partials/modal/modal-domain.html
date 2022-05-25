@@ -1,0 +1,85 @@
+<script>
+  const domainList = document.querySelector('.teams__list');
+  let modal = null;
+  let siteHeader = null;
+
+  const MODAL_DATA = {
+    title: null,
+    icon: null,
+    content: null,
+    close: null,
+  };
+
+  const openModal = (evt) => {
+    evt.preventDefault();
+
+    const card = evt.target.closest('.teams__domain');
+    modal = document.querySelector('.modal');
+    siteHeader = document.querySelector('.header');
+    const overlay = document.querySelector('.modal__overlay');
+
+    if (!card || !modal) {
+      return;
+    }
+
+    MODAL_DATA.title = modal.querySelector('.modal-domain__title');
+    MODAL_DATA.icon = modal.querySelector('.modal-domain__icon');
+    MODAL_DATA.content = modal.querySelector('.modal-domain__body');
+
+    MODAL_DATA.title.innerHTML = "";
+    MODAL_DATA.icon.innerHTML = "";
+    MODAL_DATA.content.innerHTML = "";
+
+    const CARD_DATA = {
+      title: card.querySelector('.teams__domain-title').textContent || "",
+      icon: card.querySelector('svg').cloneNode(true),
+      content: card.querySelector('.teams__domain-content').cloneNode(true),
+    };
+
+    MODAL_DATA.title.textContent = CARD_DATA.title;
+    MODAL_DATA.icon.appendChild(CARD_DATA.icon);
+    CARD_DATA.content.style.display = 'block';
+    MODAL_DATA.content.appendChild(CARD_DATA.content);
+
+    MODAL_DATA.close = document.querySelector('.modal__close-btn');
+    MODAL_DATA.close.addEventListener('click', closeModal);
+    modal.addEventListener('keydown', pressEscHandler);
+    document.addEventListener('click', overlayClickHandler);
+
+    siteHeader.style.display = 'none';
+  };
+
+  const overlayClickHandler = (evt) => {
+    if (evt.target.closest('.modal__overlay') &&
+      !evt.target.closest('.modal__content')) {
+      closeModal();
+    }
+  };
+
+  const pressEscHandler = (evt) => {
+    if (evt.keyCode === 27 || evt.code === 'Esc') {
+      closeModal();
+    }
+  };
+
+  const closeModal = () => {
+
+    MODAL_DATA.close.removeEventListener('click', closeModal);
+    modal.removeEventListener('keydown', pressEscHandler);
+    document.removeEventListener('click', overlayClickHandler);
+
+    modal.style.display = '';
+    setTimeout(() => {
+      siteHeader.style.display = '';
+    }, 1000);
+  };
+
+  domainList.addEventListener('click', openModal);
+</script>
+
+<div class="modal-domain">
+  <span class="modal-domain__icon"></span>
+  <p class="modal-domain__title"></p>
+  <div class="modal-domain__body"></div>
+  <a class="btn modal-domain__join" href="#">Присоединиться к команде</a>
+</div>

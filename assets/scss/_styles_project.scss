@@ -10,9 +10,6 @@ html {
 .td-navbar .navbar-brand span.text-uppercase {
     margin-left: 70px;
 }
-.breadcrumb {
-    padding-top: 1rem;
-}
 
 .td-cover-block {
     background-position: 50% 100%;
@@ -60,16 +57,6 @@ ul.navbar-nav .dropdown {
     cursor: pointer;
 }
 
-.glossary {
-    color: inherit;
-    padding: 0.2em 0.4em;
-    margin: 0;
-    word-break: normal;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 0.25rem;
-    cursor: pointer;
-}
-
 .glossary-item {
     margin-right: 5px;
 }
@@ -105,28 +92,6 @@ ul.navbar-nav .dropdown {
     white-space: nowrap;
 }
 
-table.dataTable {
-    thead th,
-    thead td {
-        background-color: #464C5C;
-        color: white;
-        border: none;
-    }
-
-    tr td {
-        border-right: 1px #F2F3F5 solid;
-        border-top: none;
-    }
-
-    tr.dtrg-group.dtrg-level-0 td {
-        background-color: #CED0D6 !important;
-    }
-
-    tr.dtrg-group.dtrg-level-1 td {
-        background-color: #E8E9EB !important;
-        padding-left: 1em !important;
-    }
-}
 
 #td-cover-block-0 h1 {
     margin-top: 8rem !important;

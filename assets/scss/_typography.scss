@@ -1,0 +1,119 @@
+@mixin title-h1 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 110%;
+    letter-spacing: -1.2px;
+
+    @include vp-1619 {
+        font-size: 64px;
+    }
+
+    @include vp-1023 {
+        font-size: 48px;
+        letter-spacing: -1.2px;
+    }
+
+    @include vp-767 {
+        font-size: 36px;
+    }
+
+    @include vp-374 {
+        font-size: 28px;
+    }
+}
+
+@mixin title-h2 {
+    font-weight: 600;
+    font-size: 56px;
+    line-height: 110%;
+    letter-spacing: -1.2px;
+
+    @include vp-1619 {
+        font-size: 40px;
+    }
+
+    @include vp-1023 {
+        font-size: 36px;
+        letter-spacing: -0.4px;
+    }
+
+    @include vp-767 {
+        font-size: 24px;
+    }
+}
+
+@mixin title-h3 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: -0.4px;
+
+    @include vp-767 {
+        font-size: 20px;
+    }
+}
+
+@mixin title-h3-bold {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: -0.2px;
+    
+    @include vp-767 {
+        font-size: 18px;
+    }
+}
+
+@mixin title-h4 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+
+    @include vp-767 {
+        font-size: 16px;
+    }
+}
+
+@mixin primary-text {
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+
+    @include vp-1619 {
+        font-size: 18px;
+        letter-spacing: -0.2px;
+    }
+
+    @include vp-767 {
+        font-size: 16px;
+    }
+}
+
+@mixin secondary-text {
+    font-size: 18px;
+    line-height: 150%;
+
+    @include vp-1619 {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    @include vp-1023 {
+        font-size: 14px;
+        line-height: 140%;
+    }
+
+    @include vp-767 {
+        font-size: 14px;
+        line-height: 140%;
+    }
+}
+
+@mixin accent-text {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.4px;
+}
+

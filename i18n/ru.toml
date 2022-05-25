@@ -20,11 +20,26 @@ other = "в"
 
 # Footer text
 [footer_all_rights_reserved]
-other = "Все права защищены"
+other = "ООО «ЛЕРУА МЕРЛЕН ВОСТОК»"
 
 [footer_privacy_policy]
 other = "Политика Конфиденциальности"
 
+# Youtube time
+[youtube_time_sec]
+other = "сек. назад"
+[youtube_time_min]
+other = "мин. назад"
+[youtube_time_day]
+other = "дн. назад"
+[youtube_time_month]
+other = "мес. назад"
+[youtube_time_years]
+other = "более года назад"
+
+# Domain
+[domain_small_text]
+other = "Подробнее"
 
 # Post (blog, articles etc.)
 [post_byline_by]

@@ -1,62 +1,220 @@
 +++
 title = "Leroy Merlin Tech"
-linkTitle = "Leroy Merlin Tech"
 +++
 
-{{< blocks/cover height="min" color="primary" >}}
-{{< /blocks/cover >}} 
+{{< blocks/intro >}}
 
-{{< blocks/icon left="fort-awesome" >}}
-Leroy Merlin Russia – the habitant platform.
+# Строим технологическую{{< blocks/animation-badge svg=`<svg width="690" height="67" viewBox="0 0 690 67" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.17241 24.0344L689 24.9999L1 40.9999L679.828 42.2068" stroke="#5AB030" stroke-width="48" class="svg-elem-1"></path></svg>` >}} компанию-платформу {{< /blocks/animation-badge >}}
 
-We make possible home improvement for every client, support and develop partners' ecosystem.
-
-36000+ collaborators · 100+ stores · #1 in DIY market in Europe and Russia.
-{{< /blocks/icon >}}
-
-
-{{< blocks/it color="primary" height="max" icon-right="laptop-code" >}}
-Being an IT, we want to build Retailer — technology company-platform.
-
-<h5>500+ IT connected people divided into ≈100 product teams and 20 domains.</h5>
-
-{{< /blocks/it >}}
-
-{{< blocks/section color="white">}}
-{{% blocks/feature icon="fa-users" title="People" url="values/people/" %}}
-People are the heart of the company.
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fa-sitemap" title="Architecture" url="values/architecture/" %}}
-Building long-term systems and fighting with technical debt.
-{{% /blocks/feature %}}
-
-{{% blocks/feature icon="fa-memory" title="Technology" url="values/technology/" %}}
-Сonstantly challenging selection of tools.
-{{% /blocks/feature %}}
-{{< /blocks/section >}}
-
-{{< blocks/section color="white">}}
-<div class="col">
-<h1 class="text-center">Work in progress</h1>
-<div class="text-center">This site is currently under construction. You can improve it with <a href="https://github.com/adeo/lmru--tech/pulls">Pull Requests</a>.</div>
+<div class="intro__text">
+Создаём инфраструктуру, которая улучшает клиентский опыт. Например, предлагает услуги по&nbsp;проектированию дома, решает проблемы с&nbsp;логистикой или позволяет покупать товары любым способом&nbsp;&mdash; онлайн, в&nbsp;магазине или по&nbsp;телефону.
 </div>
+{{< blocks/video "/video/intro.mp4" intro__video "/images/video-bg.jpg">}}
+{{< /blocks/intro >}}
+ 
+{{< teams >}}
 
-{{< /blocks/section >}}
+{{< blocks/teams-domain icon="icon-technologies" title="Технологии" description="Обеспечивает технологиями продуктовые команды всех доменов" >}}
 
-{{< blocks/section color="white" >}}
+* Разрабатывает технические решения, которые нужны другим командам для создания продукта
+* Поддерживает инфраструктуру — сервера, облака, платформенные кубернетесы и прочее
 
-{{% blocks/feature icon="fab fa-github" title="Contributions welcome" %}}
-This site generated from a GitHub repository. <br /> Send a [Pull Request](https://github.com/adeo/lmru--tech/pulls) for change.
-{{% /blocks/feature %}}
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-data-management" title="Управление данными" description="Обеспечивает данными и опытом команды всех доменов" >}}
+
+* Управляет хранилищем данных 
+* Создаёт инструменты для визуализации данных
+* Разрабатывает data-продукты 
 
 
-{{% blocks/feature icon="fa-building" title="Join the team" %}}
-Check out our [open vacancies](https://hh.ru/search/vacancy?text=%D0%9B%D0%B5%D1%80%D1%83%D0%B0%20%D0%9C%D0%B5%D1%80%D0%BB%D0%B5%D0%BD&search_field=company_name&specialization=1).
-{{% /blocks/feature %}}
+{{< /blocks/teams-domain >}}
+ 
+{{< blocks/teams-domain icon="icon-clients" title="Клиент" description="Изучает рынок и покупателей" >}} 
 
-{{% blocks/feature icon="fa-globe" title="Global community" %}}
-Leroy Merlin is the #1 DIY chain in Europe. <br /> It is part of the [Adeo Group](https://www.adeo.com/).
-{{% /blocks/feature %}}
+* Собирает обратную связь от клиентов, чтобы лучше понимать их потребности
+* Помогает строить путь клиента на сайте и в мобильном приложении
+* Разрабатывает стратегии и программы лояльности
+* Изучает рынок и анализирует поведение клиентов 
 
-{{< /blocks/section >}}
+
+{{< /blocks/teams-domain >}} 
+
+{{< blocks/teams-domain icon="icon-omnichannel" title="Омниканальные продажи" description="Поддерживает все виды продаж: в магазине, онлайн, через контактный центр или партнёров" >}}
+  
+  * Помогает покупателям понять, что им нужно
+  * Управляет онлайн и оффлайн-заказами клиентов 
+  * Создаёт акции
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-market-development" title="Развитие товарных рынков" description="Предлагает решения для проектов по обустройству дома">}}
+  
+  * Формирует ассортимент для разных категорий клиентов — B2B и B2C
+  * Готовит информацию для карточек товара на сайте и в мобильном приложении 
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-partnership-commitments" title="Партнёрские обязательства " description="Ищет партнёров и предлагает им работать с нами" >}}
+
+*Ищет партнёров
+* Проводит переговоры 
+* Управляет закупочными ценами 
+* Выбирает логистический поток для каждого партнёра 
+* Подключает партнёров — они поставляют товары, которых нет в основном ассортименте 
+* Занимается контактами
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-supply" title="Снабжение и импорт" description="Управляет заказами поставщиков" >}}
+
+* Сопровождает импорт и экспорт
+* Прогнозирует, когда нужна будет следующая поставка 
+* Прогнозирует, сколько нужно заказать товаров у поставщика, чтобы в магазинах не было перебоев и излишнего стока 
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-logistics" title="Логистика входящих потоков" description="Отвечает за транспортировку, хранение и распределение товаров" >}}
+
+* Управляет транспортом от поставщика до магазина и операциями в распределительных центрах
+* Отвечает за приёмку товаров в магазинах 
+* Отвечает за механизацию складов, например внедрение ADAPTO или робота, который опалечивает товары
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-reserve" title="Распределение и доступность запаса" description="Управляет запасом товаров" >}}
+
+* Оптимизирует логистику и распределение стоков, чтобы повысить уровень сервиса и качество обслуживания при меньших издержках
+* Гарантирует доступность товаров и достоверность информации о запасах для клиентов, партнёров и сотрудников 
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-services-2" title="Услуги " description="Помогает клиентам в любом канале найти нужного мастера для обустройства дома" >}}
+  
+* Предлагает покупателям заказать услуги вместе с товаром или без него
+* Проводит верификацию всех мастеров 
+* Берёт на себя ответственность за качество оказания услуг
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-price" title="Справедливая розничная цена" description="Формирует цены на товары с учётом рынка" >}}
+
+* Мониторит розничные цены 
+* Управляет ценами магазина
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-payments" title="Платежи" description="Контролирует всё, что связано с платежами — оплаты, возвраты, способы и инструменты" >}}
+
+* Создаёт программы лояльности для клиентов-профессионалов
+* Разрабатывает подходы активных продаж 
+* Формирует цены и группы товаров 
+* Развивает транзитные перевозки и перевозки между компаниями 
+* Запускает гибкие условия — скидки и специальные условия на доставку
+ 
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-quality" title="Качество" description="Отвечает за качество товаров" >}}
+
+* Гарантирует безопасность товаров и соответствие нормам качества 
+* Отвечает за гарантийное обслуживание
+* Развивает производство и качество товаров
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-order-execution" title="Исполнение заказа клиента" description="Отвечает за доставку и возвраты" >}}
+
+* Управляем сборкой, отгрузкой и доставкой 
+* Организует самовывоз из магазина и разные способы доставки — курьером и в постамат 
+* Отвечает за возвраты 
+* Сотрудничает с транспортными компаниями, которые доставляют товары магазина 
+* Решает, как клиент получит информацию о задержке заказа
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-pro" title="ПРО" description="Разрабатывает особые условия для клиентов-профессионалов" >}}
+
+* Создаёт программы лояльности для клиентов-профессионалов
+* Разрабатывает подходы активных продаж 
+* Формирует цены и группы товаров 
+* Развивает транзитные перевозки и перевозки между компаниями 
+* Запускает гибкие условия — скидки и специальные условия на доставку
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-hr" title="HR" description="Управляет кадрами и создаёт условия для комфортной работы всех сотрудников компании" >}}
+
+* Привлекает лучших  специалистов на рынке труда 
+* Повышает квалификацию сотрудников 
+* Сохраняет стабильность команды — помогает адаптироваться новым сотрудникам и строить карьеру текущим
+* Создаёт data-инструменты и продукты для сотрудников и менеджмента компании
+* Заботится о благополучии сотрудников  
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-communication" title="Коммуникация" description="Укрепляет позиции на рынке и формирует привлекательный имидж компании" >}}
+
+* Развивает бренд и коммуникационную стратегию
+* Выстраивает единую коммуникацию для всех ЦА
+* Регулирует работы внутренних служб с учётом этой коммуникации
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-strategy" title="Стратегия и эффективность" description="Помогает руководителям достигать долгосрочные и краткосрочные цели развития бизнеса" >}}
+  
+* Занимается стратегическим планированием
+* Строит архитектуру компании и управляет информационной безопасностью
+* Управляет производительностью
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-property-managment" title="Развитие и управление недвижимостью" description="Создаёт и развивает физические магазины" >}}
+
+* Решает, как, где и когда открывать магазины и другие объекты недвижимости
+* Гарантирует качество зданий, чтобы покупателям было безопасно в них находиться
+* Внедряет технологии, основанные на энергоэффективности и экологической ответственности
+* Управляет недвижимостью 
+
+{{< /blocks/teams-domain >}}
+
+{{< blocks/teams-domain icon="icon-finance" title="Финансы" description="Отвечает за юридические и финансовые вопросы во всей компании" >}}
+
+* Ведет учёт и отчетность
+* Управляет финансовыми потоками и рисками
+* Обеспечивает юридическое сопровождение и внутренний контроль.
+* Управляет нетоварными закупками
+* Оказывает информационное сопровождение бизнеса для поддержки, развития и защиты операций
+
+{{< /blocks/teams-domain >}}
+ 
+{{< /teams >}} 
+
+{{< blocks/mission title="У нас есть миссия">}}
+Делать улучшение и&nbsp;обустройство своего дома возможным для каждого клиента, <em> поддерживая и&nbsp;развивая экосистему партнёров</em>
+{{< /blocks/mission >}}
+{{< blocks/values >}}
+{{< blocks/values-card title="Люди" href="/values/people/" img-src="/images/values/girl" img-alt="" img-width="354" img-height="500" img-format="jpg">}}
+Даём конструктивный фидбэк, обмениваемся опытом в кросс-продуктовых сообществах и проводим ретроспективы, чтобы учиться на ошибках.
+{{< /blocks/values-card>}}
+{{< blocks/values-card title="Архитектура" href="/values/architecture/" img-src="/images/values/architecture" img-alt="" img-width="354" img-height="500" img-format="jpg">}}
+Заботимся о чистоте API и используем модулярную архитектуру — создаём IT-продукты, которые могут существовать отдельно друг от друга. Результат — команды могут легко интегрироваться между собой и создавать единую платформу.
+{{< /blocks/values-card>}}
+{{< blocks/values-card title="Технологии" href="/values/technology/" img-src="/images/values/human" img-alt="" img-width="354" img-height="500" img-format="jpg" >}}
+Выбираем автотесты вместо ручного тестирования, оптимизируем код под требования InnerSource и постоянно пробуем новые технологии — предложить исследование может любой сотрудник или команда.
+{{< /blocks/values-card>}}    
+{{< /blocks/values >}}
+{{< blocks/hubr-publications title="Пишем статьи на Хабре" >}} 
+{{< blocks/button class="button--transparent hubr-publications__button" text="Больше статей" href="https://habr.com/ru/company/leroy_merlin/blog/" target="_blank">}}
+{{< blocks/hubr-publications-list-local >}} 
+{{< /blocks/hubr-publications >}}  
+{{< blocks/conference-speaking title="Выступаем на&nbsp;конференциях" text="Открыто делимся опытом, а ещё рассказываем об ошибках и новых проектах.">}}
+{{< blocks/button href="https://www.youtube.com/channel/UCIqfZ4wqEoC6x6x-zyPCL8g" target="_blank" class="button--transparent conference-speaking__button" text="Наш YouTube-канал">}}
+{{< blocks/conference-speaking-list-local >}}
+{{< /blocks/conference-speaking >}}
+{{< blocks/jobs title="Хотите присоединиться к нам?" src="/images/jobs/jobs1" format="jpg" alt="Сотрудники компаниии в работе" width="1080" height="500">}}
+{{< blocks/jobs-list-local >}}
+{{< blocks/jobs-buttons-wrapper >}}
+{{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/vacancies" target="_blank">}}
+{{< blocks/button class="button--transparent jobs__button" text="Про собеседование" dataModal="candidate">}}
+{{< /blocks/jobs-buttons-wrapper >}}
+{{< /blocks/jobs >}} {{< modal-candidate >}}

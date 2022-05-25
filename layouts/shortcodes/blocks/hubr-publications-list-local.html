@@ -1,0 +1,22 @@
+<ul
+    class="hubr-publications__list"
+    data-delay-child
+    data-delay-child-counter-reset="3"
+>
+    {{ range .Site.Data.habr }}
+    <li class="hubr-publications__item" data-aos="fade-up">
+        <div class="video-external">
+            <a href="{{ .href }}" target="_blank" rel="noopener">
+                <div class="video-external__img-wrap">
+                    {{ if .img }}
+                    <img src="{{ .img }}" alt="{{ .title }}" />
+                    {{else}}
+                    {{ end }}
+                </div>
+                <h3>{{ .title }}</h3>
+                <small> {{ .date }}</small>
+            </a>
+        </div>
+    </li>
+    {{ end }}
+</ul>

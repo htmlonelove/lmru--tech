@@ -25,6 +25,22 @@ other = "All Rights Reserved"
 [footer_privacy_policy]
 other = "Privacy Policy"
 
+# Youtube time
+[youtube_time_sec]
+other = "sec. ago"
+[youtube_time_min]
+other = "min. ago"
+[youtube_time_day]
+other = "day ago"
+[youtube_time_month]
+other = "mon. ago"
+[youtube_time_years]
+other = "year ago"
+
+# Domain
+[domain_small_text]
+other = "More"
+
 
 # Post (blog, articles etc.)
 [post_byline_by]

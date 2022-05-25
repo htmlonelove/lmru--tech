@@ -1,0 +1,21 @@
+{{ $icon := .Get "icon" }}
+{{ $title := .Get "title" }}
+{{ $description := .Get "description" }}
+{{ $smallText := .Get "smallText" }}
+{{ $delay := .Get "delay-animate" }}
+{{ $hidden := .Get "hidden" }}
+
+<li class="teams__domain" data-aos="fade-up" data-open-modal="domain">
+  {{ partial "inline-svg" $icon }}
+  <p class="teams__domain-title">{{ $title }}</p>
+  <span class="teams__domain-description">{{ $description }}</span>
+  <span class="teams__domain-small-text"> 
+    {{ T "domain_small_text" }} 
+    <svg width="7" height="11" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 1L5.5 5.5L1 10" stroke="currentColor" stroke-width="1.5"/>
+    </svg>
+  </span>
+  <div class="teams__domain-content">
+    {{ .Inner | markdownify }}
+  </div>
+</li>

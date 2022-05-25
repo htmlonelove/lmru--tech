@@ -1,0 +1,8 @@
+{{ $title := .Get "title"}}
+
+<div class="hubr-publications" data-aos="fade-up">
+    <div class="hubr-publications__wrapper container">
+        <h2 class="hubr-publications__title">{{ $title }}</h2>
+            {{.Inner}}
+    </div>
+</div>

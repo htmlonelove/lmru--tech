@@ -1,0 +1,69 @@
+.hubr-publications {
+    padding: 120px 0;
+
+    @include vp-1023 {
+        padding: 64px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__title {
+        @include title-h2;
+        margin: 0;
+
+        @include vp-1023 {
+            letter-spacing: -1.4px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 32px;
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+
+        @include vp-767 {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__item {
+        width: calc(33% - 2px);
+        margin-right: 8px;
+
+        &:nth-child(1n + 3) {
+            margin-right: 0;
+        }
+
+        @include vp-1279 {
+            width: calc(33% - 3px);
+        }
+
+        @include vp-1023 {
+            width: calc(33% - 5px);
+        }
+
+        @include vp-767 {
+            width: 100%;
+            margin-bottom: 26px;
+            margin-right: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__button {
+        @include vp-767 {
+            order: 1;
+            width: 100%;
+        }
+    }
+}

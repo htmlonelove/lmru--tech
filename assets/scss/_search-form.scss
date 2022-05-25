@@ -1,0 +1,36 @@
+.search-form__field {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE0LjY3ODkgMTQuNjE0M0MxNS43Mjg5IDEzLjQ4NyAxNi4zNzI5IDExLjk2NDkgMTYuMzcyOSAxMC4yODk5QzE2LjM3MjkgNi44MTYxIDEzLjYwMzEgNCAxMC4xODY0IDRDNi43Njk3NiA0IDQgNi44MTYxIDQgMTAuMjg5OUM0IDEzLjc2MzggNi43Njk3NiAxNi41Nzk5IDEwLjE4NjQgMTYuNTc5OUMxMS45NTU2IDE2LjU3OTkgMTMuNTUxNCAxNS44MjQ4IDE0LjY3ODkgMTQuNjE0M1pNMTQuNjc4OSAxNC42MTQzTDIwIDIwIiBzdHJva2U9IiM4ODg4ODgiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K)
+    }
+}
+
+.search-form input {
+    @include secondary-text;
+    position: relative;
+    max-width: 1980px;
+    padding-right: 32px;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    color: $color-night-rider;
+
+    &:focus,
+    :focus-visible {
+        border: 1px solid $color-whisper;
+    }
+
+    &::placeholder {
+        @include primary-text;
+        font-family: inherit;
+        color: $color-grey;
+    }
+}

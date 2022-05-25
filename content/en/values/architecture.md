@@ -1,71 +1,80 @@
 ---
-title: "Architecture"
+title: "Архитектура"
 weight: 20
 type: docs
-description: Building long-term systems and fighting with technical debt.
+menu:
+    main:
+        parent: "Инженерная культура"
+description: "Рассказываем, как работаем с архитектурой: заботимся о чистоте API и создаём IT-продукты, которые могут существовать отдельно друг от друга. Всё с примерами и антипримерами."
 ---
 
-### 1. We care about API cleanness.
+## Заботимся о чистоте API.
 
-* We expose services to other teams through APIs on the Developer Portal. *[<i class="fa fa-lock"></i> internal ](https://devportal-apim.apps.lmru.tech/)*
-* We are following [API Design Principles]({{< ref "/api" >}}). Non compliant APIs should declared as a technical debt and modified.
-* <abbr data-toggle="tooltip" title="Service is an application, but not all applications are services. For example, a frontend is not a service.">Services</abbr> do not provide a client library. The API and its data model are expressed as REST and JSON <abbr  data-toggle="tooltip" title="Shared internal dependencies lead to a large-scale complexity over time.">[?]</abbr>.
+* Выставляем сервисы для других команд через API и Портал разработчиков.
+* Следуем [Принципам Построения API]({{< ref "/knowledge/sync" >}}). 
+Всё, что не соответствует этим принципам, считается техническим долгом.
+* Сервисы не должны предоставлять клиентскую библиотеку. API и модель данных выражается через REST и JSON.
 
-#### Practices & rituals: 
-{{< glossary title="30% rule" >}}
-Each engineer may spend some part of his working time on R&D tasks, technical debt reduction or education. 
-The percentage it is approximate number and should be determined by technical leader together with the product team.
-{{< /glossary >}}
+{{< blocks/practice >}}
+#### Практики и ритуалы:
+{{< glossary title="Правило 30%" text="Каждый инженер может использовать часть своего рабочего времени на исследовательские задачи, на работу над тех. долгом или обучение.<br>Количество процентов примерное и должно определяться техническим лидером совместно с продуктовой командой.">}}
 
-{{< alert color="warning" title="Antipattern" >}}GraphQL or GRPC endpoint exposed for external usage. <sup>[[See Technology Value]]({{< ref "technology/#3-choice-of-technology-aligned-with-technology-tablehahahugoshortcode-s6-hbhb" >}})</sup>{{< /alert >}}
-
----
-
-### 2. We use modular architecture and avoid tight coupling between products.
-
-* <abbr data-toggle="tooltip" title="When we are talking about “Modular” or “Microservices” architecture it means set of architecture patterns.">Modules</abbr> are isolated and loosely coupled.
-* Modules have single responsibility. 
-* We can throw away existing, add on new or change sequence of modules execution safely without impact on other functionality.
-* We periodically review important architecture and technical debt issues. 
-
-#### Practices & rituals: 
-{{< glossary title="Architecture Committee" >}}
-Enterprise & Solution architects meeting. Held by demand. Leader – CTO.
-
-Main tasks: 
-* solution architecture problem solving
-* escalation place for architecture gaps / technical debt grow
-* unblocking issues with technical debt
-* solution architecture consulting
-{{< /glossary >}}
-{{< glossary title="High Cohesion" source="https://stackoverflow.com/questions/10830135/what-is-high-cohesion-and-how-to-use-it-make-it" >}}
-High cohesion is when you have a class (or module) that does a well defined job. Low cohesion is when a class does a lot of jobs that don't have much in common.
-{{< /glossary >}}
-{{< glossary title="External Configuration" >}}
-A changeable configuration of applications should be stored in the environment.
-{{< /glossary >}}
-{{< glossary title="Orchestration / Choreography" >}}
-Microservices pattern for building of sequenses of execution (SAGAs). Short explanation [here](https://medium.com/ingeniouslysimple/choreography-vs-orchestration-a6f21cfaccae). Detailed [here](https://microservices.io/patterns/data/saga.html).
-{{< /glossary >}}
-
-{{< alert color="warning" title="Antipattern" >}}Microservices with hardcoded steps and multiple entries.{{< /alert >}}
+{{< /blocks/practice >}} 
+{{< alert color="warning" title="Антипаттерн" >}}GraphQL или GRPC эндпоинт выставили для внешнего использования. 
+<sup>[Смотри технологическую ценность]({{< ref "technology/#3-выбор-технологии-согласован-с-таблицей-технологийhahahugoshortcode-s6-hbhb" >}})</sup>
+{{< /alert >}}
 
 ---
 
-### 3. We develop only economically sustainable products.
+## Используем модулярную архитектуру и избегаем излишней связности между продуктами 
 
-* We avoid duplication of systems functionality.
-* Every system have single mantainer team.
+* Избегаем дублирования функциональности систем.
+* За каждую систему отвечает своя команда мейнтейнеров.
 
-#### Practices & rituals: 
-{{< glossary title="Revenue / Expenses Ratio" >}}
-An estimated amount of money earned by product or feature divided on spends on it should be calculated before work run.
-{{< /glossary >}}
-{{< glossary title="KISS" >}}
-Keep It Stupid Simple. Like Occam said, «[entities should not be multiplied without necessity](https://en.wikipedia.org/wiki/Occam%27s_razor)». Adding new levels of abstraction must have a strong reason. Adding new data entities or solution components also must have strong reason. Simplification is a King and we welcome the approach to describe it as an architecture debt and rework the complex areas to make it simple.
-{{< /glossary >}}
-{{< glossary title="DRY" >}}
-Do Not Repeat Yorself. Differently said, we are not develop multilple systems/modules/microservices/components with the same purpose.
-{{< /glossary >}}
 
-{{< alert color="warning" title="Antipattern" >}}Unprofitable product continues to develop for a long time because it is scary to admit a mistake. <sup>[[See People Value]]({{< ref "people/#2-we-accept-mistakes-and-learn-from-them" >}})</sup>{{< /alert >}}
+* Модули изолированы и слабо связанны.
+* У модулей единая ответственность.
+* Можем выкидывать существующий модуль, добавлять новый или изменять последовательность выполнения модулей без влияния на соседнюю функциональность.
+* Периодически обсуждаем важные вопросы архитектуры и технического долга.
+
+
+{{< alert color="warning" title="Антипаттерн" >}}Создали микросервисы с захардкоженными шагами и несколькими точками входа.</sup>
+{{< /alert >}}
+
+{{< blocks/practice >}}
+#### Практики и ритуалы:
+
+{{< glossary title="Архитектурный комитет" text="Это встреча Enterprise & Solution архитекторов. Проводится по требованию. Лидер — технический директор.Чем занимается комитет:<br> * решает проблемы архитектуры * разблокирует задачи технического долга * консультирует по архитектуре решений">}}
+
+{{< glossary title="High Cohesion" text="High Cohesion — это когда класс выполняет чётко определённую работу. Low Cohesion — когда класс выполняет много всего разного.">}}
+
+{{< glossary title="Внешняя конфигурация" text="Изменяемая конфигурация должна храниться в окружении.">}}
+
+{{< glossary title="Оркестрация / Хореография" text="Микросервисный паттерн для построения последовательности выполнений — САГА. Больше информации [тут](https://medium.com/ingeniouslysimple/choreography-vs-orchestration-a6f21cfaccae), а ещё больше [тут](https://microservices.io/patterns/data/saga.html).">}}
+
+{{< /blocks/practice >}}
+
+
+---
+
+## Разрабатываем только экономически оправданные продукты 
+
+* Избегаем дублирования функциональности систем.
+* За каждую систему отвечает своя команда мейнтейнеров.
+
+{{< alert color="warning" title="Антипаттерн" >}}Продолжаем разрабатывать убыточный продукт, потому сложно признать ошибку.
+<sup>[Смотри ценность в разделе люди]({{< ref "/values/people" >}})</sup>
+{{< /alert >}}
+
+{{< blocks/practice >}}
+#### Практики и ритуалы:
+
+{{< glossary title="Соотношение доходов и расходов" text="Для каждого продукта или фичи до начала работ рассчитываем, сколько нужно потратить и сколько можно заработать.">}}
+
+{{< glossary title="KISS" text="Keep it simple, stupid. Как говорил старина Оккам, [«не стоит множить сущее без необходимости»](https://en.wikipedia.org/wiki/Occam%27s_razor). Нужна веская причина, чтобы добавить новый уровень абстракции, объект данных или компонент. Мы за простоту и лаконичность. Излишнюю сложность следует признать архитектурным долгом и переработать.">}}
+
+{{< glossary title="DRY" text="Don’t Repeat Yourself — не повторяй сам себя. Мы не разрабатываем несколько систем, модулей, микросервисов или компонентов с одинаковым предназначением.">}}
+
+{{< /blocks/practice >}}
+
+{{< blocks/button-improvement href="#" text="Предложить улучшения">}}
