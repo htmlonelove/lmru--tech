@@ -60,6 +60,7 @@
 @import "animation-badge";
 @import "modal-candidate";
 @import "last-word";
+@import "loading-spinner";
 
 @if $td-enable-google-fonts {
     @import url($web-font-path);
