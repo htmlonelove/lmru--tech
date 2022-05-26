@@ -220,7 +220,6 @@ function getCookie(name) {
             }
         }
         
-          document.addEventListener("DOMContentLoaded", () => {
             const maxWidthAccordions = document.querySelector('[data-accordion = "parent"]').dataset.accordionMaxWidth;
             let clientWidth = document.documentElement.clientWidth;
             
@@ -239,12 +238,11 @@ function getCookie(name) {
               initAccordions();
             } 
             };
-            
+
             setTimeout(() => {
               breakpoint.addListener(breakpointChecker);
               breakpointChecker();
             }, 500);
-          });          
     class ScrollLock {
         constructor() {
           this._iosChecker = iosChecker;
