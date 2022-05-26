@@ -99,11 +99,22 @@
 
       overlay = document.querySelector('.teams__overlay');
     }, 0);
+
+    return width;
   };
 
   setTimeout(() => {
-    showFirstList();
-    window.addEventListener("resize", resizeThrottler);
+    let lastWidth = showFirstList();
+    console.log(lastWidth);
+    window.addEventListener("resize", () => {
+      let currentWidth = checkWidth();
+
+      if (lastWidth != currentWidth) {
+        console.log(currentWidth);
+        resizeThrottler();
+        lastWidth = checkWidth();
+      }
+    });
   }, 60);
 </script>
 

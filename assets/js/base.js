@@ -244,7 +244,6 @@ function getCookie(name) {
     };
 
     document.addEventListener("DOMContentLoaded", () => {
-      console.log('ready')
       breakpoint.addListener(breakpointChecker);
       breakpointChecker();
     });
