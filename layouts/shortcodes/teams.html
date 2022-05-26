@@ -103,19 +103,17 @@
     return width;
   };
 
-  setTimeout(() => {
+  document.addEventListener('DOMContentLoaded', () => {
     let lastWidth = showFirstList();
-    console.log(lastWidth);
     window.addEventListener("resize", () => {
       let currentWidth = checkWidth();
 
       if (lastWidth != currentWidth) {
-        console.log(currentWidth);
         resizeThrottler();
         lastWidth = checkWidth();
       }
     });
-  }, 60);
+  })
 </script>
 
 <div class="teams">
