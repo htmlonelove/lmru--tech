@@ -1,7 +1,12 @@
 <div class="intro__video-wrap" data-aos="fade-up">
-    <video class="video {{.Get 1}}" src="{{.Get 0}}" data-video-player="" autoplay="true" muted="true">
+    <video class="video {{.Get 1}}" src="{{.Get 0}}" data-video-player="" muted="true">
     </video>
+    <video class="video-preview {{.Get 4}}" src="{{.Get 3}}" data-video-preview loop="loop" muted="true" autoplay="true"></video>
     <img src="{{.Get 2}}" alt="poster">
+    <div class="loader-spinner-wrapper hidden" data-video-spinner>
+        <div class="loader-spinner">
+        </div>
+    </div>>
     <button class="intro__video-button" type="button">
         <svg width="53" height="60" viewBox="0 0 53 60" fill="none"
             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
