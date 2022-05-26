@@ -220,6 +220,8 @@ function getCookie(name) {
         }
     }
 
+    
+    
     let accordions;
 
     const initAccordions = () => {
@@ -240,8 +242,12 @@ function getCookie(name) {
       } else {
       }
     };
-    breakpoint.addListener(breakpointChecker);
-    breakpointChecker();
+
+    document.addEventListener("DOMContentLoaded", () => {
+      console.log('ready')
+      breakpoint.addListener(breakpointChecker);
+      breakpointChecker();
+    });
     class ScrollLock {
         constructor() {
           this._iosChecker = iosChecker;
