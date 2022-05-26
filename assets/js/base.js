@@ -218,8 +218,12 @@ function getCookie(name) {
               }
             }
         }
-       
-            const maxWidthAccordions = document.querySelector('[data-accordion = "parent"]').dataset.accordionMaxWidth;
+        
+            const maxWidthAccordions = document.querySelector('[data-accordion = "parent"]')
+            if (maxWidthAccordions) {
+              maxWidthAccordions.dataset.accordionMaxWidth;
+            }
+
             let clientWidth = document.documentElement.clientWidth;
             
             const mediaQuery = window.matchMedia(`(max-width: ${maxWidthAccordions}px)`);
