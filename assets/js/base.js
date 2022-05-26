@@ -169,8 +169,6 @@ function getCookie(name) {
               const parentElement = element.closest('[data-accordion="parent"]');
               const contentElement = element.querySelector('[data-accordion="content"]');
               const contentElementLinks = contentElement.querySelectorAll('a');
-    
-              
               this._openHeight += contentElement.scrollHeight;
               
               if (parentElement.hasAttribute('data-single')) {
@@ -220,7 +218,7 @@ function getCookie(name) {
               }
             }
         }
-        
+       
             const maxWidthAccordions = document.querySelector('[data-accordion = "parent"]').dataset.accordionMaxWidth;
             let clientWidth = document.documentElement.clientWidth;
             
@@ -239,11 +237,13 @@ function getCookie(name) {
               initAccordions();
             } 
             };
-
+            
             setTimeout(() => {
               breakpoint.addListener(breakpointChecker);
               breakpointChecker();
             }, 500);
+          });          
+
     class ScrollLock {
         constructor() {
           this._iosChecker = iosChecker;
