@@ -169,8 +169,6 @@ function getCookie(name) {
               const parentElement = element.closest('[data-accordion="parent"]');
               const contentElement = element.querySelector('[data-accordion="content"]');
               const contentElementLinks = contentElement.querySelectorAll('a');
-    
-              
               this._openHeight += contentElement.scrollHeight;
               
               if (parentElement.hasAttribute('data-single')) {
@@ -225,6 +223,7 @@ function getCookie(name) {
             if (maxWidthAccordions) {
               maxWidthAccordions.dataset.accordionMaxWidth;
             }
+
             let clientWidth = document.documentElement.clientWidth;
             
             const mediaQuery = window.matchMedia(`(max-width: ${maxWidthAccordions}px)`);
