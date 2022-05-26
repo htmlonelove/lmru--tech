@@ -13,6 +13,6 @@
             <h3>{{ $title }}</h3>
             <p>{{ .Inner | markdownify }}</p>
         </div>
-        <img src="{{ $imgSrc }}.{{$imgFormat}}" srcset="{{ $imgSrc }}@2x.{{$imgFormat}} 2x" alt="{{ $imgAlt }}" width="{{ $imgWidth }}" height="{{ $imgHeight }}">
+        <img src="{{ $imgSrc }}.{{$imgFormat}}" loading="lazy" srcset="{{ $imgSrc }}@2x.{{$imgFormat}} 2x" alt="{{ $imgAlt }}" width="{{ $imgWidth }}" height="{{ $imgHeight }}">
     </a>
 </li>

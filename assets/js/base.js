@@ -127,6 +127,7 @@ function getCookie(name) {
               });
             }
     
+
             updateAccordionsHeight(element = null) {
               if (element) {
                 const content = element.querySelector('[data-accordion="content"]');
@@ -245,6 +246,7 @@ function getCookie(name) {
               breakpointChecker();
             }, 500);
           });          
+
     class ScrollLock {
         constructor() {
           this._iosChecker = iosChecker;

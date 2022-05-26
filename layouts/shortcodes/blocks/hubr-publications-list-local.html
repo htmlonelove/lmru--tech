@@ -9,7 +9,7 @@
             <a href="{{ .href }}" target="_blank" rel="noopener">
                 <div class="video-external__img-wrap">
                     {{ if .img }}
-                    <img src="{{ .img }}" alt="{{ .title }}" />
+                    <img loading="lazy" src="{{ .img }}" alt="{{ .title }}" />
                     {{else}}
                     {{ end }}
                 </div>
