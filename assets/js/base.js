@@ -127,6 +127,7 @@ function getCookie(name) {
               });
             }
     
+
             updateAccordionsHeight(element = null) {
               if (element) {
                 const content = element.querySelector('[data-accordion="content"]');

@@ -10,7 +10,7 @@
 <div class="video-external">
     <a href="{{ $href }}">
         <div class="video-external__img-wrap">
-            <img src="{{ $src }}.{{ $format }}" srcset="{{ $src }}@2x.{{ $format }} 2x" alt="{{ $alt }}" width="{{ $width }}" height="{{ $height }}">
+            <img loading="lazy" src="{{ $src }}.{{ $format }}" srcset="{{ $src }}@2x.{{ $format }} 2x" alt="{{ $alt }}" width="{{ $width }}" height="{{ $height }}">
         </div>
         <h3> {{ $title }} </h3>
         <small> {{ $date }}</small>
