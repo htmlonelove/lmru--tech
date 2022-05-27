@@ -7,9 +7,11 @@
 
 <div class="jobs">
     <div class="container">
-        <img src="{{ $src }}.{{ $format }}"
-            srcset="{{ $src }}@2x.{{ $format }} 2x" alt="{{ $alt }}"
-            width="{{ $width }}" height="{{ $height }}" data-aos="fade-up">
+        <div class="jobs__img-wrap" data-aos="fade-up">
+            <img class="jobs__img" src="{{ $src }}.{{ $format }}"
+                srcset="{{ $src }}@2x.{{ $format }} 2x" alt="{{ $alt }}"
+                width="{{ $width }}" height="{{ $height }}">
+        </div>
         <h2 class="jobs__title" data-aos="fade-up">{{ $title }}</h2>
         {{ .Inner }}
     </div>

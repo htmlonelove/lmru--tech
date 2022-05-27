@@ -5,6 +5,20 @@
         padding-bottom: 80px;
     }
 
+    &__img-wrap {
+        @include aspect-ratio(1440, 657);
+
+        @include vp-767 {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__img {
+        border-radius: 4px;
+    }
+
     &__title {
         z-index: 1;
         @include title-h2;
@@ -86,15 +100,11 @@
 
     img {
         width: 100%;
-        height: 800px;
+        height: 100%;
         object-fit: cover;
 
-        @include vp-1439 {
-            height: 500px;
-        }
-
         @include vp-767 {
-            position: relative;
+            position: static;
             height: 400px;
         }
     }
