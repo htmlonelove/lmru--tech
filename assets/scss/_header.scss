@@ -58,6 +58,14 @@
         }
     }
 
+    &--inner.active {
+        .header__wrapper {
+            @include vp-1023 {
+                background-color: $color-default-white;
+            }
+        }
+    }
+
     &--transparent {
         .header__wrapper {
             background-color: rgba($color-default-white, 0);
@@ -106,7 +114,7 @@
     @include vp-1023 {
         z-index: 99;
         position: fixed;
-        top: var(--header-height-mobile);
+        top: calc(var(--header-height-mobile) - 1px);
         left: 0;
         display: grid;
         grid-template-columns: 1fr min-content;

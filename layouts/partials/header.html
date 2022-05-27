@@ -32,13 +32,13 @@
     </button>
     <div class="header__inner-wrapper" data-fix-block>
       <nav class="nav header__nav">
-        <ul class="nav__list" data-accordion="parent" data-single=""
+        <ul class="nav__list" data-single=""
           data-accordion-max-width="1023">
           {{ $currentPage := . }}
           {{ $p := .Page }}
           {{ range .Site.Menus.main}}
           {{ if .HasChildren }}
-          <li class="nav__item" data-accordion="element">
+          <li class="nav__item is-active">
             {{ $active := "" }}
             {{ range .Children }}
             {{ $item := .Page }}
@@ -46,7 +46,7 @@
             {{ $active = "active" }}
             {{ end }}
             {{ end }}
-            <a class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }} {{ $active }}" data-accordion="button">
+            <a class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }} {{ $active }}">
               {{ .Pre | safeHTML }}
               {{ .Name |  safeHTML }}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -56,7 +56,7 @@
                   fill="#333333" />
               </svg>
             </a>
-            <ul class="nav__inner-list" data-accordion="content">
+            <ul class="nav__inner-list">
               {{ range .Children }}
               <li class="nav__inner-item">
                 <a href="{{ .URL }}">{{ .Name | markdownify }}</a>

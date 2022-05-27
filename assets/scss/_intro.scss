@@ -125,6 +125,10 @@ h1 {
     cursor: pointer;
 }
 
+.intro__video.hidden {
+    display: none;
+}
+
 .intro__video-wrap {
     position: relative;
     max-width: 1420px;

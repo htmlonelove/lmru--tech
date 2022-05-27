@@ -9,7 +9,7 @@ title = "Leroy Merlin Tech"
 <div class="intro__text">
 Создаём инфраструктуру, которая улучшает клиентский опыт и делает его бесшовным. Например, предлагает услуги по&nbsp;проектированию дома, решает проблемы с&nbsp;логистикой или позволяет покупать товары любым удобным способом&nbsp;&mdash; онлайн, в&nbsp;магазине или по&nbsp;телефону.
 </div>
-{{< blocks/video "/video/intro-video-ls.mp4" intro__video "/images/video-bg.jpg">}}
+{{< blocks/video "/video/intro-video-ls.mp4" "intro__video" "/images/video-bg.jpg" "/video/lm-preview.mp4" "intro__video">}}
 {{< /blocks/intro >}}
  
 {{< teams >}}
@@ -113,11 +113,12 @@ title = "Leroy Merlin Tech"
 
 {{< blocks/teams-domain icon="icon-payments" title="Платежи" description="Контролирует всё, что связано с платежами — оплаты, возвраты, способы и инструменты" >}}
 
-* Создаёт программы лояльности для клиентов-профессионалов
-* Разрабатывает подходы активных продаж 
-* Формирует цены и группы товаров 
-* Развивает транзитные перевозки и перевозки между компаниями 
-* Запускает гибкие условия — скидки и специальные условия на доставку
+* Предлагает разные способы оплаты 
+* Управляет рабочим временем персонала 
+* Предлагает кредиты, рассрочки и BNPL
+* Говорит документы для оплаты
+* Развивает биллинг — управление взаиморасчётами между участниками платформы
+
  
 {{< /blocks/teams-domain >}}
 
@@ -210,10 +211,10 @@ title = "Leroy Merlin Tech"
 {{< blocks/button href="https://www.youtube.com/channel/UCIqfZ4wqEoC6x6x-zyPCL8g" target="_blank" class="button--transparent conference-speaking__button" text="Наш YouTube-канал">}}
 {{< blocks/conference-speaking-list-local >}}
 {{< /blocks/conference-speaking >}}
-{{< blocks/jobs title="Хотите присоединиться к нам?" src="/images/jobs/jobs1" format="jpg" alt="Сотрудники компаниии в работе" width="1080" height="500">}}
+{{< blocks/jobs title="Хотите присоединиться к нам?" src="/images/jobs/jobs" format="jpg" alt="Сотрудники компаниии в работе" width="1420" height="657">}}
 {{< blocks/jobs-list-local >}}
 {{< blocks/jobs-buttons-wrapper >}}
-{{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/vacancies" target="_blank">}}
+{{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/it" target="_blank">}}
 {{< blocks/button class="button--transparent jobs__button" text="Про собеседование" dataModal="candidate">}}
 {{< /blocks/jobs-buttons-wrapper >}}
 {{< /blocks/jobs >}} {{< modal-candidate >}}
