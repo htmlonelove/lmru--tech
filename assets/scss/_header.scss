@@ -58,6 +58,14 @@
         }
     }
 
+    &--inner.active {
+        .header__wrapper {
+            @include vp-1023 {
+                background-color: $color-default-white;
+            }
+        }
+    }
+
     &--transparent {
         .header__wrapper {
             background-color: rgba($color-default-white, 0);
