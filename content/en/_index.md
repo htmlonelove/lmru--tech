@@ -214,7 +214,7 @@ title = "Leroy Merlin Tech"
 {{< blocks/jobs title="Хотите присоединиться к нам?" src="/images/jobs/jobs1" format="jpg" alt="Сотрудники компаниии в работе" width="1080" height="500">}}
 {{< blocks/jobs-list-local >}}
 {{< blocks/jobs-buttons-wrapper >}}
-{{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/vacancies" target="_blank">}}
+{{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/it" target="_blank">}}
 {{< blocks/button class="button--transparent jobs__button" text="Про собеседование" dataModal="candidate">}}
 {{< /blocks/jobs-buttons-wrapper >}}
 {{< /blocks/jobs >}} {{< modal-candidate >}}

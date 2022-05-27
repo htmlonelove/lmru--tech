@@ -113,11 +113,12 @@ title = "Leroy Merlin Tech"
 
 {{< blocks/teams-domain icon="icon-payments" title="Платежи" description="Контролирует всё, что связано с платежами — оплаты, возвраты, способы и инструменты" >}}
 
-* Создаёт программы лояльности для клиентов-профессионалов
-* Разрабатывает подходы активных продаж 
-* Формирует цены и группы товаров 
-* Развивает транзитные перевозки и перевозки между компаниями 
-* Запускает гибкие условия — скидки и специальные условия на доставку
+* Предлагает разные способы оплаты 
+* Управляет рабочим временем персонала 
+* Предлагает кредиты, рассрочки и BNPL
+* Говорит документы для оплаты
+* Развивает биллинг — управление взаиморасчётами между участниками платформы
+
  
 {{< /blocks/teams-domain >}}
 
@@ -213,7 +214,7 @@ title = "Leroy Merlin Tech"
 {{< blocks/jobs title="Хотите присоединиться к нам?" src="/images/jobs/jobs1" format="jpg" alt="Сотрудники компаниии в работе" width="1080" height="500">}}
 {{< blocks/jobs-list-local >}}
 {{< blocks/jobs-buttons-wrapper >}}
-{{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/vacancies" target="_blank">}}
+{{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/it" target="_blank">}}
 {{< blocks/button class="button--transparent jobs__button" text="Про собеседование" dataModal="candidate">}}
 {{< /blocks/jobs-buttons-wrapper >}}
 {{< /blocks/jobs >}} {{< modal-candidate >}}
