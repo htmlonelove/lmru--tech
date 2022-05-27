@@ -246,7 +246,7 @@ function getCookie(name) {
               breakpoint.addListener(breakpointChecker);
               breakpointChecker();
             }, 500);
-          });          
+                
 
     class ScrollLock {
         constructor() {
