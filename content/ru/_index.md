@@ -9,7 +9,7 @@ title = "Leroy Merlin Tech"
 <div class="intro__text">
 Создаём инфраструктуру, которая улучшает клиентский опыт и делает его бесшовным. Например, предлагает услуги по&nbsp;проектированию дома, решает проблемы с&nbsp;логистикой или позволяет покупать товары любым удобным способом&nbsp;&mdash; онлайн, в&nbsp;магазине или по&nbsp;телефону.
 </div>
-{{< blocks/video "/video/intro-video-ls.mp4" "intro__video" "/images/video-bg.jpg" "/video/lm-preview.mp4" "intro__video">}}
+{{< blocks/video "/video/intro-video-ls.mp4" "intro__video" "/images/video-bg.jpg" "/video/prev-video.mp4" "intro__video">}}
 {{< /blocks/intro >}}
  
 {{< teams >}}
@@ -57,7 +57,7 @@ title = "Leroy Merlin Tech"
 
 {{< blocks/teams-domain icon="icon-partnership-commitments" title="Партнёрские обязательства " description="Ищет партнёров и предлагает им работать с нами" >}}
 
-*Ищет партнёров
+* Ищет партнёров
 * Проводит переговоры 
 * Управляет закупочными ценами 
 * Выбирает логистический поток для каждого партнёра 
@@ -193,13 +193,13 @@ title = "Leroy Merlin Tech"
 Делать улучшение и&nbsp;обустройство своего дома возможным для каждого клиента, <em> поддерживая и&nbsp;развивая экосистему партнёров</em>
 {{< /blocks/mission >}}
 {{< blocks/values >}}
-{{< blocks/values-card title="Люди" href="/values/people/" img-src="/images/values/girl" img-alt="" img-width="354" img-height="500" img-format="jpg">}}
+{{< blocks/values-card title="Люди" href="/values/people/" img-src="/images/values/girl1" img-alt="" img-width="354" img-height="500" img-format="jpg">}}
 Даём конструктивный фидбэк, обмениваемся опытом в кросс-продуктовых сообществах и проводим ретроспективы, чтобы учиться на ошибках.
 {{< /blocks/values-card>}}
-{{< blocks/values-card title="Архитектура" href="/values/architecture/" img-src="/images/values/architecture" img-alt="" img-width="354" img-height="500" img-format="jpg">}}
+{{< blocks/values-card title="Архитектура" href="/values/architecture/" img-src="/images/values/architecture1" img-alt="" img-width="354" img-height="500" img-format="jpg">}}
 Заботимся о чистоте API и используем модулярную архитектуру — создаём IT-продукты, которые могут существовать отдельно друг от друга. Результат — команды могут легко интегрироваться между собой и создавать единую платформу.
 {{< /blocks/values-card>}}
-{{< blocks/values-card title="Технологии" href="/values/technology/" img-src="/images/values/human" img-alt="" img-width="354" img-height="500" img-format="jpg" >}}
+{{< blocks/values-card title="Технологии" href="/values/technology/" img-src="/images/values/human1" img-alt="" img-width="354" img-height="500" img-format="jpg" >}}
 Выбираем автотесты вместо ручного тестирования, оптимизируем код под требования InnerSource и постоянно пробуем новые технологии — предложить исследование может любой сотрудник или команда.
 {{< /blocks/values-card>}}    
 {{< /blocks/values >}}
