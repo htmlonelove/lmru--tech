@@ -241,13 +241,11 @@ function getCookie(name) {
               initAccordions();
             } 
             };
-            
-            setTimeout(() => {
-              breakpoint.addListener(breakpointChecker);
-              breakpointChecker();
-            }, 500);
-                
 
+            // setTimeout(() => {
+            //   breakpoint.addListener(breakpointChecker);
+            //   breakpointChecker();
+            // }, 500);
     class ScrollLock {
         constructor() {
           this._iosChecker = iosChecker;

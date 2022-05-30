@@ -97,11 +97,11 @@
 
         @include vp-1023 {
             z-index: -1;
-            display: none;
+            display: block;
         }
     }
 
-    &.is-active {
+    &.is-open {
         @include vp-1023 {
             padding-bottom: 20px;
         }
