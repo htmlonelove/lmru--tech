@@ -9,7 +9,7 @@ title = "Leroy Merlin Tech"
 <div class="intro__text">
 Создаём инфраструктуру, которая улучшает клиентский опыт и делает его бесшовным. Например, предлагает услуги по&nbsp;проектированию дома, решает проблемы с&nbsp;логистикой или позволяет покупать товары любым удобным способом&nbsp;&mdash; онлайн, в&nbsp;магазине или по&nbsp;телефону.
 </div>
-{{< blocks/video "/video/intro-video-ls.mp4" "intro__video" "/images/video-bg.jpg" "/video/lm-preview.mp4" "intro__video">}}
+{{< blocks/video "/video/intro-video-ls.mp4" "intro__video" "/images/video-bg.jpg" "/video/prev-video.mp4" "intro__video">}}
 {{< /blocks/intro >}}
  
 {{< teams >}}
@@ -57,7 +57,7 @@ title = "Leroy Merlin Tech"
 
 {{< blocks/teams-domain icon="icon-partnership-commitments" title="Партнёрские обязательства " description="Ищет партнёров и предлагает им работать с нами" >}}
 
-*Ищет партнёров
+* Ищет партнёров
 * Проводит переговоры 
 * Управляет закупочными ценами 
 * Выбирает логистический поток для каждого партнёра 
