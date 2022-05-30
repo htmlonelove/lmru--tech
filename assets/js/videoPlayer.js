@@ -6,35 +6,53 @@ const initPlayer = () => {
     
     const localPlayer = document.querySelector('[data-video-player]');
     const previewVideoPlayer = document.querySelector('[data-video-preview]');
-    const playButton = document.querySelector('.intro__video-button');
     const spinner = document.querySelector('[data-video-spinner]');
  
-    playButton.classList.add('hidden');
-    videoWrap.classList.add('active');
+    // playButton.classList.add('hidden');
+    // videoWrap.classList.add('active');
 
     if (!previewVideoPlayer || !localPlayer) {
         return;
     }
+
     
-    previewVideoPlayer.addEventListener('click', (evt) => {
-        if (localPlayer.readyState === 3 || localPlayer.readyState === 4) {
-            previewVideoPlayer.classList.add('hidden');
-            previewVideoPlayer.pause();
-            localPlayer.muted = false;
-            localPlayer.setAttribute('controls', '');
-            localPlayer.play();
-        } else {
-            spinner.classList.remove('hidden');
-            localPlayer.addEventListener('canplay', () =>  {
-                spinner.classList.add('hidden');
+    window.addEventListener('load', () => {
+        const previewSrc = previewVideoPlayer.dataset.src;
+        const localSrc = localPlayer.dataset.src;
+
+        previewVideoPlayer.classList.add('hidden');
+        localPlayer.classList.add('hidden');
+        previewVideoPlayer.src = previewSrc;
+        localPlayer.src = localSrc;
+
+        previewVideoPlayer.addEventListener('canplay', ()=> {
+            videoWrap.classList.add('active');
+            previewVideoPlayer.classList.remove('hidden');
+        })
+    
+        previewVideoPlayer.addEventListener('click', (evt) => {
+            if (localPlayer.readyState === 3 || localPlayer.readyState === 4) {
                 previewVideoPlayer.classList.add('hidden');
                 previewVideoPlayer.pause();
+                localPlayer.classList.remove('hidden');
                 localPlayer.muted = false;
                 localPlayer.setAttribute('controls', '');
                 localPlayer.play();
-            })
-        }
-    });    
+            } else {
+                spinner.classList.remove('hidden');
+                localPlayer.addEventListener('canplay', () =>  {
+                    spinner.classList.add('hidden');
+                    previewVideoPlayer.classList.add('hidden');
+                    localPlayer.classList.remove('hidden');
+                    previewVideoPlayer.pause();
+                    localPlayer.muted = false;
+                    localPlayer.setAttribute('controls', '');
+                    localPlayer.play();
+                })
+            }
+        });  
+    });
+    
 }
 
 initPlayer();
