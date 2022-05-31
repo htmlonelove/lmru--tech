@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: "updated-content"
+          ssh-key: "ACTIONS_DEPLOY_KEY"
       - name: Install deps
         run: npm i
       - name: Fetch youtube data
@@ -20,3 +23,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Fetched new static data
+          branch: updated-content
+          create_branch: true

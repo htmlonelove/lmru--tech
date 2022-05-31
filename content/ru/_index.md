@@ -211,7 +211,7 @@ title = "Leroy Merlin Tech"
 {{< blocks/button href="https://www.youtube.com/channel/UCIqfZ4wqEoC6x6x-zyPCL8g" target="_blank" class="button--transparent conference-speaking__button" text="Наш YouTube-канал">}}
 {{< blocks/conference-speaking-list-local >}}
 {{< /blocks/conference-speaking >}}
-{{< blocks/jobs title="Хотите присоединиться к нам?" src="/images/jobs/jobs1" format="jpg" alt="Сотрудники компаниии в работе" width="1420" height="647">}}
+{{< blocks/jobs title="Хотите присоединиться к нам?" src="/images/jobs/jobs" format="jpg" alt="Сотрудники компаниии в работе" width="1420" height="647">}}
 {{< blocks/jobs-list-local >}}
 {{< blocks/jobs-buttons-wrapper >}}
 {{< blocks/button class="jobs__button-all" text="Все вакансии" href="https://rabota.leroymerlin.ru/it" target="_blank">}}
