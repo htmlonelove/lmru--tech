@@ -10,6 +10,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           ref: "updated-content"
+          ssh-key: "ACTIONS_DEPLOY_KEY"
       - name: Install deps
         run: npm i
       - name: Fetch youtube data
