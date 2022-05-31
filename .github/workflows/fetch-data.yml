@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: "updated-content"
       - name: Install deps
         run: npm i
       - name: Fetch youtube data
