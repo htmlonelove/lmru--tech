@@ -11,6 +11,7 @@
 {{ $jsBase := resources.Get "js/base.js" }}
 {{ $jsModals := resources.Get "vendor/modals/modals.js" }}
 {{ $jsAnchor := resources.Get "js/anchor.js" }}
+{{ $jsAccordions := resources.Get "js/accordions.js" }}
 {{ $jsYoumax := resources.Get "js/youmax.js" }}
 {{ $setAnimate := resources.Get "js/setAnimate.js" }}
 {{ $videoPlayer := resources.Get "js/videoPlayer.js" }}
@@ -21,7 +22,7 @@
 {{ if .Site.Params.offlineSearch }}
 {{ $jsSearch = resources.Get "js/offline-search.js" }}
 {{ end }}
-{{ $js := (slice $jsBase $jsAnchor $jsSearch $jsYoumax $jsModals $setAnimate $youTubeAPI $youTubePlayer $videoPlayer) |
+{{ $js := (slice $jsBase $jsAnchor $jsSearch $jsYoumax $jsModals $setAnimate $youTubeAPI $youTubePlayer $videoPlayer $jsAccordions) |
 resources.Concat "js/main.js" }}
 {{ if .Site.IsServer }}
 <script src="{{ $js.RelPermalink }}"></script>

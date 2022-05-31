@@ -32,13 +32,13 @@
     </button>
     <div class="header__inner-wrapper" data-fix-block>
       <nav class="nav header__nav">
-        <ul class="nav__list" data-single=""
+        <ul class="nav__list" data-accordion="parent" data-type="single"
           data-accordion-max-width="1023">
           {{ $currentPage := . }}
           {{ $p := .Page }}
           {{ range .Site.Menus.main}}
           {{ if .HasChildren }}
-          <li class="nav__item is-active">
+          <li class="nav__item" data-accordion="element">
             {{ $active := "" }}
             {{ range .Children }}
             {{ $item := .Page }}
@@ -46,7 +46,7 @@
             {{ $active = "active" }}
             {{ end }}
             {{ end }}
-            <a class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }} {{ $active }}">
+            <a class="{{ if $currentPage.IsMenuCurrent `main` . }}active{{ end }} {{ $active }}" data-accordion="button">
               {{ .Pre | safeHTML }}
               {{ .Name |  safeHTML }}
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -56,7 +56,7 @@
                   fill="#333333" />
               </svg>
             </a>
-            <ul class="nav__inner-list">
+            <ul class="nav__inner-list" data-accordion="content">
               {{ range .Children }}
               <li class="nav__inner-item">
                 <a href="{{ .URL }}">{{ .Name | markdownify }}</a>
@@ -116,7 +116,7 @@
       </div>
       {{ range $langPage.Translations }}
       <a href="{{ .RelPermalink }}"
-        class="lang-toggle header__lang-toggle {{ .Language }}" role="button" style="display: none;">
+        class="lang-toggle header__lang-toggle {{ .Language }}" role="button">
         <svg class="icon-en" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask0_1601_5567" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="4" y="6" width="16" height="12">
           <path d="M18.4762 6H5.52381C4.68223 6 4 6.71634 4 7.6V16.4C4 17.2837 4.68223 18 5.52381 18H18.4762C19.3178 18 20 17.2837 20 16.4V7.6C20 6.71634 19.3178 6 18.4762 6Z" fill="white"/>
@@ -234,11 +234,7 @@
       menuToggle.addEventListener('click', onNenuToggleClick);
     }
 
-    window.addEventListener('resize', () => {
-      if (!mediaQuery.matches) {
-        window.scrollLock.enableScrolling();
-      }
-    })
+
 
     document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo(0, 0);

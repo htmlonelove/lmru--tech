@@ -1,20 +1,21 @@
 <div class="intro__video-wrap" data-aos="fade-up">
-    <video class="video {{.Get 1}}" src="{{.Get 0}}" data-video-player="" autoplay="" muted="" playsinline>
+    <video class="video {{.Get 1}}" src="" data-src="{{.Get 0}}"  data-video-player="" autoplay="" muted="" playsinline>
     </video>
-    <video class="video-preview {{.Get 4}}" src="{{.Get 3}}" data-video-preview loop="loop" muted="" autoplay=""></video>
+    <video class="video-preview {{.Get 4}}" src="" data-src="{{.Get 3}}" data-video-preview="" loop="loop" muted="" autoplay="" playsinline>         
+    </video>
     <img src="{{.Get 2}}" alt="poster">
     <div class="loader-spinner-wrapper hidden" data-video-spinner>
         <div class="loader-spinner">
         </div>
-    </div>>
-    <button class="intro__video-button" type="button">
+    </div>
+    <!-- <button class="intro__video-button" type="button">
         <svg width="53" height="60" viewBox="0 0 53 60" fill="none"
             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path
                 d="M49.5 23.9378C54.1667 26.6321 54.1667 33.3679 49.5 36.0622L10.5 58.5788C5.83333 61.2731 -2.96823e-06 57.9053 -2.73269e-06 52.5167L-7.64221e-07 7.48334C-5.28678e-07 2.09474 5.83333 -1.27314 10.5 1.42116L49.5 23.9378Z"
                 fill="white" />
         </svg>
-    </button>
+    </button> -->
 </div>
 
 <script>

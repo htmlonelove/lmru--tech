@@ -47,6 +47,7 @@
     &__toggle {
         display: none;
         color: $color-night-rider;
+        cursor: pointer;
 
         @include vp-1023 {
             position: relative;
