@@ -139,28 +139,6 @@ h1 {
     transition: box-shadow $trans--400;
     overflow: hidden;
 
-    @include vp-1619 {
-        height: 686px;
-    }
-
-    @include vp-1439 {
-        width: 100%;
-        height: 596px;
-    }
-
-    @include vp-1279 {
-        height: 454px;
-    }
-
-    @include vp-1023 {
-        width: 100%;
-        height: 368px;
-    }
-
-    @include vp-767 {
-        height: 300px;
-    }
-
     &::after {
         content: '';
         position: absolute;
