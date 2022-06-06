@@ -28,11 +28,7 @@ const initPlayer = () => {
             previewVideoPlayer.classList.remove('hidden');
         })
     
-<<<<<<< HEAD
         hover.addEventListener('click', (evt) => {
-=======
-        previewVideoPlayer.addEventListener('click', (evt) => {
->>>>>>> adeo-lmru-tech/master
             if (localPlayer.readyState === 3 || localPlayer.readyState === 4) {
                 previewVideoPlayer.classList.add('hidden');
                 previewVideoPlayer.pause();
@@ -40,10 +36,7 @@ const initPlayer = () => {
                 localPlayer.muted = false;
                 localPlayer.setAttribute('controls', '');
                 localPlayer.play();
-<<<<<<< HEAD
                 hover.classList.add('hidden');
-=======
->>>>>>> adeo-lmru-tech/master
             } else {
                 spinner.classList.remove('hidden');
                 localPlayer.addEventListener('canplay', () =>  {
@@ -54,10 +47,7 @@ const initPlayer = () => {
                     localPlayer.muted = false;
                     localPlayer.setAttribute('controls', '');
                     localPlayer.play();
-<<<<<<< HEAD
                     hover.classList.add('hidden');
-=======
->>>>>>> adeo-lmru-tech/master
                 })
             }
         });  
