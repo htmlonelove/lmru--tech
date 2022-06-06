@@ -4,4 +4,4 @@
 {{$type := .Get "type" | default "button"}}
 {{$dataModal := .Get "dataModal" }}
 {{$target:= .Get "target"}}
-<a href="{{ $href }}" {{if $target}} target="{{$target}}" {{end}} class="button {{ $class }}" {{if $dataModal}} data-open-modal="{{$dataModal}}" {{end}}>{{ $text }}</a>
+<a {{if $href}} href="{{ $href }}" {{else}} href="#" {{end}} {{if $target}} target="{{$target}}" {{end}} class="button {{ $class }}" {{if $dataModal}} data-open-modal="{{$dataModal}}" {{end}}>{{ $text }}</a>

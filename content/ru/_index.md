@@ -1,7 +1,7 @@
 +++
 title = "Leroy Merlin Tech"
 +++
-
+<div>
 {{< blocks/intro >}}
 
 # Строим технологическую{{< blocks/animation-badge svg=`<svg width="690" height="67" viewBox="0 0 690 67" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.17241 24.0344L689 24.9999L1 40.9999L679.828 42.2068" stroke="#5AB030" stroke-width="48" class="svg-elem-1"></path></svg>` >}} компанию-платформу {{< /blocks/animation-badge >}}
@@ -11,7 +11,6 @@ title = "Leroy Merlin Tech"
 </div>
 {{< blocks/video "/video/intro-video-ls.mp4" "intro__video" "/images/video-bg.jpg" "/video/prev-video.mp4" "intro__video">}}
 {{< /blocks/intro >}}
- 
 {{< teams >}}
 
 {{< blocks/teams-domain icon="icon-technologies" title="Технологии" description="Обеспечивает технологиями продуктовые команды всех доменов" >}}
@@ -188,7 +187,6 @@ title = "Leroy Merlin Tech"
 {{< /blocks/teams-domain >}}
  
 {{< /teams >}} 
-
 {{< blocks/mission title="У нас есть миссия">}}
 Делать улучшение и&nbsp;обустройство своего дома возможным для каждого клиента, <em> поддерживая и&nbsp;развивая экосистему партнёров</em>
 {{< /blocks/mission >}}
@@ -218,3 +216,4 @@ title = "Leroy Merlin Tech"
 {{< blocks/button class="button--transparent jobs__button" text="Про собеседование" dataModal="candidate">}}
 {{< /blocks/jobs-buttons-wrapper >}}
 {{< /blocks/jobs >}} {{< modal-candidate >}}
+</div>

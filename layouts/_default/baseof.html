@@ -7,11 +7,9 @@
 
 <body>
   {{ partial "header.html" . }}
-  <div>
     <main>
       {{ block "main" . }}{{ end }}
     </main>
-  </div>
   {{ partial "footer.html" (dict "context" . "links" .Site.Params.links "mod"
   "all") }}
   {{ partialCached "scripts.html" . }}
