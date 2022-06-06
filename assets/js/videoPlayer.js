@@ -7,11 +7,9 @@ const initPlayer = () => {
     const localPlayer = document.querySelector('[data-video-player]');
     const previewVideoPlayer = document.querySelector('[data-video-preview]');
     const spinner = document.querySelector('[data-video-spinner]');
- 
-    // playButton.classList.add('hidden');
-    // videoWrap.classList.add('active');
+    const hover = document.querySelector('[data-video-hover]');
 
-    if (!previewVideoPlayer || !localPlayer) {
+    if (!previewVideoPlayer || !localPlayer || !hover) {
         return;
     }
 
@@ -30,7 +28,7 @@ const initPlayer = () => {
             previewVideoPlayer.classList.remove('hidden');
         })
     
-        previewVideoPlayer.addEventListener('click', (evt) => {
+        hover.addEventListener('click', (evt) => {
             if (localPlayer.readyState === 3 || localPlayer.readyState === 4) {
                 previewVideoPlayer.classList.add('hidden');
                 previewVideoPlayer.pause();
@@ -38,6 +36,7 @@ const initPlayer = () => {
                 localPlayer.muted = false;
                 localPlayer.setAttribute('controls', '');
                 localPlayer.play();
+                hover.classList.add('hidden');
             } else {
                 spinner.classList.remove('hidden');
                 localPlayer.addEventListener('canplay', () =>  {
@@ -48,6 +47,7 @@ const initPlayer = () => {
                     localPlayer.muted = false;
                     localPlayer.setAttribute('controls', '');
                     localPlayer.play();
+                    hover.classList.add('hidden');
                 })
             }
         });  
