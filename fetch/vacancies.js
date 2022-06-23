@@ -22,11 +22,12 @@ try {
 
     const vacanciesCardsJson = vacanciesCards.map((vacancy) => {
         const id = vacancy.querySelector(".btn--base").attrs.href;
+        
         const title = vacancy.querySelector(".title").innerHTML;
         const experience = vacancy.querySelector(
             "[itemprop=experienceRequirements]"
-        ).textContent;
-
+            ).textContent
+            
         return {
             id: id.replace("/vacancies/", "").replace("/application", ""),
             href: `https://rabota.leroymerlin.ru${id.replace(
@@ -34,7 +35,7 @@ try {
                 ""
             )}`,
             title,
-            experience: experience.replaceAll("\n", "").replaceAll("  ", "")
+            experience: experience.replace(/  /g, "").replace(/\n/g, "")
         };
     });
 
