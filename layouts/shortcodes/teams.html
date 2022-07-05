@@ -93,17 +93,15 @@
     let width = checkWidth();
     showList(PAGE_SIZE[width]);
 
-    setTimeout(() => {
       moreBtn = document.querySelector('.teams__more');
       moreBtn.addEventListener('click', showMoreHandler);
 
       overlay = document.querySelector('.teams__overlay');
-    }, 0);
 
     return width;
   };
 
-  document.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
     let lastWidth = showFirstList();
     window.addEventListener("resize", () => {
       let currentWidth = checkWidth();
@@ -126,7 +124,7 @@
       {{ .Inner | markdownify }}
     </ul>
 
-    <a class="btn teams__more" href="#">Показать ещё</a>
+    <button class="btn teams__more">Показать ещё</button>
 
     <div class="teams__overlay"></div>
 
